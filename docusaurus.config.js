@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Living Design System',
+  tagline: '统一化的人员交互方式、设计模式、开发原则和开发工具集',
+  url: 'https://www.itsi.com.cn',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'ITSI', // Usually your GitHub org/user name.
+  projectName: 'Living Design System', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -37,14 +37,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ITSI-Tangcuyu/Living-website-doc-docusaurus.git',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ITSI-Tangcuyu/Living-website-doc-docusaurus.git',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,21 +57,83 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Living Design System',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/lds-logo.svg',
         },
         items: [
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: '技术文档',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'MIS组件', position: 'left'},
+          {to: '/blog', label: 'GIS组件', position: 'left'},
+          {to: '/blog', label: '低代码平台', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            type: 'search',
+            position: 'right',
+          },
+          {
+            label: '社区',
+            position: 'right',
+            items: [
+              {
+                href: 'https://ionicframework.com/community',
+                label: 'Community Hub',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://forum.ionicframework.com/',
+                label: 'Forum',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://www.meetup.com/topics/ionic-framework/',
+                label: 'Meetups',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://blog.ionicframework.com/',
+                label: 'Blog',
+                target: '_blank',
+                rel: null,
+              },
+            ],
+            className: 'navbar__link--community',
+          },
+          {
+            label: '技术支持',
+            position: 'right',
+            items: [
+              {
+                href: 'https://ionicframework.com/support',
+                label: 'Help Center',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://ionic.zendesk.com/',
+                label: 'Customer Support',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://ionicframework.com/advisory',
+                label: 'Enterprise Advisory',
+                target: '_blank',
+                rel: null,
+              },
+            ],
+            className: 'navbar__link--support',
+          },
+          {
+            href: 'https://github.com/ITSI-Tangcuyu/Living-website-doc-docusaurus.git',
             label: 'GitHub',
             position: 'right',
           },
@@ -115,12 +177,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/ITSI-Tangcuyu/Living-website-doc-docusaurus.git',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} itsi.com.cn Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

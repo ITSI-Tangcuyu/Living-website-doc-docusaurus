@@ -3,20 +3,28 @@ import React from 'react';
 const Cards = () => {
   return wcs.map((item) => {
     return (
-      <div key={item.title} className="px-2 mb-6">
-        <div className="width-auto rounded overflow-hidden shadow border-gray-100 border mr-4">
-          <div className="px-4">
-            <a
-              href={'/base/' + item.title}
-              className="no-underline text-gray-600 hover:text-gray-600"
-            >
-              <div className="text-xl font-bold">
-                <p>{item.title}</p>
+      <div key={item.title} className="margin--sm container">
+        <div className='row'>
+          <div class="col col--6">
+            <div class="col-demo">
+              <div className="card">
+                <div>
+                  <a
+                    href={'/base/' + item.title}
+                  >
+                    <div className="card__header">
+                      <h2 >{item.title}</h2>
+                    </div>
+                  </a>
+                  <div className='card__body'>
+                    <p>{item.subtitle}</p>
+                  </div>
+                </div>
               </div>
-            </a>
-            <div>
-              <p>{item.subtitle}</p>
             </div>
+          </div>
+          <div class="col col--6">
+            <div class="col-demo">6</div>
           </div>
         </div>
       </div>

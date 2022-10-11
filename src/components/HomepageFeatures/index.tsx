@@ -10,38 +10,62 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Web Component组件库',
+    Svg: require('@site/static/img/button.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Web Component 是 WEB 标准原生提供的封装组件的方式，可以让开发人员定义可重复使用的自定义元素。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '兼容流行的前端开发框架',
+    Svg: require('@site/static/img/flexible.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        最大程度遵循和采用开放的、基于 WEB 标准的方法，全面兼容流行的前端开发框架：VUE，React，Angular，Svelet等
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '性能良好',
+    Svg: require('@site/static/img/search.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        可访问性意味着让每个人都可以访问相同的信息，无论个人的身体和认知能力以及访问WEB的方式是否存在一定的限制
+      </>
+    ),
+  },
+  {
+    title: '跨平台支持',
+    Svg: require('@site/static/img/flexible.svg').default,
+    description: (
+      <>
+        Web Component 是 WEB 标准原生提供的封装组件的方式，可以让开发人员定义可重复使用的自定义元素。
+      </>
+    ),
+  },
+  {
+    title: 'Design Tokens',
+    Svg: require('@site/static/img/tokenname.svg').default,
+    description: (
+      <>
+        最大程度遵循和采用开放的、基于 WEB 标准的方法，全面兼容流行的前端开发框架：VUE，React，Angular，Svelet等
+      </>
+    ),
+  },
+  {
+    title: 'A11Y可访问性支持',
+    Svg: require('@site/static/img/a11y.svg').default,
+    description: (
+      <>
+        可访问性意味着让每个人都可以访问相同的信息，无论个人的身体和认知能力以及访问WEB的方式是否存在一定的限制
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

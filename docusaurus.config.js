@@ -3,6 +3,9 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const path = require('path');
+const prismic = require('@prismicio/client');
+const fetch = require('node-fetch');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,7 +15,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: '/img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -26,7 +29,17 @@ const config = {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans'],
   },
-
+  plugins: ['docusaurus-plugin-sass', [
+    'docusaurus-plugin-module-alias',
+    {
+      alias: {
+        'styled-components': path.resolve(__dirname, './node_modules/styled-components'),
+        react: path.resolve(__dirname, './node_modules/react'),
+        'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+        '@components': path.resolve(__dirname, './src/components'),
+      },
+    },
+  ],],
   presets: [
     [
       'classic',
@@ -47,7 +60,7 @@ const config = {
             'https://github.com/ITSI-Tangcuyu/Living-website-doc-docusaurus.git',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       }),
     ],
@@ -59,7 +72,7 @@ const config = {
       navbar: {
         title: 'Living Design System',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'LDS Logo',
           src: 'img/lds-logo.svg',
         },
         items: [
@@ -69,9 +82,14 @@ const config = {
             position: 'left',
             label: '技术文档',
           },
-          {to: '/blog', label: 'MIS组件', position: 'left'},
-          {to: '/blog', label: 'GIS组件', position: 'left'},
-          {to: '/blog', label: '低代码平台', position: 'left'},
+          { to: '/blog', label: 'MIS组件', position: 'left' },
+          { to: '/blog', label: 'GIS组件', position: 'left' },
+          {
+            href: 'http://localhost:5000/admin',
+            label: '低代码平台',
+            target: '_blank',
+            rel: null
+          },
           {
             type: 'search',
             position: 'right',
@@ -149,16 +167,16 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
-                label: 'Tutorial',
+                label: '快速入门',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '社区',
             items: [
               {
                 label: 'Stack Overflow',
@@ -168,17 +186,13 @@ const config = {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
               {
-                label: 'Blog',
+                label: '博客',
                 to: '/blog',
               },
               {
@@ -188,7 +202,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} itsi.com.cn Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${ new Date().getFullYear() } itsi.com.cn Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

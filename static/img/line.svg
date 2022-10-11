@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 24" width="470" height="24"><symbol id="image-431f2a9b2f5b6618b17015c16145715d4faf2c3e"><image width="100%" height="100%" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcIAAAAECAYAAAAd3j9YAAAAAXNSR0IArs4c6QAAAFNJREFUWEft1UEVwCAMRMFEAJZwUnU4wVIFlNcLJnbi4E8O2+UIECBAgECwQP/tc71fsIF0AgQIEAgV2M9oQxj6fNkECBAgUHWHEAYBAgQIEEgVOHPCCAVrtEJOAAAAAElFTkSuQmCC"></image></symbol>
+  <!-- svg-source:excalidraw -->
+  
+  <defs>
+    <style>
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://excalidraw.com/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://excalidraw.com/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <use href="#image-431f2a9b2f5b6618b17015c16145715d4faf2c3e" width="450" height="4" transform="translate(10 10) rotate(0 225 2)"></use></svg>

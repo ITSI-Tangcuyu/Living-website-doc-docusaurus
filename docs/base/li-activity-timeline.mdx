@@ -1,0 +1,69 @@
+---
+title: li-activity-timeline元组件
+description: li-activity-timeline活动时间轴组件显示即将进行的、当前的和过去的活动
+---
+
+# li-activity-timeline 元组件
+
+li-activity-timeline 活动时间轴组件显示即将进行的、当前的和过去的活动
+
+### 示例
+
+import { LiActivityTimeline } from '@itsi/living-base-react'
+
+### 组件属性
+
+| 属性                | 类型                | 默认值 | 必选 | 描述                                         |
+| ------------------- | ------------------- | ------ | ---- | -------------------------------------------- |
+| id                  | string              | 无     | yes  | 时间线组件 Id                                |
+| itemsExpanded       | string[]            | 无     | no   | 默认需要展开的时间线条目索引组成的数组       |
+| isNarrow            | boolean             | 无     | no   | 是否是狭窄模式                               |
+| timelineIcon        | Icon                | 无     | no   | 时间线组件每个条目的图标                     |
+| timelineActions     | TimelineAction      | 无     | no   | 时间线组件每个条目右侧的操作按钮             |
+| timelineMediaFigure | TimelineMediaFigure | 无     | no   | 时间线组件每个条目信息的类型特征标识         |
+| timelineMediaBody   | TimelineMediaBody   | 无     | no   | 时间线组件每个条目信息的主题内容             |
+| timelineTrigger     | TimelineTrigger     | 无     | no   | 时间线组件每个条目信息的主题内容前缀的复选框 |
+| timelineSubtext     | TimelineSubtext     | 无     | no   | 时间线组件每个条目信息的副标题内容           |
+| timelineError       | TimelineError       | 无     | no   | 时间线组件错误信息内容位于副标题内容下方     |
+| timelineItem        | TimelineItem        | 无     | no   | 时间线组件的每个条目                         |
+| descriptionCard     | DescriptionCard     | 无     | no   | 时间线组件详细信息卡片子组件                 |
+| fieldInfoListItem   | FieldInfoListItem   | 无     | no   | 时间线组件详细信息卡片中信息条目             |
+| narrowContext       | NarrowContext       | 无     | no   | 狭窄风格时间线组件容器                       |
+| hasError            | Symbol              | 无     | no   | 是否显示错误信息                             |
+
+### 组件事件
+
+| 事件名称 | 描述 | 类型 |
+| -------- | ---- | ---- |
+| \        | \    | \    |
+
+### 插槽
+
+| 插槽名称 | 描述 |
+| -------- | ---- |
+| \        | \    |
+
+### 使用场景
+
+本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
+
+import Callout from '../../src/components/Callout'
+
+<Callout emoji="❤️">
+  建议使用场景：
+  具有过去，现在，未来时间属性的信息列表
+</Callout>
+
+<Callout type="error" emoji="️🚫">
+  避免使用场景
+  <br />
+</Callout>
+
+### 可访问性说明
+
+该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
+
+<Callout type="warning" emoji="❎">
+  该组件还未通过LDS的可访问性规则验证，需要进一步定制开发，才能符合WCAG 2.1
+  AA可访问性指南
+</Callout>

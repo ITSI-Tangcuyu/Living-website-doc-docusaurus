@@ -1,0 +1,268 @@
+---
+title: LDS Design Tokens
+description: LDS中的Design Tokens
+---
+
+# LDS 中的 Design Tokens
+
+Design Token是一种与技术无关的存储变量的方法。我们使用Token而不是硬编码值来确保不同平台之间更好的UI一致性。
+
+### LDS 默认提供的 token 组
+
+| ** 分组 **     | ** 说明 **             |
+| -------------- | ---------------------- |
+| 颜色           | 主颜色，辅助颜色等     |
+| 大小           | 宽度，高度             |
+| 间隙和内边距   | 自动布局(间隙和内边距) |
+| 边框圆角、阴影 | 所有的边角及阴影       |
+| 透明度         | 元素的透明度           |
+| 字体类型       | 文本层：采用的字体库   |
+| 字体大小       | 文本层：字体大小       |
+| 字体粗细       | 文本层：字体的粗细     |
+| 文字间距       | 文本层：文字之间的距离 |
+| 字体颜色       | 文本层：字体的颜色     |
+| z-index        | 元素的覆盖层次         |
+| 转换           | 动画场景的转换速度     |
+| 媒体查询       | 自适应屏幕大小         |
+
+# Global
+
+### 颜色
+
+** 基础颜色定义 **
+
+为了保持应急行业各平台业务应用的界面一致性，我们在整个界面中使用以下定义的调色板。注：绿色、红色和橙色仅用于特殊情况，如表单验证和消息传递。
+
+import TokenExample from "../../src/components/TokenExample";
+
+| 样例                               | 描述                                                            | 语义 Token                                                                   | 选项 Token                       |
+| ---------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------- |
+| <TokenExample bgColor='#0A7BC7' /> | ** 主题色 ** <br />用于强调和突出的场景                         | ** $ color-global-primary ** <br /> var(--li-token-color-global-primary)     | ** $ indigo-700 ** <br />#0A7BC7 |
+| <TokenExample bgColor='#00CDFE' /> | ** 辅助色 ** <br />标题背景色或需要点亮部分                     | ** $ color-global-secondary ** <br /> var(--li-token-color-global-secondary) | ** $ sky-400 ** <br />#00CDFE    |
+| <TokenExample bgColor='#F6541B' /> | ** 警示色 ** <br />主色互补色，用于警示、提示场景               | ** $ color-global-warning ** <br /> var(--li-token-color-global-warning)     | ** $ orange-600 ** <br />#F6541B |
+| <TokenExample bgColor='#F7B43E' /> | ** 强调色 ** <br />主色互补色，按钮选中状态或需要强调部分       | ** $ color-global-emphasize ** <br /> var(--li-token-color-global-emphasize) | ** $ amber-400 ** <br />#F7B43E  |
+| <TokenExample bgColor='#0EBD75' /> | ** 选中色 ** <br />主色互补色，按钮选中状态或需要强调部分       | ** $ color-global-selected ** <br /> var(--li-token-color-global-selected)   | ** $ green-500 ** <br />#0EBD75  |
+| <TokenExample bgColor='#D8DDE3' /> | ** 浅边框色 ** <br />浅色背景下分割线、默认按钮边框线、控件边线 | ** $ color-global-border ** <br /> var(--li-token-color-global-border)       | ** $ zinc-300 ** <br />#D8DDE3   |
+| <TokenExample bgColor='#f9fafb' /> | ** 浅背景色 ** <br />浅色背景下弹窗背景色                       | ** $ color-global-bg ** <br /> var(--li-token-color-global-bg)               | ** $ gray-50 ** <br />#f9fafb    |
+| <TokenExample bgColor='#609BD6' /> | ** 深边框色 ** <br />深色背景下分割线、默认按钮边框线、控件边线 | ** $ color-global-border ** <br /> var(--li-token-color-global-border)       | ** $ sky-600 ** <br />#609BD6    |
+| <TokenExample bgColor='#002044' /> | ** 深背景色 ** <br />深色背景下弹窗背景色                       | ** $ color-global-bg ** <br /> var(--li-token-color-global-bg)               | ** $ slate-900 ** <br />#002044  |
+
+** 渐变色定义 **
+
+| 样例                                               | 描述                                        | 语义 Token                                                                                       | 选项 Token            |
+| -------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------- |
+| <TokenExample gdColors={['#5989F3', '#1760D1']} /> | ** 主渐变色 ** <br />应用于数据可视化图形   | ** $ color-global-gradients-primary ** <br /> var(--li-token-color-global-gradients-primary)     | #5989F3 <br />#1760D1 |
+| <TokenExample gdColors={['#00CDFE', '#0A7BC7']} /> | ** 辅助渐变色 ** <br />应用于数据可视化图形 | ** $ color-global-gradients-secondary ** <br /> var(--li-token-color-global-gradients-secondary) | #00CDFE <br />#0A7BC7 |
+| <TokenExample gdColors={['#FF835D', '#E84504']} /> | ** 警示渐变色 ** <br />应用于数据可视化图形 | ** $ color-global-gradients-warning ** <br /> var(--li-token-color-global-gradients-warning)     | #FF835D <br />#E84504 |
+| <TokenExample gdColors={['#FCBE4E', '#DC8C00']} /> | ** 强调渐变色 ** <br />应用于数据可视化图形 | ** $ color-global-gradients-emphasize ** <br /> var(--li-token-color-global-gradients-emphasize) | #FCBE4E <br />#DC8C00 |
+| <TokenExample gdColors={['#49F175', '#0EBD75']} /> | ** 选中渐变色 ** <br />应用于数据可视化图形 | ** $ color-global-gradients-selected ** <br /> var(--li-token-color-global-gradients-selected)   | #49F175 <br />#0EBD75 |
+| <TokenExample gdColors={['#82E0FF', '#FFF8C1']} /> | ** 标题渐变色 ** <br />适用于标题           | ** $ color-global-gradients-title ** <br /> var(--li-token-color-global-gradients-title)         | #82E0FF <br />#FFF8C1 |
+| <TokenExample gdColors={['#FFFFFF', '#00DFFF']} /> | ** 图标渐变色 ** <br />适用于 ICON          | ** $ color-global-gradients-icon ** <br /> var(--li-token-color-global-gradients-icon)           | #FFFFFF <br />#00DFFF |
+| <TokenExample gdColors={['#FFFFFF', '#82E0FF']} /> | ** 内容渐变色 ** <br />适用于重点数据内容   | ** $ color-global-gradients-content ** <br /> var(--li-token-color-global-gradients-content)     | #FFFFFF <br />#82E0FF |
+
+** 数据可视化颜色定义 **
+
+下面定义的调色板仅用于数据可视化。它的设计旨在满足无障碍可访问性要求，并与上述主调色板配合使用。
+
+| 样例                                                   | 描述 | 语义 Token                                                               | 选项 Token                    |
+| ------------------------------------------------------ | ---- | ------------------------------------------------------------------------ | ----------------------------- |
+| <TokenExample bgColor='#7a01c4' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-1 ** <br /> var(--li-token-color-global-data-1)   | ** $ data-1 ** <br /> #7a01c4 |
+| <TokenExample bgColor='#009bcc' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-2 ** <br /> var(--li-token-color-global-data-2)   | ** $ data-2 ** <br /> #009bcc |
+| <TokenExample bgColor='#1bab4b' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-3 ** <br /> var(--li-token-color-global-data-3)   | ** $ data-3 ** <br /> #1bab4b |
+| <TokenExample bgColor='#ff5622' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-4 ** <br /> var(--li-token-color-global-data-4)   | ** $ data-4 ** <br /> #ff5622 |
+| <TokenExample bgColor='#f54c9a' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-5 ** <br /> var(--li-token-color-global-data-5)   | ** $ data-5 ** <br /> #f54c9a |
+| <TokenExample bgColor='#c21565' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-6 ** <br /> var(--li-token-color-global-data-6)   | ** $ data-6 ** <br /> #c21565 |
+| <TokenExample bgColor='#c065f7' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-7 ** <br /> var(--li-token-color-global-data-7)   | ** $ data-7 ** <br />#c065f7  |
+| <TokenExample bgColor='#0069bf' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-8 ** <br /> var(--li-token-color-global-data-8)   | ** $ data-8 ** <br /> #0069bf |
+| <TokenExample bgColor='#137835' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-9 ** <br /> var(--li-token-color-global-data-9)   | ** $ data-9 ** <br />#137835  |
+| <TokenExample bgColor='#b33c18' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-10 ** <br /> var(--li-token-color-global-data-10) | ** $ data-10 ** <br />#b33c18 |
+| <TokenExample bgColor='#0da3A6' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-11 ** <br /> var(--li-token-color-global-data-11) | ** $ data-11 ** <br />#0da3A6 |
+| <TokenExample bgColor='#0b7288' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-12 ** <br /> var(--li-token-color-global-data-12) | ** $ data-12 ** <br />#0b7288 |
+| <TokenExample bgColor='#b38918' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-13 ** <br /> var(--li-token-color-global-data-13) | ** $ data-13 ** <br />#b38918 |
+| <TokenExample bgColor='#806211' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-14 ** <br /> var(--li-token-color-global-data-14) | ** $ data-14 ** <br />#806211 |
+| <TokenExample bgColor='#806211' iconSize="w-32 h-12"/> |  数据可视化颜色，与白色背景协同使用。请注意，此颜色不应用于任何其他用途。  | ** $ color-global-data-15 ** <br /> var(--li-token-color-global-data-15) | ** $ data-15 ** <br />#806211 |
+
+### 大小
+
+** 布局大小定义 **
+
+| 样例                                            | 描述                               | 语义 Token                                                                                   | 选项 Token                             |
+| ----------------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------- |
+| <TokenExample content="3840px" padding="pt-3"/> | ** 布局 ** <br />最大宽度          | ** $ size-global-layout-max-width ** <br /> var(--li-token-size-global-layout-max-width)     | ** $ max-width ** <br />3840px         |
+| <TokenExample content="1080px" padding="pt-3"/> | ** 布局 ** <br />最大高度          | ** $ size-global-layout-max-height ** <br /> var(--li-token-size-global-layout-max-height)   | ** $ max-height ** <br />1080px        |
+| <TokenExample content="118px" padding="pt-3"/>  | ** 页眉 ** <br />Header 高度       | ** $ size-global-header-height ** <br /> var(--li-token-size-global-header-height)           | ** $ header-height ** <br />118px      |
+| <TokenExample content="82px" padding="pt-3"/>   | ** 页脚 ** <br />Footer 高度       | ** $ size-global-footer-height ** <br /> var(--li-token-size-global-footer-height)           | ** $ footer-height ** <br />82px       |
+| <TokenExample content="284px" padding="pt-3"/>  | ** Model ** <br />模块宽度         | ** $ size-global-model-width ** <br /> var(--li-token-size-global-model-width)               | ** $ model-width ** <br />284px        |
+| <TokenExample content="760px" padding="pt-3"/>  | ** Model ** <br />模块高度         | ** $ size-global-model-height ** <br /> var(--li-token-size-global-model-height)             | ** $ model-height ** <br />760px       |
+| <TokenExample content="1956px" padding="pt-3"/> | ** Large Model ** <br />大模块宽度 | ** $ size-global-large-model-width ** <br /> var(--li-token-size-global-large-model-width)   | ** $ large-model-width ** <br />1956px |
+| <TokenExample content="284px" padding="pt-3"/>  | ** Large Model ** <br />大模块高度 | ** $ size-global-large-model-height ** <br /> var(--li-token-size-global-large-model-height) | ** $ large-model-height ** <br />284px |
+
+** 图标大小定义 **
+
+| 样例                                                          | 描述                                                   | 语义 Token                                                                             | 选项 Token                   |
+| ------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------- | ---------------------------- |
+| <TokenExample iconSize="w-2 h-2 mt-5" bgColor='#D8DDE3'/>     | ** xxx-small ** <br />当空间有限的时候，使用 xxx-small | ** $ size-global-icon-xxx-small ** <br /> var(--li-token-size-global-icon-xxx-small)   | ** $ xxx-small ** <br />8px  |
+| <TokenExample iconSize="w-2.5 h-2.5 mt-5" bgColor='#D8DDE3'/> | ** xx-small ** <br />当空间有限的时候，使用 xxx-small  | ** $ size-global-icon-xx-small ** <br /> var(--li-token-size-global-icon-xx-small)     | ** $ xx-small ** <br />10px  |
+| <TokenExample iconSize="w-4 h-4 mt-5" bgColor='#D8DDE3'/>     | ** x-small ** <br />空间有限的时候，使用 x-small       | ** $ size-global-icon-x-small ** <br /> var(--li-token-size-global-icon-x-small)       | ** $ x-small ** <br />16px   |
+| <TokenExample iconSize="w-5 h-5 mt-5" bgColor='#D8DDE3'/>     | ** small ** <br />用于按钮，表单内部，文本内图标       | ** $ size-global-icon-small ** <br /> var(--li-token-size-global-icon-small)           | ** $ small ** <br />20px     |
+| <TokenExample iconSize="w-6 h-6 mt-2" bgColor='#D8DDE3'/>     | ** medium ** <br />中等尺寸 icon 是标准的 icon 尺寸    | ** $ size-global-icon-medium ** <br /> var(--li-token-size-global-icon-medium)         | ** $ medium ** <br />24px    |
+| <TokenExample iconSize="w-8 h-8 mt-1" bgColor='#D8DDE3'/>     | ** large ** <br />用于目录分类、及卡片上的 icon        | ** $ size-global-icon-large ** <br /> var(--li-token-size-global-icon-large)           | ** $ large ** <br />32px     |
+| <TokenExample iconSize="w-9 h-9 mt-1" bgColor='#D8DDE3'/>     | ** x-large ** <br />用于展示产品级别的 icon            | ** $ size-global-icon-x-large ** <br /> var(--li-token-size-global-icon-x-large)       | ** $ x-large ** <br />36px   |
+| <TokenExample iconSize="w-12 h-12 " bgColor='#D8DDE3'/>       | ** xx-large ** <br />用于组件中可视化的元素            | ** $ size-global-licon-xx-large ** <br /> var(--li-token-size-global-licon-xx-large)   | ** $ xx-large ** <br />48px  |
+| <TokenExample iconSize="w-20 h-20 " bgColor='#D8DDE3'/>       | ** xxx-large ** <br />用于组件中可视化的元素           | ** $ size-global-licon-xxx-large ** <br /> var(--li-token-size-global-licon-xxx-large) | ** $ xxx-large ** <br />80px |
+
+** 边框大小定义 **
+
+| 样例                                               | 描述                                                    | 语义 Token                                                                         | 选项 Token                      |
+| -------------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------- |
+| <TokenExample border="border border-slate-400"/>   | ** 细边框 ** <br />用于只包含 icon 的按钮设置统一的边框 | ** $ size-global-border-tiny ** <br /> var(--li-token-size-global-border-tiny)     | ** $ tiny ** <br />1px          |
+| <TokenExample border="border-2 border-slate-400"/> | ** 按钮边框 ** <br />用于通用按钮设置统一的边框         | ** $ size-global-border-button ** <br /> var(--li-token-size-global-border-button) | ** $ border-button ** <br />2px |
+| <TokenExample border="border border-slate-400"/>   | ** 表单边框 ** <br />为表单设置统一的边框宽度           | ** $ size-global-border-form ** <br /> var(--li-token-size-global-border-form)     | ** $ border-form ** <br />1px   |
+
+** 按钮大小定义 **
+
+| 样例                                                                                          | 描述                              | 语义 Token                                                                         | 选项 Token                       |
+| --------------------------------------------------------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------- |
+| <TokenExample border="border-2 border-slate-400" iconSize="w-20 h-8 mt-1" bgColor='#609BD6'/> | ** 按钮高度 ** <br />按钮默认高度 | ** $ size-global-button-height ** <br /> var(--li-token-size-global-button-height) | ** $ height-button ** <br />32px |
+| <TokenExample border="border-2 border-slate-400" iconSize="w-20 h-8 mt-1" bgColor='#0EBD75'/> | ** 按钮宽度 ** <br />按钮默认宽度 | ** $ size-global-button-width ** <br /> var(--li-token-size-global-button-width)   | ** $ width-button ** <br />80px  |
+
+** 步进组件圆圈直径大小定义 **
+
+| 样例                                                         | 描述                                              | 语义 Token                                                                           | 选项 Token                        |
+| ------------------------------------------------------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------ | --------------------------------- |
+| <TokenExample  iconSize="w-8 h-8 mt-1" bgColor='#D8DDE3'/>   | ** 小尺寸 ** <br />小视图中步进组件的圆圈大小     | ** $ size-global-stepper-small ** <br /> var(--li-token-size-global-stepper-small)   | ** $ stepper-small ** <br />30px  |
+| <TokenExample  iconSize="w-10 h-10 mt-1" bgColor='#D8DDE3'/> | ** 中等尺寸 ** <br />普通视图中步进组件的圆圈大小 | ** $ size-global-stepper-medium ** <br /> var(--li-token-size-global-stepper-medium) | ** $ stepper-medium ** <br />40px |
+
+### 间隙和内边距
+
+| 样例                                                                                  | 描述                                        | 语义 Token                                                                             | 选项 Token                        |
+| ------------------------------------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------- |
+| <TokenExample  rounded="rounded-none" iconSize="w-12 h-12 mt-1" bgColor='#D8DDE3'/>   | ** margin-top ** <br />模块的顶部外间距     | ** $ margin-global-model-top ** <br /> var(--li-token-margin-global-model-top)         | ** $ margin-top ** <br />48px     |
+| <TokenExample  rounded="rounded-none" iconSize="w-12 h-12 mt-1" bgColor='#D8DDE3'/>   | ** margin-right ** <br />模块的右侧外间距   | ** $ margin-global-model-right ** <br /> var(--li-token-margin-global-model-right)     | ** $ margin-right ** <br />48px   |
+| <TokenExample  rounded="rounded-none" iconSize="w-14 h-14 mt-1" bgColor='#D8DDE3'/>   | ** margin-bottom ** <br />模块的底部外间距  | ** $ margin-global-model-bottom ** <br /> var(--li-token-margin-global-model-bottom)   | ** $ margin-bottom ** <br />56px  |
+| <TokenExample  rounded="rounded-none" iconSize="w-16 h-16 mt-1" bgColor='#D8DDE3'/>   | ** margin-left ** <br />模块的左侧外间距    | ** $ margin-global-model-left ** <br /> var(--li-token-margin-global-model-left)       | ** $ margin-left ** <br />64px    |
+| <TokenExample  rounded="rounded-none" iconSize="w-4 h-4 mt-1" bgColor='#D8DDE3'/>     | ** padding-top ** <br />模块的顶部内间距    | ** $ padding-global-model-top ** <br /> var(--li-token-padding-global-model-top)       | ** $ padding-top ** <br />16px    |
+| <TokenExample  rounded="rounded-none" iconSize="w-7 h-7 mt-1" bgColor='#D8DDE3'/>     | ** padding-right ** <br />模块的右侧内间距  | ** $ padding-global-model-right ** <br /> var(--li-token-padding-global-model-right)   | ** $ padding-right ** <br />28px  |
+| <TokenExample  rounded="rounded-none" iconSize="w-4 h-4 mt-1" bgColor='#D8DDE3'/>     | ** padding-bottom ** <br />模块的底部内间距 | ** $ padding-global-model-bottom ** <br /> var(--li-token-padding-global-model-bottom) | ** $ padding-bottom ** <br />16px |
+| <TokenExample  rounded="rounded-none" iconSize="w-7 h-7 mt-1" bgColor='#D8DDE3'/>     | ** padding-left ** <br />模块的左侧内间距   | ** $ padding-global-model-left ** <br /> var(--li-token-padding-global-model-left)     | ** $ padding-left ** <br />28px   |
+| <TokenExample  rounded="rounded-none" iconSize="w-3.5 h-3.5 mt-3" bgColor='#D8DDE3'/> | ** icon-text ** <br />模块的图标与文本间距  | ** $ space-global-icon-text ** <br /> var(--li-token-space-global-icon-text)           | ** $ icon-text ** <br />14px      |
+
+### 边框圆角、阴影
+
+** 边框圆角 **
+
+| 样例                                                                                                 | 描述                                                | 语义 Token                                                                               | 选项 Token                |
+| ---------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------- |
+| <TokenExample border="border-2 border-slate-400" rounded="rounded-none" iconSize="w-24 h-12 mt-1" /> | ** 尖锐角 ** <br />设定为尖锐角                     | ** $ border-global-radius-sharp ** <br /> var(--li-token-border-global-radius-sharp)     | ** $ sharp ** <br />0px   |
+| <TokenExample border="border-2 border-slate-400" rounded="rounded-full" iconSize="w-24 h-12 mt-1" /> | ** 按钮圆角 ** <br />按钮，标签等类似元素的默认圆角 | ** $ border-global-radius-pill ** <br /> var(--li-token-border-global-radius-pill)       | ** $ pill ** <br />9999px |
+| <TokenExample border="border-2 border-slate-400" rounded="rounded" iconSize="w-24 h-12 mt-1" />      | ** 容器默认 ** <br />表单，容器元素的默认圆角       | ** $ border-global-radius-default ** <br /> var(--li-token-border-global-radius-default) | ** $ default ** <br />4px |
+| <TokenExample border="border-2 border-slate-400" rounded="rounded-full" iconSize="w-12 h-12 mt-1" /> | ** 圆 ** <br />作为 icon 的背景圆                   | ** $ border-global-radius-circle ** <br /> var(--li-token-border-global-radius-circle)   | ** $ circle ** <br />50%  |
+
+** 阴影 **
+
+| 样例                                                                                                                                         | 描述                                                 | 语义 Token                                                                               | 选项 Token                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| <TokenExample shadow= "0 2px 10px 0 rgba(0, 41, 77, 0.07)" border="border-2 border-slate-400" rounded="rounded" iconSize="w-24 h-12 mt-1" /> | ** Tooltip ** <br />弹出框的阴影                     | ** $ border-global-shadow-tooltip ** <br /> var(--li-token-border-global-shadow-tooltip) | ** $ shadow-tooltip ** <br />0 2px 10px 0 rgba(0, 41, 77, 0.07) |
+| <TokenExample shadow= "0 2px 10px 0 rgba(0, 41, 77, 0.1)" border="border-2 border-slate-400" rounded="rounded" iconSize="w-24 h-12 mt-1" />  | ** Hover ** <br />可点击组件的 hover 时/激活时的阴影 | ** $ border-global-shadow-hover ** <br /> var(--li-token-border-global-shadow-hover)     | ** $ shadow-hover ** <br />0 2px 10px 0 rgba(0, 41, 77, 0.1)    |
+| <TokenExample shadow= "0 2px 20px 0 rgba(0, 0, 0, 0.2)" border="border-2 border-slate-400" rounded="rounded" iconSize="w-24 h-12 mt-1" />    | ** Model ** <br />模态框阴影                         | ** $ border-global-shadow-model ** <br /> var(--li-token-border-global-shadow-model)     | ** $ shadow-model ** <br />0 2px 20px 0 rgba(0, 0, 0, 0.2)      |
+| <TokenExample shadow= "0 2px 6px 0 rgba(0, 41, 77, 0.07)" border="border-2 border-slate-400" rounded="rounded" iconSize="w-24 h-12 mt-1" />  | ** 默认 ** <br />默认阴影，用于卡片                  | ** $ border-global-shadow-default ** <br /> var(--li-token-border-global-shadow-default) | ** $ shadow-default ** <br />0 2px 6px 0 rgba(0, 41, 77, 0.07)  |
+
+### 透明度
+
+| 样例                                                                                | 描述                                         | 语义 Token                                                         | 选项 Token                    |
+| ----------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------ | ----------------------------- |
+| <TokenExample chess={true} opacity="0.30" rounded="rounded" iconSize="w-32 h-12" /> | ** 透明度 30 ** <br />为元素设定 30%的透明度 | ** $ opacity-global-30 ** <br /> var(--li-token-opacity-global-30) | ** $ opacity-30 ** <br />0.3  |
+| <TokenExample chess={true} opacity="0.50" rounded="rounded" iconSize="w-32 h-12" /> | ** 透明度 50 ** <br />为元素设定 50%的透明度 | ** $ opacity-global-50 ** <br /> var(--li-token-opacity-global-50) | ** $ opacity-50 ** <br />0.5  |
+| <TokenExample chess={true} opacity="0.75" rounded="rounded" iconSize="w-32 h-12" /> | ** 透明度 75 ** <br />为元素设定 75%的透明度 | ** $ opacity-global-75 ** <br /> var(--li-token-opacity-global-75) | ** $ opacity-75 ** <br />0.75 |
+| <TokenExample chess={true} opacity="0.85" rounded="rounded" iconSize="w-32 h-12" /> | ** 透明度 85 ** <br />为元素设定 80%的透明度 | ** $ opacity-global-85 ** <br /> var(--li-token-opacity-global-85) | ** $ opacity-80 ** <br />0.85 |
+
+### 字体类型
+| 样例                                                              | 描述                      | 语义 Token                                                                 | 选项 Token                               |
+| ----------------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------- | ---------------------------------------- |
+| <TokenExample content="‘微软雅黑'" iconSize="w-32 h-12"/>         | ** 默认中文字体 ** <br /> | ** $ font-global-family-cn ** <br /> var(--li-token-font-global-family-cn) | ** $ font-cn ** <br />‘微软雅黑'         |
+| <TokenExample content="‘Arial,sans-serif’" iconSize="w-32 h-12"/> | ** 默认英文字体 ** <br /> | ** $ font-global-family-en ** <br /> var(--li-token-font-global-family-en) | ** $ font-en ** <br />‘Arial,sans-serif’ |
+
+
+### 字体大小
+| 样例                                                                           | 描述                                          | 语义 Token                                                                         | 选项 Token                  |
+| ------------------------------------------------------------------------------ | --------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------- |
+| <TokenExample content="‘微软雅黑'" fontsize="text-5xl" iconSize="w-56 h-12"/>  | ** 主标题 ** <br />页面主标题/文章标题        | ** $ font-global-size-header-1 ** <br /> var(--li-token-font-global-size-header-1) | ** $ header-1 ** <br />48px |
+| <TokenExample content="‘微软雅黑'" fontsize="text-3xl" iconSize="w-36 h-12"/>  | ** 导航标题 ** <br />一级导航标题             | ** $ font-global-size-header-2 ** <br /> var(--li-token-font-global-size-header-2) | ** $ header-2 ** <br />30px |
+| <TokenExample content="‘微软雅黑'" fontsize="text-2xl" iconSize="w-36 h-12"/>  | ** 二级导航标题 ** <br />二级导航标题         | ** $ font-global-size-header-3 ** <br /> var(--li-token-font-global-size-header-3) | ** $ header-3 ** <br />24px |
+| <TokenExample content="‘微软雅黑'" fontsize="text-lg" iconSize="w-36 h-12"/>   | ** 列表标题 ** <br />模块标题/列表标题        | ** $ font-global-size-title ** <br /> var(--li-token-font-global-size-title)       | ** $ title ** <br />18px    |
+| <TokenExample content="‘微软雅黑'" fontsize="text-base" iconSize="w-36 h-12"/> | ** 正文 ** <br />表格内文字/按钮文字/文章正文 | ** $ font-global-size-content ** <br /> var(--li-token-font-global-size-content)   | ** $ content ** <br />16px  |
+| <TokenExample content="‘微软雅黑'" fontsize="text-sm" iconSize="w-36 h-12"/>   | ** 图表文字 ** <br />图表中显示的文字         | ** $ font-global-size-special ** <br /> var(--li-token-font-global-size-special)   | ** $ special ** <br />14px  |
+
+
+### 字体粗细
+| 样例                                                                                   | 描述                                                | 语义 Token                                                                                 | 选项 Token                        |
+| -------------------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------ | --------------------------------- |
+| <TokenExample  content="‘微软雅黑'" fontweight="font-normal" iconSize="w-32 h-12"/>    | ** 表单文本 ** <br />用于文本及表单输入框的文本粗细 | ** $ font-global-weight-normal ** <br /> var(--li-token-font-global-weight-normal)         | ** $ font-normal ** <br />400     |
+| <TokenExample  content="‘微软雅黑'" fontweight="font-semibold" iconSize="w-32 h-12"/>  | ** 按钮文本 ** <br />用于按钮或者子标题的文本粗细   | ** $ font-global-weight-semi-bold ** <br /> var(--li-token-font-global-weight-semi-bold)   | ** $ font-semi-blod ** <br />600  |
+| <TokenExample  content="‘微软雅黑'" fontweight="font-extrabold" iconSize="w-32 h-12"/> | ** 大标题文本 ** <br />用于大标题的文本粗细         | ** $ font-global-weight-extra-bold ** <br /> var(--li-token-font-global-weight-extra-bold) | ** $ font-extra-blod ** <br />800 |
+
+
+### 文本间距
+| 样例                                                                                       | 描述                                | 语义 Token                                                                             | 选项 Token                             |
+| ------------------------------------------------------------------------------------------ | ----------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------- |
+| <TokenExample  content="‘微软雅黑'" letterspacing="tracking-tight	" iconSize="w-32 h-12"/> | ** 标题间距 ** <br />标题的文字间距 | ** $ font-global-spacing-heading ** <br /> var(--li-token-font-global-spacing-heading) | ** $ spacing-heading ** <br />-0.025em |
+| <TokenExample  content="‘微软雅黑'" letterspacing="tracking-normal" iconSize="w-32 h-12"/> | ** 正文间距 ** <br />正文的文字间距 | ** $ font-global-spacing-content ** <br /> var(--li-token-font-global-spacing-content) | ** $ spacing-content ** <br />0em      |
+| <TokenExample  content="‘微软雅黑'" letterspacing="tracking-wider" iconSize="w-32 h-12"/>  | ** 默认间距 ** <br />默认的文字间距 | ** $ font-global-spacing-default ** <br /> var(--li-token-font-global-spacing-default) | ** $ spacing-default ** <br />0.05em   |
+
+
+### 字体颜色
+| 样例                                                                                  | 描述                                                    | 语义 Token                                                                                             | 选项 Token                              |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------- |
+| <TokenExample  content="‘微软雅黑'" fontcolor="text-black	" iconSize="w-32 h-12"/>    | ** 标题字颜色 ** <br />标题字颜色                       | ** $ font-global-color-title-light ** <br /> var(--li-token-font-global-color-title-light)             | ** $ title-light ** <br />#000000       |
+| <TokenExample  content="‘微软雅黑'" fontcolor="text-gray-800" iconSize="w-32 h-12"/>  | ** 正文字颜色（light模式） ** <br />正文字颜色          | ** $ font-global-color-content-light ** <br /> var(--li-token-font-color-content-light)                | ** $ content-light ** <br />#1F2937     |
+| <TokenExample  content="‘微软雅黑'" fontcolor="text-gray-500	" iconSize="w-32 h-12"/> | ** 辅助说明文字 ** <br />辅助说明文字颜色               | ** $ font-global-color-discription ** <br /> var(--li-token-font-global-color-discription)             | ** $ discription-text ** <br />         |
+| <TokenExample  content="‘微软雅黑'" fontcolor="text-gray-300	" iconSize="w-32 h-12"/> | ** 极弱文字 ** <br />极弱文字颜色，如输入框默认文字颜色 | ** $ font-global-color-weak ** <br /> var(--li-token-font-global-color-weak)                           | ** $ weak-text ** <br />#D1D5DB         |
+| <TokenExample  content="‘微软雅黑'" fontcolor="text-white	" iconSize="w-32 h-12" />   | ** 彩色背景文字 ** <br />模块、弹窗等彩色背景上发白文字 | ** $ font-global-color-popup ** <br /> var(--li-token-font-global-color-popup)                         | ** $ popup-text ** <br />#FFFFFF        |
+| <TokenExample  content="‘微软雅黑'" fontcolor="text-white	" iconSize="w-32 h-12"/>    | ** 标题字颜色（Dark模式） ** <br />标题字颜色           | ** $ font-global-color-title-dark ** <br /> var(--li-token-font-global-color-title-dark)               | ** $ title-dark ** <br />#FFFFFF        |
+| <TokenExample  content="‘微软雅黑'" fontcolor="text-stone-400" iconSize="w-32 h-12"/> | ** 正文字颜色（Dark模式） ** <br />正文字颜色           | ** $ font-global-color-content-dark ** <br /> var(--li-token-font-global-color-content-dark)           | ** $ content-dark ** <br />#CFFAFE      |
+| <TokenExample  content="‘微软雅黑'" fontcolor="text-rose-500" iconSize="w-32 h-12"/>  | ** 强调文字颜色 ** <br />需要强调的文字颜色             | ** $ font-global-color-content-emphasize ** <br /> var(--li-token-font-global-color-content-emphasize) | ** $ content-emphasize ** <br />#F43F5E |
+
+
+### z-index
+| 样例                                                     | 描述                                                                                | 语义 Token                                                                             | 选项 Token                             |
+| -------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------- |
+| <TokenExample  content="-999999"  iconSize="w-32 h-12"/> | ** 最深 ** <br />最深的z-index，用于把元素放置在最深处                              | ** $ z-index-global-deep ** <br /> var(--li-token-z-index-global-deep)                 | ** $ z-index-deep ** <br />-999999     |
+| <TokenExample  content="1"  iconSize="w-32 h-12"/>       | ** 默认 ** <br />组件中元素或子组件的默认z-index                                    | ** $ z-index-global-default ** <br /> var(--li-token-z-index-global-default)           | ** $ z-index-default ** <br />1        |
+| <TokenExample  content="100"  iconSize="w-32 h-12"/>     | ** 被遮挡 ** <br />被遮挡住的界面元素的z-index                                      | ** $ z-index-global-masked ** <br /> var(--li-token-z-index-global-masked)             | ** $ z-index-masked ** <br />100       |
+| <TokenExample  content="200"  iconSize="w-32 h-12"/>     | ** 遮挡 ** <br />遮挡界面元素的z-index                                              | ** $ z-index-global-mask ** <br /> var(--li-token-z-index-global-mask)                 | ** $ z-index-mask ** <br />200         |
+| <TokenExample  content="250"  iconSize="w-32 h-12"/>     | ** 遮挡上层按钮 ** <br />在遮挡界面元素上面的按钮的z-index                          | ** $ z-index-global-mask-button ** <br /> var(--li-token-z-index-global-mask-button)   | ** $ mask-button ** <br />250          |
+| <TokenExample  content="300"  iconSize="w-32 h-12"/>     | ** 置顶 ** <br /> 置顶界面元素的z-index                                             | ** $ z-index-global-sticky ** <br /> var(--li-token-z-index-global-sticky)             | ** $ z-index-sticky ** <br />300       |
+| <TokenExample  content="400"  iconSize="w-32 h-12"/>     | ** 置顶 ** <br />Header的z-index                                                    | ** $ z-index-global-header ** <br /> var(--li-token-z-index-global-header)             | ** $ z-index-header ** <br />400       |
+| <TokenExample  content="500"  iconSize="w-32 h-12"/>     | ** 置顶 ** <br />Toast信息的z-index                                                 | ** $ z-index-global-toast ** <br /> var(--li-token-z-index-global-toast)               | ** $ z-index-toast ** <br />500        |
+| <TokenExample  content="600"  iconSize="w-32 h-12"/>     | ** 置顶 ** <br />下拉框的z-index,确保下拉框在toast元素和sticky元素上方              | ** $ z-index-global-dropdown ** <br /> var(--li-token-z-index-global-dropdown)         | ** $ z-index-dropdown ** <br />600     |
+| <TokenExample  content="700"  iconSize="w-32 h-12"/>     | ** 置顶 ** <br />模态框和弹出框的默认z-index                                        | ** $ z-index-global-overlay ** <br /> var(--li-token-z-index-global-overlay)           | ** $ z-index-overlay ** <br />700      |
+| <TokenExample  content="800"  iconSize="w-32 h-12"/>     | ** 置顶 ** <br /> spinner元素的z-index，固定在覆盖类元素的上面                      | ** $ z-index-global-mask-spinner ** <br /> var(--li-token-z-index-global-mask-spinner) | ** $ z-index-mask-spinner ** <br />800 |
+| <TokenExample  content="900"  iconSize="w-32 h-12"/>     | ** 置顶 ** <br />模态窗的z-index，确保模态窗在覆盖类元素上面同时不会遮挡主popup弹窗 | ** $ z-index-global-modal ** <br /> var(--li-token-z-index-global-modal)               | ** $ z-index-modal ** <br />900        |
+| <TokenExample  content="950"  iconSize="w-32 h-12"/>     | ** 置顶 ** <br />popup弹窗元素的z-index，位于所有元素最上面                         | ** $ z-index-global-popup ** <br /> var(--li-token-z-index-global-popup)               | ** $ z-index-popup ** <br />950        |
+
+### 转换
+
+** 动画场景的转换速度 **
+
+| 样例                                                                                | 描述                                                               | 语义 Token                                                                         | 选项 Token                       |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | -------------------------------- |
+| <TokenExample  content="300ms ease" fontweight="font-normal" iconSize="w-32 h-12"/> | ** 快速 ** <br />用于快速转换，常用语按钮、链接、表单输入hover效果 | ** $ transition-global-quickly ** <br /> var(--li-token-transition-global-quickly) | ** $ quickly ** <br />300ms ease |
+| <TokenExample  content="600ms ease" fontweight="font-normal" iconSize="w-32 h-12"/> | ** 慢速 ** <br />用于比较缓慢速度的转换                            | ** $ transition-global-slowly ** <br /> var(--li-token-transition-global-slowly)   | ** $ slowly ** <br />600ms ease  |
+
+
+### 媒体查询
+
+** 自适应屏幕大小 **
+
+| 样例                                                                                              | 描述                                                                                            | 语义 Token                                                                               | 选项 Token                                            |
+| ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| <TokenExample  content="'(max-width: 22.5em)'" fontweight="font-normal" iconSize="w-32 h-12"/>    | ** xx-small尺寸 ** <br />xx-small媒体查询用于针对屏幕尺寸在0-360px之间的最小设备                | ** $ media-query-global-xx-small ** <br /> var(--li-token-media-query-global-xx-small)   | ** $ media-xx-small ** <br />'(max-width: 22.5em)'    |
+| <TokenExample  content="'(max-width: 35.9375em)'" fontweight="font-normal" iconSize="w-32 h-12"/> | ** x-small尺寸 ** <br />x-small媒体查询用于针对0-575px之间的较小设备                            | ** $ media-query-global-x-small ** <br /> var(--li-token-media-query-global-x-small)     | ** $ media-x-small ** <br />'(max-width: 35.9375em)'  |
+| <TokenExample  content="'(min-width: 36em)'" fontweight="font-normal" iconSize="w-32 h-12"/>      | ** small尺寸 ** <br />用于定位576px及以上的设备。面向移动应用时，这是视口宽度增长时的第一个断点 | ** $ media-query-global-small ** <br /> var(--li-token-media-query-global-small)         | ** $ media-small ** <br />'(min-width: 36em)'         |
+| <TokenExample  content="'(min-width: 48em)'" fontweight="font-normal" iconSize="w-32 h-12"/>      | ** medium中等尺寸 ** <br />用于定位768px及以上的平板电脑                                        | ** $ media-query-global-medium ** <br /> var(--li-token-media-query-global-medium)       | ** $ media-medium ** <br />'(min-width: 48em)'        |
+| <TokenExample  content="'(min-width: 62em)'" fontweight="font-normal" iconSize="w-32 h-12"/>      | ** large尺寸 ** <br />用于定位992px及以上的平板电脑                                             | ** $ media-query-global-large ** <br /> var(--li-token-media-query-global-large)         | ** $ media-large ** <br />'(min-width: 62em)'         |
+| <TokenExample  content="'(min-width: 64.0625em)'" fontweight="font-normal" iconSize="w-32 h-12"/> | ** x-large尺寸 ** <br />用于定位1025px及以上的桌面设备                                          | ** $ media-query-global-x-large ** <br /> var(--li-token-media-query-global-x-large)     | ** $ media-x-large ** <br />'(min-width: 64.0625em)'  |
+| <TokenExample  content="'(min-width: 76.25em)'" fontweight="font-normal" iconSize="w-32 h-12"/>   | ** xx-large尺寸 ** <br />用于针对1220px及以上的大型桌面设备                                     | ** $ media-query-global-xx-large ** <br /> var(--li-token-media-query-global-xx-large)   | ** $ media-xx-large ** <br />'(min-width: 76.25em)'   |
+| <TokenExample  content="'(min-width: 106.25em)''" fontweight="font-normal" iconSize="w-32 h-12"/> | ** xxx-large尺寸 ** <br />用于针对1700px及以上的超大桌面设备                                    | ** $ media-query-global-xxx-large ** <br /> var(--li-token-media-query-global-xxx-large) | ** $ media-xxx-large ** <br />'(min-width: 106.25em)' |
+| <TokenExample  content="'(min-width: 120em)''" fontweight="font-normal" iconSize="w-32 h-12"/>    | ** 16-9尺寸 ** <br />用于针对1920px及以上的超大屏幕设备                                         | ** $ media-query-global-16-9 ** <br /> var(--li-token-media-query-global-16-9)           | ** $ media-16-9 ** <br />'(min-width: 120em)'         |
+| <TokenExample  content="'(min-width: 240em)''" fontweight="font-normal" iconSize="w-32 h-12"/>    | ** 32-9尺寸 ** <br />用于针对3840px及以上的超大屏幕设备                                         | ** $ media-query-global-32-9 ** <br /> var(--li-token-media-query-global-32-9)           | ** $ media-32-9 ** <br />'(min-width: 240em)'         |

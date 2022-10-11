@@ -1,0 +1,115 @@
+---
+title: 命名原则
+description: 使用系统中定义的名称来进行交流，形成一个通俗易懂的语境
+---
+
+# 命名原则
+
+### 概述
+
+LDS开发体系使用系统中定义的名称来进行交流，形成一个通俗易懂的语境。
+这样在企业中的各种角色的人员比如：项目经理、产品经理、设计师、开发人员、测试人员、部署人员、售后支持等进行沟通交流的时候，
+会消除歧义。大家都会充分理解LDS系统中Tokens，组件，CSS工具，文件名，仓库名所包含的各种含义。
+因此，命名就必须简洁、有含义并易于朗读。LDS开发体系中命名遵从以下几个规则：
+
+- **模块化**
+
+LDS开发体系自身的组成就是模块化构成的，这同样适用于命名。体系中的各个部分都可以清晰的区分
+
+- **易读性**
+
+开发人员和设计人员可以根据命名，清晰理解命名所代表的含义
+
+- **避免冲突**
+
+由于LDS开发体系适用于多平台，多业务，所以避免命名之间的冲突是非常关键的
+
+### 大小
+
+对于大小的命名，我们借鉴了T恤尺寸的命名。这种日常生活中大家都非常熟知的方式，可以让技术人员和非技术人员都可以轻松理解其含义：
+
+- **保持一致并易于理解**：在命名组件，Tokens及符号时，使用有明确意义的单词，比如：small，medium, large, x-large。避免使用缩略，比如：s, m, l, xl
+- **默认大小**：“medium”作为默认大小
+- **大于默认大小**：当需要使用的尺寸大于默认大小时，使用large, x-large, xx-large等等。如果，为组件传入属性，组件的属性名为：size
+- **小于默认大小**：当需要使用的尺寸小于默认大小时，使用small, x-small, xx-small等等。如果，为组件传入属性，组件的属性名为：size
+- **举例**：size-large，size-medium，size-small，size-x-small，size-xx-small
+
+### 颜色
+
+对于颜色的命名，遵从以下规则：
+
+- **可以表达一定含义**：不要过于抽象
+- **不仅仅用颜色来命名**：由于LDS系统支撑多业务，多平台及主题，所以我们不能只用“红”或“蓝”来命名颜色。而应该基于该颜色代表的功能来命名，比如：color-primary，color-secondary，color-warning等
+- **递进的深色命名**：当定义阴影的时候，使用：color-\{name\}-dark， color-\{name\}-darker, color-\{name\}-darkest
+- **递进的浅色命名**：当定义浅色的时候，使用：color-\{name\}-light， color-\{name\}-lighter, color-\{name\}-lightest
+
+### 图标
+
+当命名图标的时候，我们采用下面的规则来定义和分类：
+
+- **图标名称前缀**：图标的名称总是由分类名称加上连字符“-”，作为前缀。比如：action-\{name\} 或 messaging-\{name\}。
+如果有子分类：action-arrow-\{name\}
+- **图标的分类**：LDS中的图标包含以下各种分类：action- ， categroy- ，claim- ，damage- ，expression- ，
+file- ，form- ，messaging- ，navigation- ， profile- 。
+
+### Design Tokens
+
+当需要增加一个全局的Design Token时，请与设计团队讨论并获得认可。LDS需要确保所有的全局tokens可以最大程度的复用。在对Tokens进行分类时，LDS遵从以下原则：
+
+- **NPM包引用**：Design Tokens通过NPM包的形式发布，在安装完@itsi/tokens 包后，开发人员或设计人员使用时，
+可以根据目录结构按需引入所需要的Tokens包。
+- **目录的分类**：在发布的npm包中，包含的目录结构组成为： 一级目录表示平台(比如：大屏，web, ios, 安卓) — 二级目录表示业务类型(比如：city代表城市生命线，emergency代表应急业务，fire代表消防业务)。
+二级目录中的文件为全局Design Tokens文件
+- **Tokens命名规则**：采用CTI规则，前缀为命名空间：li-token，然后是类别：category， 类型：type，
+条目：item， 子条目：sub-item，状态： state。后缀为主题：light 或者dark 等。（除命名空间外，其他项目不是必选）
+![Token命名规则](/img/tokenname.svg)
+
+### 组件
+
+组件的命名需要简洁、有明确含义并易于朗读，需遵循一下原则：
+
+- **使用名词**：组件通常都代表某件事物，因此在对组件命名时尽量采用名词。比如：输入框，导航条，菜单，列表等
+- **组件名表述的含义清晰**：组件的命名避免抽象
+- **简短**：组件的命名尽量简短，避免超过3个单词
+- **易于朗读**：组件名称可能会作为各个团队的讨论及交流时候经常用到的名词，因此组件命名尽量易于朗读
+
+### 属性
+
+当命名组件属性名称时，需要留意，避免与保留字发生冲突。
+
+HTML元素保留字：
+
+
+> 'title','lang','translate','dir','tabIndex','accessKey',
+'draggable','contentEditable','isContentEditable',offsetParent',
+'offsetTop','offsetLeft','offsetWidth','offsetHeight','style',
+'innerText','outerText','oncopy','oncut','onpaste','onabort','onblur',
+'oncancel','oncanplay','oncanplaythrough','onchange','onclick','onclose',
+'oncontextmenu','oncuechange','ondblclick','ondrag','ondragend','ondragenter',
+'ondragleave','ondragover','ondragstart','ondrop','ondurationchange','onemptied',
+'onended','onerror','onfocus','onfocusin','onfocusout','oninput','oninvalid','onkeydown',
+'onkeypress','onkeyup','onload','onloadeddata','onloadedmetadata','onloadstart','onmousedown',
+'onmouseenter','onmouseleave','onmousemove','onmouseout','onmouseover','onmouseup','onmousewheel',
+'onpause','onplay','onplaying','onprogress','onratechange','onreset','onresize','onscroll','onseeked',
+'onseeking','onselect','onstalled','onsubmit','onsuspend','ontimeupdate','ontoggle','onvolumechange',
+'onwaiting','onwheel','onauxclick','ongotpointercapture','onlostpointercapture','onpointerdown',
+'onpointermove','onpointerup','onpointercancel','onpointerover','onpointerout','onpointerenter',
+'onpointerleave','onselectstart','onselectionchange','nonce','click','focus','blur'
+
+注：LDS带有命名规范检查机制，遇到组件属性命名与保留字冲突时，IDE中会有提示。
+
+### 文件名
+
+LDS中程序文件的命名遵从以下原则：
+
+- 目录名：每一个组件，都有自己单独的目录，目录名为组件名的小写形式。多个单词组成的名称中间通过连字符连接，比如：card-header
+- 文件名：文件名为组件名称的小写形式，多个单词组成的中间通过连字符连接。组件文件名的后缀为：.tsx，样式文件名后缀为：.scss，
+单元测试文件名后缀：.spec.tsx，端到端测试文件后缀：.e2e.ts，接口文件名为：组件名-interface.ts
+
+### GitHub仓库
+
+Github仓库命名遵从以下原则：
+
+- 以Living-为前缀，例如：Living-design-tokens
+- 首字母大写外，剩下都是小写
+- 使用连字符区分仓库名中的单词

@@ -1,0 +1,242 @@
+---
+title: CSS 框架
+description: 针对样式的一系列快捷工具类，可以协助开发人员快速对开发的组件进行样式处理
+---
+
+# CSS 框架
+
+LDS 开发体系中的 CSS 框架**@itsi/css**提供了一系列快捷工具类，可以协助开发人员快速对开发的组件进行样式处理。
+@itsi/css 库在实现过程中，通过利用@itsi/tokens 库作为原子支撑，可以让组件的样式，风格，动画高效切换，实现了换肤功能的零代码实现。
+
+### 安装
+
+NPM 安装：在应用开发项目的根目录，运行如下命令：
+
+```javascript
+$ npm install -S @itsi/css
+```
+
+Yarn 安装：在应用开发项目的根目录，运行如下命令：
+
+```javascript
+$ yarn add @itsi/css
+```
+
+# 使用说明
+
+当通过 NPM 安装完 CSS 框架后，在&lthead&gt 标签中，其他 css 样式前增加如下&ltlink&gt 标签
+
+```javascript
+<link rel="stylesheet" href="[path-to-directory]/living.min.css" />
+```
+
+注：当 LDS 产品化部署后，也可以直接引用 CDN 上的 CSS 框架
+
+### 导入 CSS
+
+在 SCSS 中导入：
+
+```javascript
+// Import CSS framework
+@import "../../node_modules/@itsi/css/lib/living.min"
+```
+
+如果你使用了打包工具：Webpack，可以简化为：
+
+```javascript
+// Import CSS framework
+@import "~@itsi/css/lib/living.min"
+```
+
+### 颜色工具
+
+在 Design Tokens 文档中描述的每个 Token 都会被转译为一个颜色的 CSS 工具类。例如：如果要修改文本的颜色或者背景色，可以这样使用：
+
+```javascript
+// 修改文本颜色
+<p class="li-color-primary"> 文本 </p>
+<p class="li-color-secondary"> 文本 </p>
+<p class="li-color-primary-city"> 文本 </p>
+<p class="li-color-secondary-city"> 文本 </p>
+```
+
+```javascript
+// 修改背景颜色
+<div class="li-background-primary"></div>
+<div class="li-background-secondary"></div>
+<div class="li-background-primary-city"></div>
+<div class="li-background-secondary-city"></div>
+```
+
+### 间隔工具
+
+LDS CSS 框架中包含了很多快捷使用的内边距和外边距的工具类，可用于修改元素的外观和间隔。工具类的命名格式：li- \{属性\} \{边\} - \{尺寸\}
+
+其中，属性是：
+
+- m - 表示外边距
+- p - 表示内边距
+
+其中， 边是：
+
+- t - 用于表示顶边包括 margin-top 或 padding-top
+- b - 用于表示底边包括 margin-botton 或 padding-bottom
+- l - 用于表示左边包括 margin-left 或 padding-left
+- r - 用于表示右边包括 margin-right 或 padding-right
+- x - 用于表示 X 轴向的边距包括*-left 和 *-right
+- y - 用于表示 Y 轴向的边距包括*-top 和 *-bottom
+- 空 - 表示设定所有边的 margin 或 padding
+
+其中， 尺寸是：
+
+- xx-small
+- x-small
+- small
+- medium
+- large
+- x-large
+- xx-large
+- xxx-large
+- xxxx-large
+
+示例：
+
+```javascript
+<div class="li-pl-x-small">
+  带有x-small尺寸左侧内边距的div元素
+</div>
+<div class="li-mx-medium">
+  在X轴向带有medium尺寸外边距的div元素
+</div>
+```
+
+### 排版工具
+
+LDS CSS 框架提供了针对排版的工具类，例如：字体大小，字体类型，字符间距，行高等。示例如下：
+
+```javascript
+// 字体类型
+<p class="li-font-family-heading">family-heading</p>
+<p class="li-font-family-heading-city">family-heading-city</p>
+<p class="li-font-family-text">family-text</p>
+<p class="li-font-family-text-city">family-text-city</p>
+
+// 字符间距
+<p class="li-letter-spacing-heading">letter-spacing-heading</p>
+
+// 字体大小
+<p class="li-font-size-x-small">font-size-x-small</p>
+<p class="li-font-size-small">font-size-small</p>
+<p class="li-font-size-medium">font-size-medium</p>
+<p class="li-font-size-large">font-size-large</p>
+
+// 字体行高
+<p class="li-line-height-x-small">line-height-x-small</p>
+<p class="li-line-height-small">line-height-small</p>
+<p class="li-line-height-medium">line-height-medium</p>
+
+// 文字对齐
+<p class="li-text-left">line-text-left</p>
+```
+
+### 渐变工具
+
+LDS CSS 框架的渐变工具类，可以根据不同的业务类型创建统一的渐变背景色。比如：消防业务类型，应急业务类型，城市安全业务类型
+
+```javascript
+<html class="li-bg-gradient"></html>
+<html class="li-bg-gradient li-theme-city"></html>
+```
+
+### 列表工具
+
+LDS CSS 框架包含基础的有序列表和无序列表的工具类，例如：
+
+```javascript
+<ul class="li-list"></ul>
+<ol class="li-list"></ol>
+```
+
+### 固定页脚工具
+
+LDS CSS 框架包含的固定页脚工具可以保证 Footer 组件总是固定在页面的底部。无论 Footer 组件前面的元素有多少
+
+```javascript
+<html class="li-sticky-footer"></html>
+```
+
+"li-sticky-footer"工具类只有在&ltli-layout&gt 组件作为&ltbody&gt 元素的一级子元素的时候，才可以发挥作用。
+但是，某些情况下，layout 组件可能不是&ltbody&gt 元素的一级子元素，例如：
+
+```javascript
+<html class="li-sticky-footer">
+  <head>
+    <title>Layout不是body一级子元素演示</title>
+  </head>
+  <body>
+    <div class="app">
+      <li-header></li-header>
+      <li-layout></li-layout>
+      <li-footer></li-footer>
+    </div>
+  </body>
+</html>
+```
+
+在上面代码的情况下，&ltli-layout&gt 组件不是&ltbody&gt 元素的一级子元素，因此"li-sticky-footer"工具类失效。
+这种情况下，我们新增了一个 li-sticky-body 工具类，这个工具类会让 LDS 的 CSS 框架把应用该类的容器元素当做 body 对待：
+
+```javascript
+<html class="li-sticky-footer">
+  <head>
+    <title>Layout不是body一级子元素演示</title>
+  </head>
+  <body>
+    <div class="app li-sticky-body">
+      <li-header></li-header>
+      <li-layout></li-layout>
+      <li-footer></li-footer>
+    </div>
+  </body>
+</html>
+```
+
+LDS 的 CSS 框架还提供了一个"li-sticky-content"工具类，
+如果 layout 组件被包裹在更深层级的元素中，可以用这个工具类，让"li-sticky-footer"继续正常工作，例如：
+
+```javascript
+<html class="li-sticky-footer">
+  <head>
+    <title>Layout不是body一级子元素演示</title>
+  </head>
+  <body>
+    <div class="app li-sticky-body">
+      <li-header></li-header>
+      <div class="content li-sticky-content">
+        <li-layout></li-layout>
+      </div>
+      <li-footer></li-footer>
+    </div>
+  </body>
+</html>
+```
+
+### 响应式表格
+
+LDS CSS 框架包含一个响应式表格工具类，可以让表格宽度超过视窗宽度时，在水平方向上滚动。
+
+```javascript
+<li-table breakpoint="none-scrollable"></li-table>
+```
+
+### 页面动画加载
+
+LDS CSS 框架包含动画效果加载页面工具类，可以在组件全部加载的时候实现 fade in 效果。
+
+```javascript
+<html class="li-animate-load"></html>
+```
+### 其他工具
+
+LDS CSS框架还包括一系列辅助工具类，分别应用于：圆角、阴影、z-index、变换、透明度、大小等。
+这些工具类对应于各自场景的Tokens，在Design Tokens文档中有详细的介绍

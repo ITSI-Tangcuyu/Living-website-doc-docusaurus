@@ -1,0 +1,102 @@
+---
+title: LDS简介
+description: 介绍Living Design System是什么？以及LDS的核心目标
+---
+
+# LDS简介
+
+1. **具备应急行业特征的设计系统** 统一化的人员交互方式、设计模式、开发原则和开发工具集
+2. **基于 Web Component 的组件库** 用于快速构建应急行业各类 WEB 应用
+3. **一套完整的 SAAS 云平台** 提供内容存储及数据支撑
+
+### 为什么要创建 LDS 设计系统?
+
+Living Design System — 应急行业设计系统 简称 LDS，是一套基于 web component 和现代化 web 开发标准构建的、
+专门针对应急行业进行了行业特征功能融合的一整套 WEB 开发体系和工具集。其核心目标是协助用户解决在创建应急行业大屏、WEB应用、
+移动端应用等多端应用时遇到的各种挑战。
+
+### 什么是 Web Component?
+
+Web Component 是 WEB 标准原生提供的封装组件的方式，可以让开发人员定义可重复使用的自定义元素。
+标准包含了自定义 HTML 标签、自定义组件生命周期、封装 HTML 和 CSS 渲染、组件换肤等多种能力。如今，各大主流浏览器已经全面支持 Web Component 标准的实现。
+
+### LDS 如何利用 Web Component?
+
+LDS 的一个设计原则是：最大程度遵循和采用开放的、基于 WEB 标准的方法。因此，
+LDS 的开发直接采用 W3C 的 Web Component 标准，没有创建非标准的组件模型。这样就确保了所有的 LDS 组件就是原生的标准 HTML 元素。在使用 LDS 组件库的时候你不需要引入任何第三方框架。当然，如果你已经采用了第三方前端框架，比如：VUE，React，Angular，Svelet 等 LDS 也是全面兼容的。
+
+### LDS 如何在应急行业应用开发中提升开发效率？
+
+要想了解 LDS 如何在应急行业应用开发中提升开发效率，我们先看一下 LDS 的技术栈。
+在 LDS 技术栈的最底层，LDS 提供了：@itsi/tokens Design Tokens 库。这个库是 LDS 设计系统中的基石。
+
+<div className="max-w-xl rounded overflow-hidden shadow-lg border-gray-100 border text-center">
+  <div className="m-0">
+    ## @itsi/tokens
+    LDS设计系统中包含应急行业特征的原子组成部分
+  </div>
+</div>
+
+@itsi/tokens 库包含了针对应急行业设计系统视觉效果的最基础、最原子的可重复使用的设计定义，
+涵盖了如：大小、边距、颜色、排版、阴影、字体、动画转换等多种设计元素。
+所有的设计定义根据应急行业中的不同应用场景和目标平台进行分类，并抽象为语义化 Token。
+
+例如：
+- 原始的颜色值 #635bff被抽象为$blue-500(Option Token)
+- 在对应到某个设计场景时，会被进一步抽象为$actions-primary-background(Semantic Token)
+- 当应用到某个具体组件时，会更进一步抽象为$color-background-button-primary-selected(Component Token) 
+
+![tokens结构](/img/color-token.svg)
+
+经过这样的抽象处理，当业务需求发生变化时，组成应用系统各个组件的格式、风格、布局、外观可以在不修改程序代码的情况下自动进行调整和改变。
+
+在Design Token库的基础上，LDS提供了@itsi/base-components元组件库。
+元组件库包含了：按钮、卡片、模态框、列表、树形视图、进度条、表格等等一系列搭建业务组件所需的基础组件。
+
+<div className="max-w-xl rounded overflow-hidden shadow-lg border-gray-100 border">
+  <div className="text-center m-0">
+    ## @itsi/base-components
+    元组件库是创建业务组件的基础组件
+  </div>
+</div>
+
+业务组件实现了状态管理、可访问性支持、键盘导航、动态样式和行为、CSS属性管理、自动换肤、自适应布局等业务能力，
+更进一步的是业务组件具备了应急行业的业务需求特征属性，根据业务的需求把业务组件划分为MIS组件和GIS组件
+
+<div className="max-w-xl rounded overflow-hidden shadow-lg border-gray-100 border">
+  <div className="text-center m-0">
+    ## @itsi/mis-components
+    具备MIS信息及功能的业务组件
+  </div>
+</div>
+<div className="max-w-xl rounded overflow-hidden shadow-lg border-gray-100 border">
+  <div className="text-center m-0">
+    ## @itsi/gis-components
+    具备GIS信息及功能的业务组件
+  </div>
+</div>
+
+LDS开发体系针对开发人员提供了一系列方便、高效、快捷的支撑能力。
+例如：自定义元素特性/属性的自动同步、高效率的模板渲染和更新引擎、
+可构造的CSS样式支持、虚拟DOM、TypeScript原生支持、单向数据绑定、完整的组件状态管理、GraphQL客户端支持等。
+
+<hr/>
+
+# LDS特性及兼容环境
+
+- 基于W3C Web Component标准
+- 组件预渲染
+- 管道式异步渲染
+- 元组件的懒加载
+- TypeScript原生支持
+- JSX/TSX 支持
+- 单向数据绑定
+- 元组件无第三方依赖
+
+### 兼容环境
+
+- 现代浏览器和IE11（需要polyfills）
+- 支持服务器端渲染SSR
+- 桌面环境支持Electron
+- 移动端PWA支持
+

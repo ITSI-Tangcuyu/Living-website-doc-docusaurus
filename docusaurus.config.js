@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Living Design System',
-  tagline: '统一化的人员交互方式、设计模式、开发原则和开发工具集',
+  tagline: '统一的人员交互方式、设计模式、开发原则、原生组件库和开发工具集',
   url: 'https://www.itsi.com.cn',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -65,7 +65,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'index',
             position: 'left',
             label: '技术文档',
           },
@@ -138,6 +138,12 @@ const config = {
             position: 'right',
           },
         ],
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
       },
       footer: {
         style: 'dark',

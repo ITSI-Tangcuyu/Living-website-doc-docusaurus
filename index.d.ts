@@ -8,3 +8,5 @@ declare module '@theme/*';
 declare module '@components/*';
 
 declare module '@docusaurus/*';
+
+declare module '@Components/global/*'

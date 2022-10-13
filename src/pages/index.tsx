@@ -3,7 +3,9 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import HomepageComponents from '@site/src/components/HomepageComponents';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepagePreview from '@site/src/components/HomepagePreview';
 import BackgroundImage from '@components/global/BackgroundImage/BackgroundImage';
 
 import styles from './index.module.scss';
@@ -40,10 +42,12 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Living Design System">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <HomepageComponents />
+        <HomepagePreview />
       </main>
     </Layout>
   );

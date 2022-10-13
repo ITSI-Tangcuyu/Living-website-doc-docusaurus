@@ -10,7 +10,7 @@ const fetch = require('node-fetch');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Living Design System',
-  tagline: '统一的人员交互方式、设计模式、开发原则、原生组件库和开发工具集',
+  tagline: '基于Web Component、具备应急行业特征的WEB开发体系和工具集',
   url: 'https://www.itsi.com.cn',
   baseUrl: '/',
   onBrokenLinks: 'throw',

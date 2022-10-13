@@ -33,7 +33,7 @@ export const StyledBackgroundImage = styled.div<BackgroundImageProps>`
     
     animation-fill-mode: forwards;
     animation-name: ${parallax};
-    animation-duration: 3s;
+    animation-duration: 30s;
   }
   
   >.content {

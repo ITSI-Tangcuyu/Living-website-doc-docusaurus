@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 
 export default function HomepageComponents(): JSX.Element {
   return (
-    <section className={styles.licomp}>
+    <section id='homepagecomponents' className={styles.licomp}>
       <Container>
         <StatGroup>
           <FadeInSlideUp visible={true} delay={0.1} duration={1.2}>

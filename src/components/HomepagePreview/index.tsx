@@ -3,7 +3,8 @@ import Container from '../global/Container/Container';
 import List from '../global/List/List';
 import ArticlePreview from '../global/ArticlePreview/ArticlePreview';
 import styles from './styles.module.scss';
-
+import { H1 } from '../global/Typography/Typography';
+import { StyledStat } from '../global/Stats/Stats.styles';
 
 export interface Scene {
   mission_name: string;
@@ -69,7 +70,12 @@ const Preview = ((scene, idx) => {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.preview}>
+    <section id='homepagefeatures' className={styles.preview}>
+      <StyledStat>
+        <div className={styles.head}>
+          <H1>{'应用场景'}</H1>
+        </div>
+      </StyledStat>
       <List>
         {SceneList.map((scene, idx) => (
           <Preview key={idx} {...scene} />

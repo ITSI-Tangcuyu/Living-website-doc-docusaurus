@@ -23,7 +23,7 @@ export const StyledStat = styled.div`
     transition: all .4s cubic-bezier(.215, .61, .355, 1);
     transform: scale(1);
     cursor: default;
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: 400;
     letter-spacing: -2px;
     margin-bottom: 0.5rem;
@@ -71,8 +71,8 @@ export const StyledStat = styled.div`
 `;
 
 export const StyledStatGroup = styled.div`
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   padding-left: 0;
   list-style: none;
   display: flex;

@@ -1,213 +1,79 @@
 import React from 'react';
-import {
-  forwardRef,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.scss';
-import { Chrome } from '../Chrome';
-import cn from 'classnames';
-
-
-interface ExampleItem {
-  title: string
-  description: string
-  chrome: any;
-  titleClass: string
-  demoLink: string
-  svg: React.ComponentType<React.ComponentProps<'svg'>>;
-}
-// const [placement, setPlacement] = useState('top');
-const Com = () => {
-  return (
-    <Chrome label='Click the dots' center scrollable relative={false}>
-      {[
-        {
-          placement: 'top',
-          styles: {
-            left: 'calc(50% - 10px - 1rem)',
-            top: 0,
-          },
-        },
-        {
-          placement: 'top-start',
-          styles: {
-            left: 'calc(50% - 70px - 1rem)',
-            top: 0,
-          },
-        },
-        {
-          placement: 'top-end',
-          styles: {
-            left: 'calc(50% + 50px - 1rem)',
-            top: 0,
-          },
-        },
-        {
-          placement: 'bottom',
-          styles: {
-            left: 'calc(50% - 10px - 1rem)',
-            bottom: 0,
-          },
-        },
-        {
-          placement: 'bottom-start',
-          styles: {
-            left: 'calc(50% - 70px - 1rem)',
-            bottom: 0,
-          },
-        },
-        {
-          placement: 'bottom-end',
-          styles: {
-            left: 'calc(50% + 50px - 1rem)',
-            bottom: 0,
-          },
-        },
-        {
-          placement: 'right',
-          styles: {
-            top: 'calc(50% - 10px - 1rem)',
-            right: 'min(50px, 5%)',
-          },
-        },
-        {
-          placement: 'right-start',
-          styles: {
-            top: 'calc(50% - 70px - 1rem)',
-            right: 'min(50px, 5%)',
-          },
-        },
-        {
-          placement: 'right-end',
-          styles: {
-            top: 'calc(50% + 50px - 1rem)',
-            right: 'min(50px, 5%)',
-          },
-        },
-        {
-          placement: 'left',
-          styles: {
-            top: 'calc(50% - 10px - 1rem)',
-            left: 'min(50px, 5%)',
-          },
-        },
-        {
-          placement: 'left-start',
-          styles: {
-            top: 'calc(50% - 70px - 1rem)',
-            left: 'min(50px, 5%)',
-          },
-        },
-        {
-          placement: 'left-end',
-          styles: {
-            top: 'calc(50% + 50px - 1rem)',
-            left: 'min(50px, 5%)',
-          },
-        },
-      ].map(({ placement: p, styles }) => (
-        <button
-          key={p}
-          className="p-4 absolute transition hover:scale-125"
-          style={styles}
-          // onClick={() => setPlacement(p)}
-          aria-label={p}
-        >
-          <div
-            className={cn(
-              'w-5 h-5 rounded-full border-2 border-solid',
-              {
-                // 'border-gray-500': placement === p,
-                // 'border-gray-600': placement !== p,
-                // 'bg-gray-500': placement === p,
-              }
-            )}
-          />
-        </button>
-      ))}
-    </Chrome>
-  )
-}
-
-const Examples = [{
-  title: 'Placement',
-  description: 'Placement Description',
-  chrome: '',
-  titleClass: 'text-violet-300',
-  demoLink: 'https://codesandbox.io/s/lively-waterfall-rbc1pi?file=/src/index.js',
-  Svg: require('@site/static/img/browsers.svg').default,
-}, {
-  title: 'Placement',
-  description: 'Placement Description',
-  chrome: '',
-  titleClass: 'text-violet-300',
-  demoLink: 'https://codesandbox.io/s/lively-waterfall-rbc1pi?file=/src/index.js',
-  Svg: require('@site/static/img/frameworks.svg').default,
-}, {
-  title: 'Placement',
-  description: 'Placement Description',
-  chrome: '',
-  titleClass: 'text-violet-300',
-  demoLink: 'https://codesandbox.io/s/lively-waterfall-rbc1pi?file=/src/index.js',
-  Svg: require('@site/static/img/browsers.svg').default,
-}, {
-  title: 'Placement',
-  description: 'Placement Description',
-  chrome: '',
-  titleClass: 'text-violet-300',
-  demoLink: 'https://codesandbox.io/s/lively-waterfall-rbc1pi?file=/src/index.js',
-  Svg: require('@site/static/img/browsers.svg').default,
-}]
+import Examples, { ExampleItem } from './exampleData';
+import { H1 } from '../global/Typography/Typography';
+import FadeInSlideUp from '../global/Animations/FadeInSlideUp';
+import { InView } from 'react-intersection-observer';
 
 function GridItem({
   title,
   description,
-  chrome,
-  titleClass,
   demoLink,
-}) {
+  label,
+  Svg,
+  image,
+  imgdesc,
+}: ExampleItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <h3 className={`text-3xl font-bold mb-2 ${titleClass}`}>
-          {title}
-        </h3>
-        <p className="text-xl mb-6">{description}</p>
-      </div>
-      <div className="relative items-center bg-gray-800 rounded-lg lg:h-auto">
-        {chrome}
-      </div>
-      <a
-        className="text-red-300 hover:text-red-200 border-red-300/30 border-b-2 text-center font-bold absolute right-6 top-6"
-        href={demoLink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        CodeSandbox
-      </a>
-    </div>
-  );
-}
-
-function Feature({ title, Svg, description }: any) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className='padding-top--md padding-bottom--md'>
-        <div className='card'>
-          <div className="card__image">
-            <Svg className={styles.featureSvg} role="img" />
+    <div className={clsx('col col--6 padding-top--sm')}>
+      <div className="card">
+        <div className='card__header'>
+          <div className="padding-left--md">
+            <h3 className={styles.title}>
+              {title}
+            </h3>
+            <p className={styles.subtitle}>{description}</p>
           </div>
-          <div className="card__footer">
-            <h3>{title}</h3>
-            <p>{description}</p>
+          <a
+            className={styles.demolink}
+            href={demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            在线样例
+          </a>
+
+        </div>
+        <div className={styles.chrome}>
+          <div className={styles.chromeheader}>
+            <div
+              className={styles.trafficlight}
+            >
+              <div
+                className={styles.light}
+                style={{ background: '#ec695e' }}
+              />
+              <div
+                className={styles.light}
+                style={{ background: '#f4bf4f' }}
+              />
+              <div
+                className={styles.light}
+                style={{ background: '#61c653' }}
+              />
+            </div>
+            <div className={styles.chromelabel}>
+              {label}
+            </div>
+          </div>
+          <div className={styles.chromebody}>
+            <InView threshold={0.2}>
+              {({ ref, inView }: any) => (
+                <div ref={ref} >
+                  <FadeInSlideUp visible={inView} delay={0.5}>
+                    <div className={styles.chromeimg} >
+                      <img src={image} alt="示例图片" className={styles.chromeimg} />
+                      {!!imgdesc ? <p className={styles.chromeimgdesc}>{imgdesc}</p> : ""}
+                    </div>
+                  </FadeInSlideUp>
+                </div>
+              )}
+            </InView>
+
           </div>
         </div>
       </div>
-
     </div>
   );
 }
@@ -216,9 +82,12 @@ export default function HomepageExample(): JSX.Element {
   return (
     <section>
       <div className="container">
+        <div >
+          <H1 className={styles.head}>{'组件示例'}</H1>
+        </div>
         <div className="row padding-top--lg padding-bottom--lg">
           {Examples.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <GridItem key={idx} {...props} />
           ))}
         </div>
       </div>

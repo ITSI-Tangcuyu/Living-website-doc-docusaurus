@@ -1,0 +1,75 @@
+---
+title: li-alert元组件
+description: li-alert警告框组件，用于在组件中显示警告模态框
+---
+
+# li-alert 元组件
+
+> li-alert 以显著的方式吸引用户的注意力，用于通知用户界面的重要变化。
+
+尽量使用 li-alert 组件而避免使用原生的 window.alert()，以保证用户体验的一致性。
+虽然他们具备同样的功能，但是 li-alert 可以在跨域的 iframes 中使用。和 windows.alert()方法不一样的是，li-alert 不是在页面中执行，而是返回一个 Promise。
+可以使用`async/await` 或 `.then()`来执行在关闭掉 li-alert 弹窗后你想执行的操作。
+
+### 示例
+
+import { LiAlert } from '@itsi/living-base-react'
+
+### 组件属性
+
+| 属性                    | 类型                   | 默认值                                          | 必选 | 描述                                                                 |
+| ----------------------- | ---------------------- | ----------------------------------------------- | ---- | -------------------------------------------------------------------- |
+| accessibleLabel         | string                 | `getLocalString(this.accessibleLabelDefaults)`  | no   | 为可以消除警告框的关闭按钮增加可访问性标签                           |
+| accessibleLabelDefaults | LiLangObject \| string | `{en: "Close the message", cn: "关闭警告信息"}` | no   | 为弹窗提供默认可访问性内容的多语言支持                               |
+| announcements           | boolean                | true                                            | no   | 在可访问性中是否启动自动播报                                         |
+| autoDismiss             | number                 | 无                                              | no   | 等待毫秒数之后自动关闭警告窗                                         |
+| dismissible             | boolean                | false                                           | no   | 是否包含关闭警告窗的按钮                                             |
+| icon                    | string                 | ""                                              | no   | 在左侧显示代表图标的字符串                                           |
+| class                   | string                 | 无                                              | no   | 基于组件自带 CSS 类基础上，自定义的 CSS 类名                         |
+| label                   | string                 | `确认`                                          | no   | 警告窗标题文本，也用于可访问性的 ariaLabel                           |
+| message                 | string                 | 无                                              | no   | 警告窗显示的内容                                                     |
+| variant                 | string                 | `header`                                        | no   | 可以选择两个值： `header` 或 `headerless` 分别表示警告窗是否带标题栏 |
+| title                   | string                 | 无                                              | no   | 当鼠标 hover 在组件时，显示在 tooltip 中的标题                       |
+
+### 组件事件
+
+| 事件名称  | 类型        | 描述                       |
+| --------- | ----------- | -------------------------- |
+| openAlert | CustomEvent | 触发事件后弹出模态的警告窗 |
+| liDismiss | CustomEvent | 点击关闭按钮时触发         |
+
+### 插槽
+
+| 插槽名称 | 类型 | 默认值 | 必选 | 描述 |
+| -------- | ---- | ------ | ---- | ---- |
+| 无       | 无   | 无     | 无   | 无   |
+
+### 使用场景
+
+本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
+
+import Callout from '../../src/components/Callout'
+
+<Callout emoji="❤️">
+  建议使用场景: 
+  
+  - 需要吸引用户注意时 
+  - 通知用户重要的信息或条件时 
+  - 界面高亮显示错误信息或成功信息时 
+  - 如果警告信息和整个页面相关，放在页面顶部显示警告窗
+</Callout>
+
+<Callout type="error" emoji="️🚫">
+  避免使用场景: 
+  
+  - 高亮页面内容时，避免使用警告窗。使用Card组件 
+  - 错误页面时，避免使用错误警告窗
+</Callout>
+
+### 可访问性说明
+
+该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
+
+<Callout type="warning" emoji="✅">
+  该组件已经通过LDS的可访问性规则验证，符合WCAG 2.1 AA可访问性指南
+</Callout>

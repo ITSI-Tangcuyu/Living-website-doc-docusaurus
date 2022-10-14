@@ -1,0 +1,61 @@
+---
+title: li-anchor元组件
+description: 锚点元素提供了按钮组件相同的视觉外观
+---
+
+# li-anchor 元组件
+
+li-anchor 是一个[HTML 锚点元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a)的 web 组件实现。
+提供了按钮组件相同的视觉外观，包括边框、背景、自定义前后缀图标、突出的色彩显示等
+
+### 示例
+
+import { LiAnchor } from '@itsi/living-base-react'
+
+### 组件属性
+
+| 属性     | 类型                                        | 默认值 | 必选 | 描述                                                                                                               |
+| -------- | ------------------------------------------- | ------ | ---- | ------------------------------------------------------------------------------------------------------------------ |
+| href     | string                                      | “”     | no   | 超链接指向的 URL 或 URL 片段                                                                                       |
+| hrefLang | string                                      | “”     | no   | 用于指定链接文档的人类语言                                                                                         |
+| target   | "\_self" / "\_blank" / "\_parent" / "\_top" | “”     | no   | 该属性指定在何处显示链接的资源。 取值为标签（tab），窗口（window），或框架（iframe）等浏览上下文的名称或其他关键词 |
+| type     | string                                      | ""     | no   | 该属性指定在一个 MIME type 链接目标的形式的媒体类型                                                                |
+
+### 组件事件
+
+| 事件名称        | 描述           | 类型     |
+| --------------- | -------------- | -------- |
+| templateChanged | 模板改变时触发 | Function |
+| stylesChanged   | 样式改变时触发 | Function |
+
+### 插槽
+
+| 插槽名称 | 描述                       |
+| -------- | -------------------------- |
+| start    | 在锚点内容之前的提供的内容 |
+| end      | 在锚点内容之后提供的内容   |
+
+### 使用场景
+
+本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
+
+import Callout from '../../src/components/Callout'
+
+<Callout emoji="❤️">
+  建议使用场景:
+  焦点委托给ShadowDOM中的锚点元素时
+</Callout>
+
+<Callout type="error" emoji="️🚫">
+  避免使用场景: 无
+  <br />
+</Callout>
+
+### 可访问性说明
+
+该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
+
+<Callout type="warning" emoji="❎">
+  该组件还未通过LDS的可访问性规则验证，需要进一步定制开发，才能符合WCAG 2.1
+  AA可访问性指南
+</Callout>

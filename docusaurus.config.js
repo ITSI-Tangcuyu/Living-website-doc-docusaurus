@@ -3,21 +3,24 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const path = require('path');
+const prismic = require('@prismicio/client');
+const fetch = require('node-fetch');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Living Design System',
+  tagline: '基于Web Component、具备应急行业特征的WEB开发体系和工具集',
+  url: 'https://www.itsi.com.cn',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: '/img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'ITSI', // Usually your GitHub org/user name.
+  projectName: 'Living Design System', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -26,7 +29,17 @@ const config = {
     defaultLocale: 'zh-Hans',
     locales: ['zh-Hans'],
   },
-
+  plugins: ['docusaurus-plugin-sass', [
+    'docusaurus-plugin-module-alias',
+    {
+      alias: {
+        'styled-components': path.resolve(__dirname, './node_modules/styled-components'),
+        react: path.resolve(__dirname, './node_modules/react'),
+        'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+        '@components': path.resolve(__dirname, './src/components'),
+      },
+    },
+  ],],
   presets: [
     [
       'classic',
@@ -37,17 +50,17 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ITSI-Tangcuyu/Living-website-doc-docusaurus.git',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/ITSI-Tangcuyu/Living-website-doc-docusaurus.git',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       }),
     ],
@@ -57,40 +70,113 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Living Design System',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'LDS Logo',
+          src: 'img/lds-logo.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'index',
             position: 'left',
-            label: 'Tutorial',
+            label: '技术文档',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'MIS组件', position: 'left' },
+          { to: '/blog', label: 'GIS组件', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'http://localhost:5000/admin',
+            label: '低代码平台',
+            target: '_blank',
+            rel: null
+          },
+          {
+            type: 'search',
+            position: 'right',
+          },
+          {
+            label: '社区',
+            position: 'right',
+            items: [
+              {
+                href: 'https://ionicframework.com/community',
+                label: 'Community Hub',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://forum.ionicframework.com/',
+                label: 'Forum',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://www.meetup.com/topics/ionic-framework/',
+                label: 'Meetups',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://blog.ionicframework.com/',
+                label: 'Blog',
+                target: '_blank',
+                rel: null,
+              },
+            ],
+            className: 'navbar__link--community',
+          },
+          {
+            label: '技术支持',
+            position: 'right',
+            items: [
+              {
+                href: 'https://ionicframework.com/support',
+                label: 'Help Center',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://ionic.zendesk.com/',
+                label: 'Customer Support',
+                target: '_blank',
+                rel: null,
+              },
+              {
+                href: 'https://ionicframework.com/advisory',
+                label: 'Enterprise Advisory',
+                target: '_blank',
+                rel: null,
+              },
+            ],
+            className: 'navbar__link--support',
+          },
+          {
+            href: 'https://github.com/ITSI-Tangcuyu/Living-website-doc-docusaurus.git',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       footer: {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
-                label: 'Tutorial',
+                label: '快速入门',
                 to: '/docs/intro',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '社区',
             items: [
               {
                 label: 'Stack Overflow',
@@ -100,27 +186,23 @@ const config = {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
               {
-                label: 'Blog',
+                label: '博客',
                 to: '/blog',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/ITSI-Tangcuyu/Living-website-doc-docusaurus.git',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${ new Date().getFullYear() } itsi.com.cn Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

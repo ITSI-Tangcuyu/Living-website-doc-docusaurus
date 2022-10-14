@@ -1,0 +1,108 @@
+---
+title: Design Tokens分类
+description: 按照清晰明确的规则对Design Token进行组织和分类管理
+---
+
+# Design Tokens的组织和分类
+
+Design Tokens是一个Design System的基础原子组成部分，在设计Design System时，不同的品牌、行业、应用都有自己独特的设计原则和设计语言。
+为了增强Design System系统的灵活性和适应能力，使Design Token可以应用于WEB开发中的各种平台及多种业务场景，为Design Token制定清晰明确的分类和组织规则，至关重要。
+
+---
+
+### Design Tokens的抽象层次
+
+- ** Option Token （选项Token） **
+
+Option Token是对设计元素原始值的第一层抽象，为原始值提供了一定程度的语义，例如：
+
+![Option Token](/img/option_token.svg)
+
+定义好Option Token就可以使用这些Option Token来修饰设计组件
+
+![Option Token的应用](/img/option_token_2.svg)
+
+** 但是存在一个问题：**
+如果仅需要修改button的颜色，其他使用该token的元素也会受到影响，
+该如何处理？
+
+> 通过进一步抽象，创建另外一个token类型 -- Semantic(Alias) Token，来解决这个问题
+
+- ** Semantic(Alias) Token （语义Token）**
+
+Semantic(Alias) Token可称之为语义Token/别名Token，是对设计元素的进一步抽象，更加明确的表示了Token应用的场景
+
+![Semantic(Alias) Token](/img/semantic_token.svg)
+
+现在每种token都有一个清晰的目标/意图，我们现在就可以只修改一组token，而不影响其他组的token
+
+![Semantic(Alias) Token的应用](/img/semantic_token_2.svg)
+
+> 简而言之：语义tokens通过引用option tokens来描述样式的目标/意图，Option tokens描述具体的值
+
+- ** Component Specific Token （组件特征Token）**
+
+当应用到具体的组件时，又可以增加一层抽象，专门用于组件开发时对组件特征的描述
+
+![Component Token](/img/component_token.svg)
+
+通过Design Token定义的三个层次抽象可以充分解耦样式的设计值与组件CCS代码中引用的Token之间的紧密绑定关系，使WEB系统更加灵活和健壮，如下图示例：
+
+![Component Token的应用](/img/component_token_2.svg)
+
+<div align="center">**当鼠标hover到按钮后**</div>
+
+<div align="center">![向下箭头](/img/arrowdown.svg)</div>
+
+![Component Token的应用](/img/component_token_3.svg)
+
+---
+
+### Design Tokens命名的规则
+
+LDS设计系统按照** CTI **(Category类别/Type类型/Item项目)的规则来命名Design Token
+
+- namespace: 命名空间（li-token）,标识该Token是由LDS 设计系统定义的
+- category: 定义design token的原始的特性，比如：颜色这个类别。所有在这个类别下的token都是和颜色相关的
+- type: 类型表示更具体的分类，比如：背景色，文本颜色，或者边框颜色
+- item: 项目对应某个具体组件，比如：页面，按钮，表格
+- sub-item: 子项目对应组件的子级别，比如：一级按钮，二级按钮，三级按钮
+- state: 对应子项目的级别的状态，比如：激活状态，基本状态，禁用状态
+
+![Style Dictionary](/img/style_dictionary.svg)
+
+---
+
+### Design Tokens的组织
+
+首先，Living Design System需要支撑多平台（web, ios, 安卓，大屏）多业务的应用。
+因此，我们根据多种平台及多种业务之间的关系来组织Design Token。
+
+- 有些Token根据业务的不同而不同（比如：主色调及辅助色调）
+- 有些Token依赖于平台的不同而不同（比如：按钮大小，字体大小）
+- 而有些Token具有全局特征，适用于所有的平台及业务。（比如：天气组件等通用组件中应用的Token）
+
+其次，在实际应用中需要从生产者和消费者的角度来组织Design Token。
+
+- 通常生产者是指设计人员，负责定义Token的具体值
+- 消费者是指web应用系统的开发人员，使用定义好的Token进行组件及系统的开发
+
+** 生产者角度（设计人员） **
+
+在创建Design Token时，设计人员统一采用JSON格式进行编写，并遵从Design Token的命名规则，文件夹的组织格式按照业务（brands）、全局（globals）、
+平台（platforms）作为一级目录。
+具体的业务名称（比如城市生命线、应急管理、设备与消防）、全局组件名称和平台名称作为二级目录，如下图所示： 
+
+![LDS的Tokens组织和分类](/img/lds_tokens_category.svg)
+
+基于这样的组织形式，Design Token的生产者可以根据目标业务和平台非常快速的找到添加Token的位置、在更新/删除Token或者组件时，也可以很容易定位。
+采用统一的JSON格式及命名规范，可以让不同设计人员分工协作，而不用去关心最终生成的Token文件的格式（不同的开发平台，Token文件格式不同）。
+
+** 消费者角度（开发人员） **
+
+组件及web应用开发的过程中，开发人员作为Design Token的消费者，也希望可以快速的找到自己感兴趣的Design Token定义文件。
+下图展示了LDS系统中输出的Design Tokens目录结构：
+
+![lds_tokens_build](/img/lds_tokens_build.svg)
+
+如上图所示，各平台的开发人员可以基于各自开发需求，能快速定位到相对应的Token存储的位置，并且可以看到各平台环境支持的文件格式。

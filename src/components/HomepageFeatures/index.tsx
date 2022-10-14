@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
+
 type FeatureItem = {
   title: string;
   Svg: React.ComponentType<React.ComponentProps<'svg'>>;
@@ -10,38 +11,62 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '跨浏览器多端支持',
+    Svg: require('@site/static/img/browsers.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        支持移动端、桌面端、大屏、平板电脑等多端适配。支持市场上最流行的各类浏览器：Chrome、Firefox、Safari、Opera、Edge
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '兼容流行的前端开发框架',
+    Svg: require('@site/static/img/frameworks.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        最大程度遵循和采用开放的、基于 WEB 标准的方法，全面兼容流行的前端开发框架：VUE，React，Angular，Svelet等
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '性能良好',
+    Svg: require('@site/static/img/performant.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        可访问性意味着让每个人都可以访问相同的信息，无论个人的身体和认知能力以及访问WEB的方式是否存在一定的限制
+      </>
+    ),
+  },
+  {
+    title: 'Web Component组件库',
+    Svg: require('@site/static/img/button.svg').default,
+    description: (
+      <>
+        Web Component 是 WEB 标准原生提供的封装组件的方式，可以让开发人员定义可重复使用的自定义元素。
+      </>
+    ),
+  },
+  {
+    title: 'Design Tokens',
+    Svg: require('@site/static/img/tokenname.svg').default,
+    description: (
+      <>
+        Design Token 是对颜色的色值、间距、尺寸等设计元素定义的设计变量,可以让设计变量所代表的含义更容易理解，也更便于对产品风格的控制
+      </>
+    ),
+  },
+  {
+    title: 'A11Y可访问性支持',
+    Svg: require('@site/static/img/a11y.svg').default,
+    description: (
+      <>
+        可访问性意味着让每个人都可以访问相同的信息，无论个人的身体和认知能力以及访问WEB的方式是否存在一定的限制
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
@@ -57,7 +82,7 @@ function Feature({title, Svg, description}: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
+    <section id="homepagefeature" className={styles.features}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (

@@ -1,47 +1,49 @@
 ---
-sidebar_position: 1
+title: 快速入门
+description: 介绍如何快速开始安装LDS的各个库
 ---
 
-# Tutorial Intro
+# 快速入门
 
-Let's discover **Docusaurus in less than 5 minutes**.
+LDS的所有组件库全部可以通过NPM或Yarn进行安装。在命令行终端运行：
 
-## Getting Started
-
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+安装全局CLI
+```javascript
+  /* 全局安装CLI */
+  $ npm install -g @itsi/cli
+```
+安装Design Tokens，CSS Framework, Icons, Fonts
+```javascript
+  /* 安装Design Tokens，CSS Framework, Icons, Fonts */
+  $ npm install @itsi/tokens
+  $ npm install @itsi/css
+  $ npm install @itsi/icons
+  $ npm install @itsi/fonts
+```
+安装元组件库，MIS组件库，GIS组件库
+```javascript
+  /*  安装元组件库，MIS组件库，GIS组件库 */
+  $ npm install @itsi/base-components
+  $ npm install @itsi/mis-components
+  $ npm install @itsi/gis-components
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+LDS组件库兼容流行的各种前端开发框架，比如： Vue，React，Angular
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
+- Vue.js：2 -3 版本使用@itsi/base-components，@itsi/mis-components，@itsi/gis-components
+- React.js：16.7.0及以上版本使用 @itsi/react NPM包
+```javascript
+  /* React 框架集成 */
+  $ npm install @itsi/react
 ```
+- Angular.js：7.2.1 - 13版本使用 @itsi/angular NPM包
+```javascript
+  /*  Angular 框架集成 */
+  $ npm install @itsi/angular
+```
+<hr />
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+# 加入LDS社区
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+在使用LDS过程中，如果遇到问题可以实时与我们在社区网站进行沟通。
+可以提交PR到我们的Github仓库，也欢迎有兴趣的开源爱好者参照Github仓库中的Contributing规范贡献代码

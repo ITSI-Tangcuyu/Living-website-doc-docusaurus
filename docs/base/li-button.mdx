@@ -1,0 +1,102 @@
+---
+title: li-button元组件
+description: 按钮组件用于用户界面的交互
+---
+
+# li-button 元组件
+
+按钮用于界面操作。它们默认具有灰色边框和深色文本的外观。在每个视图上应该只有一个 Primary 样式的按钮，用于页面的主要操作。
+
+### 示例
+
+import { LiButton } from '@itsi/living-base-react'
+
+### 组件属性
+
+| 属性                            | 类型                                                                                                                                                                                      | 默认值    | 必选 | 描述                                                                                                                                      |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| accessibleActiveDescendant      | string                                                                                                                                                                                    | undefined | no   | 代表相关组件的视觉焦点元素的 ID                                                                                                           |
+| accessibleControls              | string                                                                                                                                                                                    | undefined | no   | 本属性为按钮添加一个 aria-controls (旨在表明某个元素控制着另一个元素)特性。使用这个特性指向按钮管理内容的唯一 ID                          |
+| accessibleDescribedBy           | string                                                                                                                                                                                    | undefined | no   | 指示描述按钮的组件的 id                                                                                                                   |
+| accessibleDescription           | string                                                                                                                                                                                    | undefined | no   | 按钮的可访问性描述                                                                                                                        |
+| accessibleDetails               | string                                                                                                                                                                                    | undefined | no   | 按钮的可访问性详细信息描述                                                                                                                |
+| accessibleExpanded              | string                                                                                                                                                                                    | undefined | no   | 如果按钮展开或折叠相邻内容，则使用 ariaExpanded 属性将 AriaExpand 属性添加到按钮。设置该值以传达内容的当前展开（true）或折叠（false）状态 |
+| accessibleLabel                 | string                                                                                                                                                                                    | undefined | no   | 为仅为屏幕阅读器显示的按钮添加可访问标签。通常，对于使用辅助技术的用户，此标签文本将替换按钮上的可见文本                                  |
+| accessibleLabelExternal         | string                                                                                                                                                                                    | undefined | no   | 为外部链接中显示的工具提示添加可访问标签（url 和外部均已设置）                                                                            |
+| accessibleLabelExternalDefaults | string                                                                                                                                                                                    | undefined | no   | 属性更改组件的 AccessibleLabel 外部默认值。通常，您将在应用程序级别处理这些字符串，并在需要时覆盖@accessibleLabelExternal                 |
+| accessibleLabelledBy            | string                                                                                                                                                                                    | undefined | no   | 表示替代标签元素的 id 字符串                                                                                                              |
+| accessibleOwns                  | string                                                                                                                                                                                    | undefined | no   | 指示按钮拥有的组件的 id                                                                                                                   |
+| accessiblePopup                 | string                                                                                                                                                                                    | undefined | no   | 如果将 aria-haspopup 属性用作菜单按钮，则使用此属性将其添加到按钮                                                                         |
+| accessiblePressed               | boolean                                                                                                                                                                                   | false     | no   | 通知屏幕阅读器，该按钮被按下                                                                                                              |
+| centerText                      | boolean                                                                                                                                                                                   | false     | no   | 按钮文本居中                                                                                                                              |
+| color                           | string                                                                                                                                                                                    | ""        | no   | 按钮文本的颜色。使用 Design Token 作为值                                                                                                  |
+| disabled                        | boolean                                                                                                                                                                                   | false     | no   | 使按钮组件处于禁用状态。这会阻止用户与按钮进行交互，并将其非活动状态传递给辅助技术                                                        |
+| expand                          | boolean                                                                                                                                                                                   | false     | no   | 展开按钮以填充容器宽度的 100%                                                                                                             |
+| external                        | boolean                                                                                                                                                                                   | false     | no   | 强制 URL 打开一个新的 Tab 页。与 URL 属性一起使用                                                                                         |
+| fixed                           | boolean                                                                                                                                                                                   | false     | no   | 在移动视窗中保持按钮固定宽度                                                                                                              |
+| icon                            | string                                                                                                                                                                                    | ""        | no   | 在按钮文本内容左侧显示图标                                                                                                                |
+| iconOnly                        | boolean                                                                                                                                                                                   | false     | no   | 是否仅显示图标                                                                                                                            |
+| iconRight                       | boolean                                                                                                                                                                                   | false     | no   | 在按钮文本内容右侧显示图标                                                                                                                |
+| iconSize                        | "large" \| "medium" \| "small"                                                                                                                                                            | "medium"  | no   | 图标大小                                                                                                                                  |
+| identifier                      | string                                                                                                                                                                                    | undefined | no   | 为按钮添加一个唯一标识。注意：这个标识添加在 Shadow DOM 内部。 如果要为 HTML 自定义元素添加标识请使用 HTML 的 id 特性                     |
+| loading                         | boolean                                                                                                                                                                                   | false     | no   | 按钮的加载状态                                                                                                                            |
+| margin                          | "auto" \| "none"                                                                                                                                                                          | "auto"    | no   | 控制组件的外边距                                                                                                                          |
+| name                            | string                                                                                                                                                                                    | undefined | no   | 按钮的名称，当作为表单的一部分提交时，与按钮的值配对。对应于本机 HTML 名称属性。                                                          |
+| negative                        | boolean                                                                                                                                                                                   | false     | no   | 可以与 negative 变体配合，实现一个按钮的 negative 版本                                                                                    |
+| padding                         | "auto" \| "none"                                                                                                                                                                          | "auto"    | no   | 控制按钮的内边距                                                                                                                          |
+| size                            | "medium" \| "small"                                                                                                                                                                       | "medium"  | no   | 按钮的大小                                                                                                                                |
+| submit                          | boolean                                                                                                                                                                                   | false     | no   | 允许按钮提交一个表单                                                                                                                      |
+| theme                           | "" \| "default"                                                                                                                                                                           | ""        | no   | 按钮主题                                                                                                                                  |
+| url                             | string                                                                                                                                                                                    | undefined | no   | 链接的目的地，在链接的 href 属性中呈现                                                                                                    |
+| value                           | string                                                                                                                                                                                    | undefined | no   | 当作为表单的一部分提交时，按钮的值与按钮的名称配对。对应于本机 HTML 值属性。                                                              |
+| variation                       | "default" \| "destructive" \| "destructive-primary" \| "destructive-secondary" \| "input-button-primary" \| "input-button-secondary" \| "negative" \| "plain" \| "primary" \| "secondary" | "default" | no   | 按钮的变体                                                                                                                                |
+| wrapping                        | "auto" \| "none"                                                                                                                                                                          | "auto"    | no   | 控制文本的容器                                                                                                                            |
+
+### 组件事件
+
+| 事件名称 | 描述 | 类型 |
+| -------- | ---- | ---- |
+| liBlur   |      |      |
+| liFocus  |      |      |
+
+### 使用场景
+
+本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
+
+import Callout from '../../src/components/Callout'
+
+<Callout emoji="❤️">
+  建议使用场景: 
+  - 通常情况下，按钮用于用户界面中非连接到其他页面的交互 
+  - 当需要为用户提供响应用户操作时 
+  - 用于表单的提交，取消，编辑，保存及打开一个模态框 
+  - 纯文本的按钮看起来像一个连接，这种按钮通常用于“设置”等场景
+</Callout>
+
+<Callout type="error" emoji="️🚫">
+  避免使用场景： 
+  - 避免使用按钮链接到其他页面。而应该使用Link组件 
+  - 当链接在一个句子中时，避免使用按钮进行链接
+</Callout>
+
+
+### 按钮变体使用说明
+
+| 名称        | 描述                                                                                                                                           |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| default     | 默认样式是最常见的按钮变体。仅当需要调整图元的视觉权重时，才切换到其他变体。请注意，默认样式使用透明背景，因此它可以很好地处理的灯光背景渐变。 |
+| primary     | 主样式保留给视图的主操作调用。每个视图只应使用一次，例如，表单末尾的提交操作。此样式也适用于暗背景或图像。                                     |
+| secondary   | 辅助样式应用于视图中的辅助操作。当已经有一个主要动作，并且我们想要突出显示另一个具有不同风格的动作时，最常用。                                 |
+| negative    | Negative 风格是指暗背景，用于插图顶部。                                                                                                        |
+| destructive | Destructive 样式应用于删除数据或使操作难以恢复的操作。                                                                                         |
+| plain       | 用于不太重要或不太常见的动作                                                                                                                   |
+| disabled    | 用于当前不可用或不再可用的操作                                                                                                                 |
+| loading     | 用于指示按下按钮且操作仍在处理时的进度                                                                                                         |
+
+### 可访问性说明
+
+该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
+
+<Callout type="warning" emoji="✅">
+  该组件已经通过LDS的可访问性规则验证，符合WCAG 2.1 AA可访问性指南
+</Callout>

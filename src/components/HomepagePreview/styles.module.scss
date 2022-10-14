@@ -1,0 +1,19 @@
+.preview {
+  padding: 4rem 0 4rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1680px;
+  background-color: #070707;
+}
+
+[data-theme='dark'] .preview {
+  padding: 4rem 0 4rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1680px;
+  background-color: #1b1b1d;
+}
+
+.head {
+  padding-bottom: 3rem;
+}

@@ -22,6 +22,16 @@
   /* 垂直居中 */
 }
 
+[data-theme='dark'] .head {
+  padding: 2rem 0 0 0;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+}
+
 .featureSvg {
   height: 200px;
   width: 300px;

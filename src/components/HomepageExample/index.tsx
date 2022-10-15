@@ -80,7 +80,7 @@ function GridItem({
 
 export default function HomepageExample(): JSX.Element {
   return (
-    <section>
+    <section id='homepageexample'>
       <div className="container">
         <div >
           <H1 className={styles.head}>{'组件示例'}</H1>

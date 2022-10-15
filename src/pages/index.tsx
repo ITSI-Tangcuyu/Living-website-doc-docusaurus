@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageComponents from '@site/src/components/HomepageComponents';
+import HomepageReady from '@site/src/components/HomepageReady';
 import HomepageExample from '@site/src/components/HomepageExample';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import HomepagePreview from '@site/src/components/HomepagePreview';
@@ -50,6 +51,7 @@ export default function Home(): JSX.Element {
         <HomepageComponents />
         <HomepageExample />
         <HomepagePreview />
+        <HomepageReady />
       </main>
     </Layout>
   );

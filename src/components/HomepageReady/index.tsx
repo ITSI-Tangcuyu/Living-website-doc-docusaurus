@@ -17,21 +17,21 @@ interface CardItem {
 const CardList: CardItem[] = [
   {
     title: '安装',
-    Svg: require('@site/static/img/download-outline.svg').default,
+    Svg: require('@site/static/icons/guide-installation-icon.svg').default,
     desc: 'Living Design System提供了方便的命令行工具，可以通过NPM或Yarn包管理器进行快速安装',
     src: '/docs/intro',
     label: '查看'
   },
   {
     title: '使用指南',
-    Svg: require('@site/static/img/book-outline.svg').default,
+    Svg: require('@site/static/icons/guide-native-icon.svg').default,
     desc: '从设计原则、命名原则、CSS框架、可访问性等层面让你对LDS有一个全面的了解',
     src: '/docs/docs/principles',
     label: '查看'
   },
   {
     title: '组件库',
-    Svg: require('@site/static/img/extension-puzzle-outline.svg').default,
+    Svg: require('@site/static/icons/guide-components-icon.svg').default,
     desc: '组件库是可复用基础单元，通过低代码平台用可视化的方式快速搭建应急行业业务系统',
     src: '/docs/base',
     label: '查看'

@@ -5,38 +5,12 @@ description: 在Tokens基础上的元组件是组成其他业务组件的基础�
 
 # 元组件总览
 
-在 Tokens 基础上的元组件是组成其他业务组件的基础组件
+以 Design Tokens 为基础创建的元组件是组成 MIS 组件、GIS 组件的可复用基础单元
 
-import Cards from '../../src/components/Card';
-import DocsCard from '../../src/components/global/DocsCard';
-import DocsCards from '../../src/components/global/DocsCards';
+import Cards from '../../src/components/global/Card';
 
-<div>
-  <DocsCards>
-  <DocsCard header="Installation Guide" href="/intro/cli" icon="/icons/guide-installation-icon.svg" hoverIcon="/icons/guide-installation-icon-hover.svg">
-    <p>Step-by-step guides to setting up your system and installing the framework.</p>
-  </DocsCard>
-
-<DocsCard
-  header="UI Components"
-  href="/components"
-  icon="/icons/guide-components-icon.svg"
-  hoverIcon="/icons/guide-components-icon-hover.svg"
->
-  <p>Dive into Ionic beautifully designed UI component library.</p>
-</DocsCard>
-
-<DocsCard
-  header="Native Functionality"
-  href="/native"
-  icon="/icons/guide-native-icon.svg"
-  hoverIcon="/icons/guide-native-icon-hover.svg"
->
-  <p>Integrate native device plugins, like Bluetooth, Maps, HealthKit, and more.</p>
-</DocsCard>
-
-  <DocsCard header="Theming" href="/theming/basics" icon="/icons/guide-theming-icon.svg" hoverIcon="/icons/guide-theming-icon-hover.svg">
-    <p>Learn to easily customize and modify your Ionic app's visual design to fit your brand.</p>
-  </DocsCard>
-</DocsCards>
+<div className='container'>
+  <div className='row'>
+    <Cards></Cards>
+  </div>
 </div>

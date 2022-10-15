@@ -1,30 +1,27 @@
 import React from 'react';
 
 const Cards = () => {
-  return wcs.map((item) => {
+  return wcs.map((item, idx) => {
     return (
-      <div key={item.title} className="margin--sm container">
-        <div className='row'>
-          <div class="col col--6">
-            <div class="col-demo">
-              <div className="card">
-                <div>
-                  <a
-                    href={'/base/' + item.title}
-                  >
-                    <div className="card__header">
-                      <h2 >{item.title}</h2>
-                    </div>
-                  </a>
-                  <div className='card__body'>
-                    <p>{item.subtitle}</p>
-                  </div>
+      <div key={idx} className='col col--6'>
+        <div className='col-demo'>
+          <div
+            className='card margin--sm'
+            style={{
+              backgroundColor: 'white',
+              boxShadow:
+                '0 4px 8px 0 rgba(0,0,0,0.1)',
+            }}>
+            <div>
+              <a href={'/base/' + item.title}>
+                <div className='card__header' style={{ padding: '1rem' }}>
+                  <h2>{item.title}</h2>
                 </div>
+              </a>
+              <div className='card__body' style={{ padding: '1rem', color: 'gray' }}>
+                <p>{item.subtitle}</p>
               </div>
             </div>
-          </div>
-          <div class="col col--6">
-            <div class="col-demo">6</div>
           </div>
         </div>
       </div>
@@ -36,10 +33,6 @@ const wcs = [
   {
     title: 'li-accordion',
     subtitle: 'li-accordion手风琴元组件允许用户切换内容部分的显示',
-  },
-  {
-    title: 'li-accordion-section',
-    subtitle: 'li-accordion组件的内容部分',
   },
   {
     title: 'li-activity-timeline',

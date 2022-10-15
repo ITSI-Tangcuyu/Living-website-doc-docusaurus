@@ -13,7 +13,7 @@ const Cards = () => {
                 '0 4px 8px 0 rgba(0,0,0,0.1)',
             }}>
             <div>
-              <a href={'/base/' + item.title}>
+              <a href={'/docs/base/' + item.title}>
                 <div className='card__header' style={{ padding: '1rem' }}>
                   <h2>{item.title}</h2>
                 </div>

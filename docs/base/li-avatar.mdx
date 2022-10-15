@@ -9,7 +9,7 @@ li-avatar 用于图形化地表示用户或对象
 
 ### 示例
 
-import Avatar from '../../src/components/Avatar'
+import Avatar from '../../src/components/Avatar';
 
 <Avatar></Avatar>
 
@@ -28,26 +28,28 @@ import Avatar from '../../src/components/Avatar'
 
 | 事件名称 | 描述 | 类型 |
 | -------- | ---- | ---- |
-|    \      |  \    |   \   |
+| \        | \    | \    |
 
 ### 插槽
 
 | 插槽名称 | 描述 |
 | -------- | ---- |
-|    \      |    \  |
+| \        | \    |
 
 ### 使用场景
 
 本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
 
-import Callout from '../../src/components/Callout'
+import Callout from '@components/global/Callout';
 
-<Callout emoji="❤️">
+<Callout emoji='❤️'>
   建议使用场景：
   用图像信息代表一个用户或者账号作为头像。可以有原型或者正方形两种形式
 </Callout>
 
-<Callout type="error" emoji="️🚫">
+<Callout
+  type='error'
+  emoji='️🚫'>
   避免使用场景：无
 </Callout>
 
@@ -55,6 +57,8 @@ import Callout from '../../src/components/Callout'
 
 该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
 
-<Callout type="warning" emoji="✅">
+<Callout
+  type='warning'
+  emoji='✅'>
   该组件已经通过LDS的可访问性规则验证，符合WCAG 2.1 AA可访问性指南
 </Callout>

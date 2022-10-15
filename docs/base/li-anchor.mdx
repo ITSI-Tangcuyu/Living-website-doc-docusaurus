@@ -5,12 +5,14 @@ description: 锚点元素提供了按钮组件相同的视觉外观
 
 # li-anchor 元组件
 
-li-anchor 是一个[HTML 锚点元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a)的 web 组件实现。
-提供了按钮组件相同的视觉外观，包括边框、背景、自定义前后缀图标、突出的色彩显示等
+li-anchor 是一
+个[HTML 锚点元素](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/a)的
+web 组件实现。提供了按钮组件相同的视觉外观，包括边框、背景、自定义前后缀图标、突
+出的色彩显示等
 
 ### 示例
 
-import { LiAnchor } from '@itsi/living-base-react'
+import { LiAnchor } from '@itsi/living-base-react';
 
 ### 组件属性
 
@@ -39,14 +41,13 @@ import { LiAnchor } from '@itsi/living-base-react'
 
 本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
 
-import Callout from '../../src/components/Callout'
+import Callout from '@components/global/Callout';
 
-<Callout emoji="❤️">
-  建议使用场景:
-  焦点委托给ShadowDOM中的锚点元素时
-</Callout>
+<Callout emoji='❤️'>建议使用场景: 焦点委托给ShadowDOM中的锚点元素时</Callout>
 
-<Callout type="error" emoji="️🚫">
+<Callout
+  type='error'
+  emoji='️🚫'>
   避免使用场景: 无
   <br />
 </Callout>
@@ -55,7 +56,9 @@ import Callout from '../../src/components/Callout'
 
 该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
 
-<Callout type="warning" emoji="❎">
+<Callout
+  type='warning'
+  emoji='❎'>
   该组件还未通过LDS的可访问性规则验证，需要进一步定制开发，才能符合WCAG 2.1
   AA可访问性指南
 </Callout>

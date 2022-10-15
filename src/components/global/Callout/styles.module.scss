@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 250, 240);
+  color: rgba(156, 66, 33)
+}
+
+.icon {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.title {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+}

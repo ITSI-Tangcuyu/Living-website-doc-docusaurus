@@ -18,7 +18,7 @@ function HomepageHeader() {
 
     <div className={clsx('hero hero--primary', styles.heroBanner)}>
       <BackgroundImage style={{ justifyContent: 'center' }}
-        src="/img/floating-ui.jpg"
+        src="/img/living-bg.jpg"
       >
         <div className="container">
 

@@ -41,7 +41,7 @@ const CardList: CardItem[] = [
 function Card({ title, Svg, desc, src, label }: CardItem) {
   return (
     <div className={clsx('col col--4 padding-top--lg')}>
-      <div className="card shadow--md padding-left--md" style={{ background: '#FFFFFF' }}>
+      <div className="card shadow--sm padding-left--md" style={{ background: '#FFFFFF' }}>
         <div className="card__header">
           <div className="avatar">
             <Link href={src} >
@@ -60,7 +60,7 @@ function Card({ title, Svg, desc, src, label }: CardItem) {
             <Link href={src} >
               <Button style={{
                 background: '#000000',
-                boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)'
+                boxShadow: '0 2px 4px 0 rgba(0,0,0,0.2)'
               }}>{label}</Button>
             </Link>)}
         </div>

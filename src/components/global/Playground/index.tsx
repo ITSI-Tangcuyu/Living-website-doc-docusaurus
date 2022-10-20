@@ -4,7 +4,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import './playground.css';
 import { EditorOptions, openAngularEditor, openHtmlEditor, openReactEditor, openVueEditor } from './stackblitz.utils';
 import { Mode, UsageTarget } from './playground.types';
-import useThemeContext from '@theme/hooks/useThemeContext';
+// import useThemeContext from '@theme/hooks/useThemeContext';
 
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
@@ -105,7 +105,8 @@ export default function Playground({
     console.warn('No code usage examples provided for this Playground example.');
     return;
   }
-  const { isDarkTheme } = useThemeContext();
+  // const { isDarkTheme } = useThemeContext();
+  const isDarkTheme = false;
 
   const hostRef = useRef<HTMLDivElement | null>(null);
   const codeRef = useRef(null);
@@ -389,24 +390,6 @@ export default function Playground({
             <ControlButton isSelected={isMD} handleClick={() => setMode(Mode.MD)} title="MD mode" label="MD" />
           </div>
           <div className="playground__control-group playground__control-group--end">
-            <Tippy theme="playground" arrow={false} placement="bottom" content="Open in StackBlitz">
-              <button className="playground__icon-button playground__icon-button--primary" onClick={openEditor}>
-                <svg
-                  aria-hidden="true"
-                  width="10"
-                  height="14"
-                  viewBox="0 0 10 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5.53812 5.91743L7.52915 1L1 8.01835H4.42601L2.42601 13L9 5.91743H5.53812Z"
-                    stroke="#73849A"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            </Tippy>
             <Tippy
               theme="playground"
               arrow={false}
@@ -418,9 +401,8 @@ export default function Playground({
               }
             >
               <button
-                className={`playground__icon-button playground__icon-button--primary ${
-                  hasUsageTargetOptions ? 'playground__icon-button--disabled' : ''
-                }`}
+                className={`playground__icon-button playground__icon-button--primary ${hasUsageTargetOptions ? 'playground__icon-button--disabled' : ''
+                  }`}
                 aria-disabled={hasUsageTargetOptions}
                 onClick={copySourceCode}
               >
@@ -434,9 +416,9 @@ export default function Playground({
                 >
                   <path
                     d="M2.06667 9V9C1.47756 9 1 8.52244 1 7.93333V3C1 1.89543 1.89543 1 3 1H7.93333C8.52244 1 9 1.47756 9 2.06667V2.06667"
-                    stroke="current"
+                    stroke="#73849A"
                   />
-                  <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="current" />
+                  <rect x="3" y="3" width="8" height="8" rx="1.5" stroke="#73849A" />
                 </svg>
               </button>
             </Tippy>
@@ -468,7 +450,7 @@ export default function Playground({
             <Tippy theme="playground" arrow={false} placement="bottom" content="Report an issue">
               <a
                 className="playground__icon-button"
-                href="https://github.com/ionic-team/ionic-docs/issues/new/choose"
+                href="https://github.com/Tangcuyu/living-base/issues"
                 aria-label="Report an issue"
                 target="_blank"
                 rel="noreferrer"
@@ -485,43 +467,49 @@ export default function Playground({
         </div>
         {renderIframes
           ? [
-              <div className="playground__preview">
-                {!iframesLoaded && renderLoadingScreen()}
-                {/*
+            <div className="playground__preview" key={frameSize.toString()}>
+              {!iframesLoaded && renderLoadingScreen()}
+              {/*
               We render two iframes, one for each mode.
               When the set mode changes, we hide one frame and
               show the other. This is done to avoid flickering
               and doing unnecessary reloads when switching modes.
             */}
-                {devicePreview
-                  ? [
-                      <div className={!isIOS ? 'frame-hidden' : 'frame-visible'}>
-                        <device-preview mode="ios">
-                          <iframe height={frameSize} ref={ref => handleFrameRef(ref, 'ios')} src={sourceiOS}></iframe>
-                        </device-preview>
-                      </div>,
-                      <div className={!isMD ? 'frame-hidden' : 'frame-visible'}>
-                        <device-preview mode="md">
-                          <iframe height={frameSize} ref={ref => handleFrameRef(ref, 'md')} src={sourceMD}></iframe>
-                        </device-preview>
-                      </div>,
-                    ]
-                  : [
-                      <iframe
-                        height={frameSize}
-                        className={!isIOS ? 'frame-hidden' : ''}
-                        ref={ref => handleFrameRef(ref, 'ios')}
-                        src={sourceiOS}
-                      ></iframe>,
-                      <iframe
-                        height={frameSize}
-                        className={!isMD ? 'frame-hidden' : ''}
-                        ref={ref => handleFrameRef(ref, 'md')}
-                        src={sourceMD}
-                      ></iframe>,
-                    ]}
-              </div>,
-            ]
+              {devicePreview
+                ? [
+                  <div className={!isIOS ? 'frame-hidden' : 'frame-visible'} >
+                    {/* @ts-ignore */}
+                    <device-preview mode="ios">
+                      <iframe height={frameSize} ref={ref => handleFrameRef(ref, 'ios')} src={sourceiOS}></iframe>
+                      {/* @ts-ignore */}
+                    </device-preview>
+                  </div>,
+                  <div className={!isMD ? 'frame-hidden' : 'frame-visible'} >
+                    {/* @ts-ignore */}
+                    <device-preview mode="md">
+                      <iframe height={frameSize} ref={ref => handleFrameRef(ref, 'md')} src={sourceMD}></iframe>
+                      {/* @ts-ignore */}
+                    </device-preview>
+                  </div>,
+                ]
+                : [
+                  <iframe
+                    height={frameSize}
+                    className={!isIOS ? 'frame-hidden' : ''}
+                    ref={ref => handleFrameRef(ref, 'ios')}
+                    src={sourceiOS}
+                    key={sourceiOS}
+                  ></iframe>,
+                  <iframe
+                    height={frameSize}
+                    className={!isMD ? 'frame-hidden' : ''}
+                    ref={ref => handleFrameRef(ref, 'md')}
+                    src={sourceMD}
+                    key={sourceMD}
+                  ></iframe>,
+                ]}
+            </div>,
+          ]
           : []}
       </div>
       <div ref={codeRef} className="playground__code-block">

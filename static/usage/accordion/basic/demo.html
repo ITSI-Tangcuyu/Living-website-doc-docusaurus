@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Living Base基础库</title>
+    <link
+      rel="stylesheet"
+      href="../../common.css" />
+    <script src="../../common.js"></script>
+    <script
+      nomodule
+      src="@itsi/living-base-react/dist/index.js"></script>
+  </head>
+  <body>
+    <h2>Accordion基础用法</h2>
+    <li-accordion dependent>
+      <li-collapsible>
+        <span slot="heading">为什么要创建 LDS 设计系统?</span>
+        <p>
+          Living Design System — 应急行业设计系统 简称 LDS，是一套基于 web
+          component 和现代化 web 开发标准构建的、
+          专门针对应急行业进行了行业特征功能融合的一整套 WEB
+          开发体系和工具集。其核心目标是协助用户解决在创建应急行业大屏、WEB应用、
+          移动端应用等多端应用时遇到的各种挑战。
+        </p>
+      </li-collapsible>
+      <li-collapsible>
+        <span slot="heading">什么是 Web Component?</span>
+        <p>
+          Web Component 是 WEB
+          标准原生提供的封装组件的方式，可以让开发人员定义可重复使用的自定义元素。
+          标准包含了自定义 HTML 标签、自定义组件生命周期、封装 HTML 和 CSS
+          渲染、组件换肤等多种能力。如今，各大主流浏览器已经全面支持 Web
+          Component 标准的实现。
+        </p>
+      </li-collapsible>
+      <li-collapsible>
+        <span slot="heading">LDS 如何利用 Web Component?</span>
+        <p>
+          LDS 的一个设计原则是：最大程度遵循和采用开放的、基于 WEB
+          标准的方法。因此， LDS 的开发直接采用 W3C 的 Web Component
+          标准，没有创建非标准的组件模型。这样就确保了所有的 LDS
+          组件就是原生的标准 HTML 元素。在使用 LDS
+          组件库的时候你不需要引入任何第三方框架。当然，如果你已经采用了第三方前端框架，比如：VUE，React，Angular，Svelet
+          等 LDS 也是全面兼容的。
+        </p>
+      </li-collapsible>
+    </li-accordion>
+  </body>
+</html>

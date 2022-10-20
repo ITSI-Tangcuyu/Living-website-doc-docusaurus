@@ -1,18 +1,18 @@
 /* Dark theme overrides */
 [data-theme="dark"] .playground {
-  --playground-btn-color: var(--c-carbon-20);
+  --playground-btn-color: #b4bcc6;
   --playground-btn-selected-color: #fff;
-  --playground-btn-selected-background: var(--c-carbon-70);
+  --playground-btn-selected-background: #434f5e;
 
-  --playground-btn-icon-color: var(--c-carbon-20);
+  --playground-btn-icon-color: #b4bcc6;
   --playground-btn-icon-hover-background: rgba(67, 79, 93, 0.5);
 
-  --playground-separator-color: var(--c-carbon-70);
+  --playground-separator-color: #434f5e;
 
   --playground-code-background: rgb(22, 29, 37);
 
-  --playground-tabs-background: var(--c-carbon-90);
-  --playground-tab-btn-color: var(--c-carbon-20);
+  --playground-tabs-background: #222d3a;
+  --playground-tab-btn-color: #b4bcc6;
   --playground-tab-btn-border-color: transparent;
 }
 
@@ -29,17 +29,17 @@
    * @prop --playground-tab-btn-color: The text color of the tab buttons.
    * @prop --playground-tab-btn-border-color: The border color of the tab buttons.
    */
-  --playground-btn-color: var(--c-indigo-90);
-  --playground-btn-selected-color: var(--c-blue-90);
-  --playground-btn-selected-background: var(--c-blue-10);
-  --playground-btn-icon-hover-background: var(--c-indigo-20);
-  --playground-btn-icon-color: var(--c-indigo-80);
-  --playground-separator-color: var(--c-indigo-30);
-  --playground-code-background: var(--c-indigo-10);
+  --playground-btn-color: #2d4665;
+  --playground-btn-selected-color: #1b6dff;
+  --playground-btn-selected-background: #e3edff;
+  --playground-btn-icon-hover-background: #e9edf3;
+  --playground-btn-icon-color: #445b78;
+  --playground-separator-color: #dee3ea;
+  --playground-code-background: #f6f8fc;
 
-  --playground-tabs-background: var(--c-indigo-20);
-  --playground-tab-btn-color: var(--c-carbon-100);
-  --playground-tab-btn-border-color: var(--c-indigo-30);
+  --playground-tabs-background: #e9edf3;
+  --playground-tab-btn-color: #03060b;
+  --playground-tab-btn-border-color: #dee3ea;
 
   overflow: hidden;
 
@@ -83,12 +83,12 @@
   min-height: 24px;
 }
 
-.playground__control-group + .playground__control-group {
+.playground__control-group+.playground__control-group {
   padding-left: 12px;
 }
 
 /** Vertical divider between control groups */
-.playground__control-group + .playground__control-group:not(.playground__control-group--end) {
+.playground__control-group+.playground__control-group:not(.playground__control-group--end) {
   /* Only show the vertical divider when there is a control group after it */
   border-left: 1px solid var(--playground-separator-color);
 }

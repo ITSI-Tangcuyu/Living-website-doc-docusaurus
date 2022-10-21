@@ -480,14 +480,14 @@ export default function Playground({
                   <div className={!isIOS ? 'frame-hidden' : 'frame-visible'} >
                     {/* @ts-ignore */}
                     <device-preview mode="ios">
-                      <iframe height={frameSize} ref={ref => handleFrameRef(ref, 'ios')} src={sourceiOS}></iframe>
+                      <iframe height={frameSize} ref={ref => handleFrameRef(ref, 'ios')} srcDoc={sourceiOS}></iframe>
                       {/* @ts-ignore */}
                     </device-preview>
                   </div>,
                   <div className={!isMD ? 'frame-hidden' : 'frame-visible'} >
                     {/* @ts-ignore */}
                     <device-preview mode="md">
-                      <iframe height={frameSize} ref={ref => handleFrameRef(ref, 'md')} src={sourceMD}></iframe>
+                      <iframe height={frameSize} ref={ref => handleFrameRef(ref, 'md')} srcDoc={sourceMD}></iframe>
                       {/* @ts-ignore */}
                     </device-preview>
                   </div>,

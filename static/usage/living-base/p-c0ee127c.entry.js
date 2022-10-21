@@ -1,0 +1,1 @@
+import{r as s,h as t,H as l}from"./p-f27c1a9d.js";const r=class{constructor(t){s(this,t)}render(){return t(l,null,t("slot",null))}};r.style=":host{display:block}";export{r as li_activity_timeline}

@@ -249,6 +249,10 @@
   height: 100%;
 }
 
+.item  {
+  flex: 1;
+  padding-left: 2rem;
+}
 :root {
   --ion-safe-area-top: 20px;
   --ion-safe-area-bottom: 22px;

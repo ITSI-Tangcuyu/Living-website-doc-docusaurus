@@ -1,0 +1,1 @@
+import{r as s,h as o,H as t}from"./p-f27c1a9d.js";const r=class{constructor(o){s(this,o)}render(){return o(t,null,o("slot",null))}};r.style=":host{display:block}";export{r as li_notification}

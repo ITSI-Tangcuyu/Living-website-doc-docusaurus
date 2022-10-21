@@ -1,0 +1,1 @@
+import{r as l,h as s,H as r}from"./p-f27c1a9d.js";const t=class{constructor(s){l(this,s)}render(){return s(r,null,s("slot",null))}};t.style=":host{display:block}";export{t as li_table_cell}

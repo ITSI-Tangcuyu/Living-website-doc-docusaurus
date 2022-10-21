@@ -120,6 +120,11 @@ const wcs = [
       'li-cookie-consent通知用户Cookie的使用情况，用户第一次访问应用时，会显示此横幅',
   },
   {
+    title: 'li-data-grid',
+    subtitle:
+      'li-data-grid日期选择器是用于捕获单个日期、日期范围或日期和时间的文本输入',
+  },
+  {
     title: 'li-date-picker',
     subtitle:
       'li-date-picker日期选择器是用于捕获单个日期、日期范围或日期和时间的文本输入',

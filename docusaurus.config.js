@@ -7,7 +7,7 @@ const path = require('path');
 const prismic = require('@prismicio/client');
 const fetch = require('node-fetch');
 
-/** @type {import('@docusaurus/types').Config} */
+/** @typedef {import('@docusaurus/types').Config} */
 const config = {
   title: 'Living Design System',
   tagline: '基于Web Component、具备应急行业特征的WEB开发体系和工具集',
@@ -43,7 +43,7 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      /** @typedef {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
@@ -67,7 +67,7 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    /** @typedef {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
         title: 'Living Design System',

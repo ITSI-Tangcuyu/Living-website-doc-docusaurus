@@ -7,12 +7,33 @@ description: 在Tokens基础上的元组件是组成其他业务组件的基础�
 
 ### 示例
 
+### 普通卡片（阴影效果）
+
+import Basic from '@site/static/usage/card/basic/index.mdx';
+
+<Basic />
+
+### 带有链接属性的卡片
+
+import WithLink from '@site/static/usage/card/withLink/index.mdx';
+
+<WithLink />
+
+### 带有图片的卡片
+
+import WithImg from '@site/static/usage/card/withImg/index.mdx';
+
+<WithImg />
+
 ### 组件属性
 
-| 属性 | 特性 | 描述 | 类型 | 默认值 |
-| ---- | ---- | ---- | ---- | ------ |
-|      |      |      |      |        |
-|      |      |      |      |        |
+| 属性     | 特性     | 描述 | 类型                  | 默认值      |
+| -------- | -------- | ---- | --------------------- | ----------- |
+| `label`  | `label`  |      | `string \| undefined` | `''`        |
+| `rel`    | `rel`    |      | `string \| undefined` | `''`        |
+| `styles` | `styles` |      | `string \| undefined` | `undefined` |
+| `target` | `target` |      | `string \| undefined` | `''`        |
+| `to`     | `to`     |      | `string \| undefined` | `''`        |
 
 ### 组件事件
 

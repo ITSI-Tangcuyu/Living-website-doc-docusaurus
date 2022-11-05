@@ -37,10 +37,10 @@ const sidebars = {
       items: [
         'base/base',
         'base/li-accordion',
-        'base/li-accordion-section',
         'base/li-activity-timeline',
         'base/li-alert',
         'base/li-anchor',
+        'base/li-avatar',
         'base/li-badge',
         'base/li-bread-crumbs',
         'base/li-button',

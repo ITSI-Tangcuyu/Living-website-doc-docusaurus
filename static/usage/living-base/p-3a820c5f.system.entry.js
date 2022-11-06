@@ -1,1 +1,0 @@
-System.register(["./p-0de9bb69.system.js"],(function(t){"use strict";var e,r,n;return{setters:[function(t){e=t.r;r=t.h;n=t.H}],execute:function(){var s=":host{display:block}";var i=t("li_grid",function(){function t(t){e(this,t)}t.prototype.render=function(){return r(n,null)};return t}());i.style=s}}}));

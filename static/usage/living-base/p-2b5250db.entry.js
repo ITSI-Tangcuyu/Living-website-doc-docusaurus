@@ -1,1 +1,0 @@
-import{r as o,h as s,H as r}from"./p-f27c1a9d.js";const l=class{constructor(s){o(this,s)}render(){return s(r,null,s("slot",null))}};l.style=":host{display:block}";export{l as li_combo_box}

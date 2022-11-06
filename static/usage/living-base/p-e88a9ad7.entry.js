@@ -1,0 +1,1 @@
+import{r as s,h as l,H as t}from"./p-8d227782.js";const r=class{constructor(l){s(this,l)}render(){return l(t,null,l("slot",null))}};r.style=":host{display:block}";export{r as li_editable_table}

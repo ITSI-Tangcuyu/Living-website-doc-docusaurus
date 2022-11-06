@@ -1,1 +1,0 @@
-import{r as s,h as o,H as l}from"./p-f27c1a9d.js";const r=class{constructor(o){s(this,o)}render(){return o(l,null,o("slot",null))}};r.style=":host{display:block}";export{r as li_logo}

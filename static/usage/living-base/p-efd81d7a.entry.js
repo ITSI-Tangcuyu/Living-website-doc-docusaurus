@@ -1,1 +1,0 @@
-import{r,h as s,H as o}from"./p-f27c1a9d.js";const t=class{constructor(s){r(this,s)}render(){return s(o,null)}};t.style=":host{display:block}";export{t as li_grid}

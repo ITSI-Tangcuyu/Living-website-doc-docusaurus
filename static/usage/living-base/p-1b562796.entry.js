@@ -1,0 +1,1 @@
+import{r as s,h as i,H as l}from"./p-8d227782.js";import{c as t}from"./p-1af7e5e1.js";const e=class{constructor(i){s(this,i),this.layout="vertical"}render(){return i(l,{class:t("timeline",{[this.layout]:!0})},i("slot",null))}};e.style=":host{display:block}:host(.li-timeline-horizontal){display:-ms-flexbox;display:flex}";export{e as li_timeline}

@@ -1,1 +1,0 @@
-import{r,h as s,H as o}from"./p-f27c1a9d.js";const l=class{constructor(s){r(this,s)}render(){return s(o,null,s("slot",null))}};l.style=":host{display:block}";export{l as li_hero_area}

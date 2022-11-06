@@ -1,1 +1,0 @@
-System.register(["./p-0de9bb69.system.js"],(function(t){"use strict";var r,e,n;return{setters:[function(t){r=t.r;e=t.h;n=t.H}],execute:function(){var s=":host{display:block}";var u=t("li_paragraph",function(){function t(t){r(this,t)}t.prototype.render=function(){return e(n,null,e("slot",null))};return t}());u.style=s}}}));

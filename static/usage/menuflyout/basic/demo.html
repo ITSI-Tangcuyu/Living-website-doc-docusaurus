@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Base基础库</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <link rel="stylesheet" href="../../living-base/living-base.css" />
+
+  <script src="../../living-base/living-base.js"></script>
+</head>
+
+<body>
+  <div class="item">
+    <li-menu-flyout>
+      <li-button slot="trigger" variant="secondary" icon-only>
+        <li-icon-service-settings accessibility-title="Open menu">
+          </li-icon-sevice-settings>
+      </li-button>
+      <li-menu-flyout-list>
+        <li-menu-flyout-item>Item Title</li-menu-flyout-item>
+        <li-menu-flyout-item>Really Quite Long Item Title</li-menu-flyout-item>
+        <li-menu-flyout-divider></li-menu-flyout-divider>
+        <li-menu-flyout-item>Item With Suffix 1<span slot="suffix">⌘F</span></li-menu-flyout-item>
+        <li-menu-flyout-item>Item With Suffix 2<span slot="suffix">⌘H</span></li-menu-flyout-item>
+        <li-menu-flyout-divider></li-menu-flyout-divider>
+        <li-menu-flyout-item>
+          Other Options
+          <li-menu-flyout-list slot="sublist">
+            <li-menu-flyout-item>
+              <li-icon-action-cut-paste slot="prefix"></li-icon-action-cut-paste>Item With Prefix 1
+            </li-menu-flyout-item>
+            <li-menu-flyout-item>
+              <li-icon-action-loop slot="prefix"></li-icon-action-loop>Item
+              With Prefix 2
+              <li-menu-flyout-list slot="sublist">
+                <li-menu-flyout-item>Third Level Item 1</li-menu-flyout-item>
+                <li-menu-flyout-item>Third Level Item 2</li-menu-flyout-item>
+                <li-menu-flyout-item>Third Level Item 3</li-menu-flyout-item>
+              </li-menu-flyout-list>
+            </li-menu-flyout-item>
+            <li-menu-flyout-item>
+              <li-icon-action-more slot="prefix"></li-icon-action-more>Item
+              With Prefix 3
+            </li-menu-flyout-item>
+          </li-menu-flyout-list>
+        </li-menu-flyout-item>
+      </li-menu-flyout-list>
+    </li-menu-flyout>
+  </div>
+</body>
+
+</html>

@@ -109,42 +109,42 @@ const wcs = [
     subtitle:
       'li-divider用于表示段落级元素之间的主题分隔。界面上它们看起来像水平的线条。',
   },
-  {
-    title: 'li-editable-table',
-    subtitle:
-      'li-editable-table可编辑表用于增强具有可编辑功能的表格编辑数据的能力',
-  },
-  {
-    title: 'li-empty-state',
-    subtitle: 'li-empty-state元组件用于表示另一个组件没有要显示的项或数据',
-  },
-  {
-    title: 'li-fieldset',
-    subtitle: 'li-fieldset字段集元组件用于将多个相关表单组件和标签组合在一起',
-  },
-  {
-    title: 'li-footer',
-    subtitle:
-      'li-footer页脚组件用作所有视图的全局页脚。包含版权数据和相关文档的链接。',
-  },
-  {
-    title: 'li-grid',
-    subtitle: 'li-grid网格组件使用基于Flexbox的布局系统为其他组件提供布局结构',
-  },
-  {
-    title: 'li-header',
-    subtitle:
-      'li-header标题用于显示Logo、主导航和实用程序菜单。它总是在界面顶部可见。',
-  },
-  {
-    title: 'li-heading',
-    subtitle: 'li-heading标题元组件用作界面中页面每个主要部分的标题。',
-  },
-  {
-    title: 'li-hero-area',
-    subtitle:
-      'li-hero-area英雄区域通常是用户看到的第一件事，是吸引用户注意力的好地方。',
-  },
+  // {
+  //   title: 'li-editable-table',
+  //   subtitle:
+  //     'li-editable-table可编辑表用于增强具有可编辑功能的表格编辑数据的能力',
+  // },
+  // {
+  //   title: 'li-empty-state',
+  //   subtitle: 'li-empty-state元组件用于表示另一个组件没有要显示的项或数据',
+  // },
+  // {
+  //   title: 'li-fieldset',
+  //   subtitle: 'li-fieldset字段集元组件用于将多个相关表单组件和标签组合在一起',
+  // },
+  // {
+  //   title: 'li-footer',
+  //   subtitle:
+  //     'li-footer页脚组件用作所有视图的全局页脚。包含版权数据和相关文档的链接。',
+  // },
+  // {
+  //   title: 'li-grid',
+  //   subtitle: 'li-grid网格组件使用基于Flexbox的布局系统为其他组件提供布局结构',
+  // },
+  // {
+  //   title: 'li-header',
+  //   subtitle:
+  //     'li-header标题用于显示Logo、主导航和实用程序菜单。它总是在界面顶部可见。',
+  // },
+  // {
+  //   title: 'li-heading',
+  //   subtitle: 'li-heading标题元组件用作界面中页面每个主要部分的标题。',
+  // },
+  // {
+  //   title: 'li-hero-area',
+  //   subtitle:
+  //     'li-hero-area英雄区域通常是用户看到的第一件事，是吸引用户注意力的好地方。',
+  // },
   {
     title: 'li-icon',
     subtitle:

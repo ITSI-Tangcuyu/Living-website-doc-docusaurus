@@ -16,7 +16,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@itsi/base-components": "../file/living-base",
+    "@itsi/base-components": "file:../living-base",
     "@docusaurus/core": "2.1.0",
     "@docusaurus/mdx-loader": "^2.1.0",
     "@docusaurus/preset-classic": "^2.1.0",

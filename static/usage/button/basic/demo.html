@@ -13,17 +13,28 @@
 </head>
 
 <body>
-  <div class="item">
-    <h2>基础用法</h2>
-    <li-button color="primary">一级按钮</li-button>
-    <li-button color="success">二级按钮</li-button>
-    <li-button color="warning">三级按钮</li-button>
-    <li-button>四级按钮</li-button>
-    <h2>禁用状态</h2>
-    <li-button color="primary" disabled="true">一级按钮</li-button>
-    <li-button color="success" disabled="true">二级按钮</li-button>
-    <li-button color="warning" disabled="true">三级按钮</li-button>
-    <li-button disabled="true">四级按钮</li-button>
+  <div class="item pt">
+    <li-button>标准按钮</li-button>
+    <li-button variant="secondary">二级按钮</li-button>
+    <li-button disabled>禁用状态按钮</li-button>
+    <li-button variant="secondary" disabled>二级禁用状态按钮</li-button>
+  </div>
+  <div class="item pt">
+    <li-button icon-position="after">后置图标按钮<li-icon-navigation-right></li-icon-navigation-right>
+    </li-button>
+    <li-button href="https://example.com" target="_blank">打开新Tab页面的按钮（外部连接）</li-button>
+    <li-button icon-position="before">
+      <li-icon-action-search></li-icon-action-search>前置图标按钮
+    </li-button>
+  </div>
+
+  <div class="item pt">
+    <li-button href="assets/welcome.jpg" download="welcome.jpg">下载按钮</li-button>
+    <li-button href="https://example.com" target="_blank">
+      带有图标的打开新Tab页面按钮（外部连接）
+      <li-icon-navigation-external-link accesibility-title="打开新Tab页面的按钮（外部连接）">
+      </li-icon-navigation-external-link>
+    </li-button>
   </div>
 </body>
 

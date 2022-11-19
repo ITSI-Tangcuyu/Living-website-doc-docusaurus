@@ -1,40 +1,41 @@
 ```html
-<ion-accordion-group>
-  <ion-accordion value="angular">
-    <ion-item
-      slot="header"
-      color="light">
-      <ion-label>First Accordion</ion-label>
-    </ion-item>
-    <div
-      class="ion-padding"
-      slot="content">
-      First Content
-    </div>
-  </ion-accordion>
-  <ion-accordion value="second">
-    <ion-item
-      slot="header"
-      color="light">
-      <ion-label>Second Accordion</ion-label>
-    </ion-item>
-    <div
-      class="ion-padding"
-      slot="content">
-      Second Content
-    </div>
-  </ion-accordion>
-  <ion-accordion value="third">
-    <ion-item
-      slot="header"
-      color="light">
-      <ion-label>Third Accordion</ion-label>
-    </ion-item>
-    <div
-      class="ion-padding"
-      slot="content">
-      Third Content
-    </div>
-  </ion-accordion>
-</ion-accordion-group>
+<div class="item">
+  <li-button>标准按钮</li-button>
+  <li-button variant="secondary">二级按钮</li-button>
+  <li-button disabled>禁用状态按钮</li-button>
+  <li-button
+    variant="secondary"
+    disabled
+    >二级禁用状态按钮</li-button
+  >
+</div>
+<div class="item">
+  <li-button icon-position="after"
+    >后置图标按钮<li-icon-navigation-right></li-icon-navigation-right>
+  </li-button>
+  <li-button
+    href="https://example.com"
+    target="_blank"
+    >打开新Tab页面的按钮（外部连接）</li-button
+  >
+  <li-button icon-position="before">
+    <li-icon-action-search></li-icon-action-search>前置图标按钮
+  </li-button>
+</div>
+
+<div class="item">
+  <li-button
+    href="assets/welcome.jpg"
+    download="welcome.jpg"
+    >下载按钮</li-button
+  >
+  <li-button
+    href="https://example.com"
+    target="_blank">
+    带有图标的打开新Tab页面按钮（外部连接）
+    <li-icon-navigation-external-link
+      accesibility-title="打开新Tab页面的按钮（外部连接）">
+    </li-icon-navigation-external-link>
+  </li-button>
+</div>
 ```

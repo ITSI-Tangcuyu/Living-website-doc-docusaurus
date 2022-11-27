@@ -248,6 +248,11 @@ const wcs = [
     subtitle: 'li-rating-star评级组件让用户分享他们对产品、服务或内容的看法',
   },
   {
+    title: 'li-sidebar',
+    subtitle:
+      'li-sidebar侧边栏导航补充了广泛信息架构中的主导航。它帮助用户快速找到网站某个区域内的内容',
+  },
+  {
     title: 'li-select',
     subtitle:
       'li-select选择允许用户从选项菜单中选择一个选项。有6个或更多选项时，请使用select',

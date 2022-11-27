@@ -90,6 +90,7 @@ const sidebars = {
         'base/li-radio-group',
         'base/li-range-silder',
         'base/li-range-stepper',
+        'base/li-rating-star',
         'base/li-select',
         'base/li-spacer',
         'base/li-spinner',

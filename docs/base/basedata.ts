@@ -244,6 +244,10 @@ const wcs = [
       'li-range-stepper范围步进器是一个组件，可用于逐步通过一系列值范围',
   },
   {
+    title: 'li-rating-star',
+    subtitle: 'li-rating-star评级组件让用户分享他们对产品、服务或内容的看法',
+  },
+  {
     title: 'li-select',
     subtitle:
       'li-select选择允许用户从选项菜单中选择一个选项。有6个或更多选项时，请使用select',

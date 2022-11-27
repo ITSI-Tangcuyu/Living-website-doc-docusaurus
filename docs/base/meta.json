@@ -54,6 +54,7 @@
   "li-radio-group": "radio-group组件",
   "li-range-silder": "range-silder组件",
   "li-range-stepper": "range-stepper组件",
+  "li-rating-star": "rating-star组件",
   "li-select": "select组件",
   "li-spacer": "spacer组件",
   "li-spinner": "spinner组件",

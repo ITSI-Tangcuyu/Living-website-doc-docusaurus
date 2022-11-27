@@ -92,6 +92,7 @@ const sidebars = {
         'base/li-range-stepper',
         'base/li-rating-star',
         'base/li-sidebar',
+        'base/li-slider',
         'base/li-select',
         'base/li-spacer',
         'base/li-spinner',

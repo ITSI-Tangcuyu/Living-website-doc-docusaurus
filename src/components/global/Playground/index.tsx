@@ -146,7 +146,6 @@ export default function Playground({
    * dark mode can be enabled without a full page reload.
    */
   const postDarkThemeMessage = async () => {
-    console.log(frameMD, frameiOS);
     if (frameiOS && frameiOS.current && frameMD && frameMD.current) {
       await Promise.all([
         waitForFrame(frameiOS.current),

@@ -253,6 +253,11 @@ const wcs = [
       'li-sidebar侧边栏导航补充了广泛信息架构中的主导航。它帮助用户快速找到网站某个区域内的内容',
   },
   {
+    title: 'li-slider',
+    subtitle:
+      'li-slider组件显示当前值或值范围。用户可以通过沿条移动手柄来增加或减少值或值范围',
+  },
+  {
     title: 'li-select',
     subtitle:
       'li-select选择允许用户从选项菜单中选择一个选项。有6个或更多选项时，请使用select',

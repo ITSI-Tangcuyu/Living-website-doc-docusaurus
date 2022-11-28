@@ -281,6 +281,11 @@ const wcs = [
       'li-stepper逐步操作元组件通过将内容划分为逻辑步骤来创建类似向导的工作流',
   },
   {
+    title: 'li-switch',
+    subtitle:
+      'li-switch开关允许用户快速打开或关闭某个项目。就像物理灯光开关一样，它们可以提供即时结果',
+  },
+  {
     title: 'li-tab-group',
     subtitle:
       'li-tab-group选项卡组，允许在单个窗口中包含多个面板，使用选项卡作为导航元素。',

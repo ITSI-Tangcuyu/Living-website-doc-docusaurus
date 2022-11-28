@@ -153,8 +153,10 @@ export default function Playground({
       ]);
 
       const message = { darkMode: isDarkTheme };
-      frameiOS.current.contentWindow.postMessage(message);
-      frameMD.current.contentWindow.postMessage(message);
+      if (frameiOS.current && frameMD.current) {
+        frameiOS.current.contentWindow.postMessage(message);
+        frameMD.current.contentWindow.postMessage(message);
+      }
     }
   };
 

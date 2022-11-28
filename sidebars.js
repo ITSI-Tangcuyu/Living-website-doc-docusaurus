@@ -98,6 +98,7 @@ const sidebars = {
         'base/li-spinner',
         'base/li-srollable',
         'base/li-stepper',
+        'base/li-switch',
         'base/li-tab-group',
         'base/li-table',
         'base/li-textarea',

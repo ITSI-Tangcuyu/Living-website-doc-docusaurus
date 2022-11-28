@@ -286,9 +286,9 @@ const wcs = [
       'li-switch开关允许用户快速打开或关闭某个项目。就像物理灯光开关一样，它们可以提供即时结果',
   },
   {
-    title: 'li-tab-group',
+    title: 'li-tab-nav',
     subtitle:
-      'li-tab-group选项卡组，允许在单个窗口中包含多个面板，使用选项卡作为导航元素。',
+      'li-tab-nav选项卡组，允许在单个窗口中包含多个面板，使用选项卡作为导航元素。',
   },
   {
     title: 'li-table',

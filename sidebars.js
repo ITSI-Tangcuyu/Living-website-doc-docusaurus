@@ -99,7 +99,7 @@ const sidebars = {
         'base/li-srollable',
         'base/li-stepper',
         'base/li-switch',
-        'base/li-tab-group',
+        'base/li-tab-nav',
         'base/li-table',
         'base/li-textarea',
         'base/li-toggle',

@@ -291,9 +291,9 @@ const wcs = [
       'li-tab-nav选项卡组，允许在单个窗口中包含多个面板，使用选项卡作为导航元素。',
   },
   {
-    title: 'li-table',
+    title: 'li-tag',
     subtitle:
-      'li-table是一个轻量级的，提供了粘性标题、支持窄视口宽度和表格样式等功能的表格组件',
+      'li-tag标签将用户的注意力吸引到某些内容元素上。它们表示类别或属性',
   },
   {
     title: 'li-textarea',

@@ -100,7 +100,7 @@ const sidebars = {
         'base/li-stepper',
         'base/li-switch',
         'base/li-tab-nav',
-        'base/li-table',
+        'base/li-tag',
         'base/li-textarea',
         'base/li-toggle',
         'base/li-tooltip',

@@ -150,21 +150,21 @@ const wcs = [
     subtitle:
       'li-icon图标组件允许您自定义图标的大小和颜色。在文本标签不适合的地方提供额外的含义',
   },
-  {
-    title: 'li-input',
-    subtitle:
-      'li-input输入组件用于用户在预期输入较短时提供文本输入，支持多种文本格式，包括数字。',
-  },
-  {
-    title: 'li-label',
-    subtitle:
-      'li-label标签用于为界面中的项目创建文本标签。最常用于其他表单组件内部。',
-  },
-  {
-    title: 'li-layout',
-    subtitle:
-      'li-layout布局组件虽然在用户界面本身中不可见，但为其他组件提供了布局结构。',
-  },
+  // {
+  //   title: 'li-input',
+  //   subtitle:
+  //     'li-input输入组件用于用户在预期输入较短时提供文本输入，支持多种文本格式，包括数字。',
+  // },
+  // {
+  //   title: 'li-label',
+  //   subtitle:
+  //     'li-label标签用于为界面中的项目创建文本标签。最常用于其他表单组件内部。',
+  // },
+  // {
+  //   title: 'li-layout',
+  //   subtitle:
+  //     'li-layout布局组件虽然在用户界面本身中不可见，但为其他组件提供了布局结构。',
+  // },
   {
     title: 'li-link',
     subtitle:
@@ -175,21 +175,21 @@ const wcs = [
     subtitle:
       'li-list列表元组件用于显示名称/值对，如术语和定义。特别适用于词汇表。',
   },
-  {
-    title: 'li-list-item',
-    subtitle:
-      'li-list-item列表项是列表中使用的组件。有关具体用法示例，请参见列表组件。',
-  },
-  {
-    title: 'li-logo',
-    subtitle:
-      'li-logo徽标是页眉和页脚组件内部使用的组件，提供了自定义语言和外观以及主题的选项',
-  },
-  {
-    title: 'li-marquee',
-    subtitle:
-      'li-marqeuee模态元组件用于显示临时阻止与应用程序主视图交互的内容。',
-  },
+  // {
+  //   title: 'li-list-item',
+  //   subtitle:
+  //     'li-list-item列表项是列表中使用的组件。有关具体用法示例，请参见列表组件。',
+  // },
+  // {
+  //   title: 'li-logo',
+  //   subtitle:
+  //     'li-logo徽标是页眉和页脚组件内部使用的组件，提供了自定义语言和外观以及主题的选项',
+  // },
+  // {
+  //   title: 'li-marquee',
+  //   subtitle:
+  //     'li-marqeuee模态元组件用于显示临时阻止与应用程序主视图交互的内容。',
+  // },
   {
     title: 'li-menu-flyout',
     subtitle: 'li-menuflyout元组件用于弹出式选择菜单。',
@@ -198,28 +198,28 @@ const wcs = [
     title: 'li-modal',
     subtitle: 'li-modal元组件用于滚动显示主题内容。',
   },
-  {
-    title: 'li-notification',
-    subtitle: 'li-notification通知元组件用作右上角的反馈和确认机制。',
-  },
-  {
-    title: 'li-notification-drawer',
-    subtitle:
-      'li-notification-drawer通知抽屉通知用户最近的通知消息，可显示多达20条通知消息。',
-  },
-  {
-    title: 'li-number-input',
-    subtitle: 'li-number-input数字输入允许用户使用加号和减号按钮指定数值',
-  },
+  // {
+  //   title: 'li-notification',
+  //   subtitle: 'li-notification通知元组件用作右上角的反馈和确认机制。',
+  // },
+  // {
+  //   title: 'li-notification-drawer',
+  //   subtitle:
+  //     'li-notification-drawer通知抽屉通知用户最近的通知消息，可显示多达20条通知消息。',
+  // },
+  // {
+  //   title: 'li-number-input',
+  //   subtitle: 'li-number-input数字输入允许用户使用加号和减号按钮指定数值',
+  // },
   {
     title: 'li-pagination',
     subtitle:
       'li-pagination分页组件可以方便地为用户显示页码列表，以便他们可以浏览大型数据集',
   },
-  {
-    title: 'li-paragraph',
-    subtitle: 'li-paragraph段落元组件是通过空行与相邻块分隔的文本块。',
-  },
+  // {
+  //   title: 'li-paragraph',
+  //   subtitle: 'li-paragraph段落元组件是通过空行与相邻块分隔的文本块。',
+  // },
   {
     title: 'li-progress',
     subtitle: 'li-progress进度组件用于指示任何正在进行且对时间敏感的过程',
@@ -233,16 +233,16 @@ const wcs = [
     title: 'li-radio-group',
     subtitle: 'li-radio-group单选按钮组使用“组上的值”设置选定选项。',
   },
-  {
-    title: 'li-range-silder',
-    subtitle:
-      'li-range-silder范围滑块允许用户在不小于给定值，且不大于另一个给定值范围中指定数值',
-  },
-  {
-    title: 'li-range-stepper',
-    subtitle:
-      'li-range-stepper范围步进器是一个组件，可用于逐步通过一系列值范围',
-  },
+  // {
+  //   title: 'li-range-silder',
+  //   subtitle:
+  //     'li-range-silder范围滑块允许用户在不小于给定值，且不大于另一个给定值范围中指定数值',
+  // },
+  // {
+  //   title: 'li-range-stepper',
+  //   subtitle:
+  //     'li-range-stepper范围步进器是一个组件，可用于逐步通过一系列值范围',
+  // },
   {
     title: 'li-rating-star',
     subtitle: 'li-rating-star评级组件让用户分享他们对产品、服务或内容的看法',
@@ -257,29 +257,29 @@ const wcs = [
     subtitle:
       'li-slider组件显示当前值或值范围。用户可以通过沿条移动手柄来增加或减少值或值范围',
   },
-  {
-    title: 'li-select',
-    subtitle:
-      'li-select选择允许用户从选项菜单中选择一个选项。有6个或更多选项时，请使用select',
-  },
-  {
-    title: 'li-spacer',
-    subtitle: 'li-spacer间隔组件用于在相邻的两个组件之间提供额外的空白',
-  },
+  // {
+  //   title: 'li-select',
+  //   subtitle:
+  //     'li-select选择允许用户从选项菜单中选择一个选项。有6个或更多选项时，请使用select',
+  // },
+  // {
+  //   title: 'li-spacer',
+  //   subtitle: 'li-spacer间隔组件用于在相邻的两个组件之间提供额外的空白',
+  // },
   {
     title: 'li-spinner',
     subtitle:
       'li-spinner等待元组件用于指示用户正在处理某个操作，基于HTML和CSS构建',
   },
-  {
-    title: 'li-srollable',
-    subtitle: 'li-srollable滚动元组件用作一系列要水平滚动的元素的容器',
-  },
-  {
-    title: 'li-stepper',
-    subtitle:
-      'li-stepper逐步操作元组件通过将内容划分为逻辑步骤来创建类似向导的工作流',
-  },
+  // {
+  //   title: 'li-srollable',
+  //   subtitle: 'li-srollable滚动元组件用作一系列要水平滚动的元素的容器',
+  // },
+  // {
+  //   title: 'li-stepper',
+  //   subtitle:
+  //     'li-stepper逐步操作元组件通过将内容划分为逻辑步骤来创建类似向导的工作流',
+  // },
   {
     title: 'li-switch',
     subtitle:
@@ -301,32 +301,36 @@ const wcs = [
       'li-textarea元组件是当预期用户输入较长时使用，允许用户在多行上写入文本的控件。',
   },
   {
-    title: 'li-toggle',
-    subtitle:
-      'li-toggle开关元组件是图形界面开关，使用户可以控制可以打开或关闭的功能或选项',
+    title: 'li-textfield',
+    subtitle: 'li-textfield元组件单行文本框允许用户输入单行文本',
   },
-  {
-    title: 'li-tooltip',
-    subtitle: 'li-tooltip提示框组件提供简要说明用户界面元素的功能。',
-  },
-  {
-    title: 'li-tray',
-    subtitle:
-      'li-tray托盘组件用于显示小视口上的附加信息，通常显示在布局组件的粘性侧栏中',
-  },
-  {
-    title: 'li-tree',
-    subtitle: 'li-tree树状组件用于显示树形结构数据的功能强大的组件',
-  },
-  {
-    title: 'li-upload',
-    subtitle: 'li-upload上传组件用于允许用户将一个或多个文件上传到服务器上',
-  },
-  {
-    title: 'li-visually-hidden',
-    subtitle:
-      'li-visually-hidden在一个元素需要用于可访问性辅助技术，但在其他情况下隐藏时使用。',
-  },
+  // {
+  //   title: 'li-toggle',
+  //   subtitle:
+  //     'li-toggle开关元组件是图形界面开关，使用户可以控制可以打开或关闭的功能或选项',
+  // },
+  // {
+  //   title: 'li-tooltip',
+  //   subtitle: 'li-tooltip提示框组件提供简要说明用户界面元素的功能。',
+  // },
+  // {
+  //   title: 'li-tray',
+  //   subtitle:
+  //     'li-tray托盘组件用于显示小视口上的附加信息，通常显示在布局组件的粘性侧栏中',
+  // },
+  // {
+  //   title: 'li-tree',
+  //   subtitle: 'li-tree树状组件用于显示树形结构数据的功能强大的组件',
+  // },
+  // {
+  //   title: 'li-upload',
+  //   subtitle: 'li-upload上传组件用于允许用户将一个或多个文件上传到服务器上',
+  // },
+  // {
+  //   title: 'li-visually-hidden',
+  //   subtitle:
+  //     'li-visually-hidden在一个元素需要用于可访问性辅助技术，但在其他情况下隐藏时使用。',
+  // },
 ];
 
 export default wcs;

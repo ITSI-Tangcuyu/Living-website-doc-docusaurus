@@ -102,6 +102,7 @@ const sidebars = {
         'base/li-tab-nav',
         'base/li-tag',
         'base/li-textarea',
+        'base/li-textfield',
         'base/li-toggle',
         'base/li-tooltip',
         'base/li-tray',

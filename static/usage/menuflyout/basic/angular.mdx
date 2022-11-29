@@ -1,40 +1,34 @@
 ```html
-<ion-accordion-group>
-  <ion-accordion value="angular">
-    <ion-item
-      slot="header"
-      color="light">
-      <ion-label>First Accordion</ion-label>
-    </ion-item>
-    <div
-      class="ion-padding"
-      slot="content">
-      First Content
-    </div>
-  </ion-accordion>
-  <ion-accordion value="second">
-    <ion-item
-      slot="header"
-      color="light">
-      <ion-label>Second Accordion</ion-label>
-    </ion-item>
-    <div
-      class="ion-padding"
-      slot="content">
-      Second Content
-    </div>
-  </ion-accordion>
-  <ion-accordion value="third">
-    <ion-item
-      slot="header"
-      color="light">
-      <ion-label>Third Accordion</ion-label>
-    </ion-item>
-    <div
-      class="ion-padding"
-      slot="content">
-      Third Content
-    </div>
-  </ion-accordion>
-</ion-accordion-group>
+<li-menu-flyout>
+  <li-button slot="trigger" variant="secondary" icon-only>
+    <li-icon-service-settings accessibility-title="Open menu"></li-icon-sevice-settings>
+  </li-button>
+  <li-menu-flyout-list>
+    <li-menu-flyout-item>Item Title</li-menu-flyout-item>
+    <li-menu-flyout-item>Really Quite Long Item Title</li-menu-flyout-item>
+    <li-menu-flyout-divider></li-menu-flyout-divider>
+    <li-menu-flyout-item>Item With Suffix 1<span slot="suffix">⌘F</span></li-menu-flyout-item>
+    <li-menu-flyout-item>Item With Suffix 2<span slot="suffix">⌘H</span></li-menu-flyout-item>
+    <li-menu-flyout-divider></li-menu-flyout-divider>
+    <li-menu-flyout-item>
+          Other Options
+      <li-menu-flyout-list slot="sublist">
+        <li-menu-flyout-item>
+          <li-icon-action-cut-paste slot="prefix">Item With Prefix 1</li-icon-action-cut-paste>
+        </li-menu-flyout-item>
+        <li-menu-flyout-item>
+              <li-icon-action-loop slot="prefix">Item With Prefix 2</li-icon-action-loop>
+              <li-menu-flyout-list slot="sublist">
+                <li-menu-flyout-item>Third Level Item 1</li-menu-flyout-item>
+                <li-menu-flyout-item>Third Level Item 2</li-menu-flyout-item>
+                <li-menu-flyout-item>Third Level Item 3</li-menu-flyout-item>
+              </li-menu-flyout-list>
+        </li-menu-flyout-item>
+        <li-menu-flyout-item>
+          <li-icon-action-more slot="prefix">Item With Prefix 3</li-icon-action-more>
+        </li-menu-flyout-item>
+      </li-menu-flyout-list>
+    </li-menu-flyout-item>
+  </li-menu-flyout-list>
+</li-menu-flyout>
 ```

@@ -26,10 +26,15 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    defaultLocale: 'en',
+    locales: ['en', 'zh-Hans'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-GB',
+      }
+    },
   },
-  plugins: ['docusaurus-plugin-sass', [
+  plugins: ['docusaurus-plugin-sass', path.resolve(__dirname, 'plugins', 'lds'), [
     'docusaurus-plugin-module-alias',
     {
       alias: {
@@ -207,6 +212,9 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      lds: {
+        code: 'lds',
       },
     }),
 };

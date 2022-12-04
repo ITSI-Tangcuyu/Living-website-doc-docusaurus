@@ -78,7 +78,7 @@ const config = {
         title: 'Living Design System',
         logo: {
           alt: 'LDS Logo',
-          src: 'img/lds-logo.svg',
+          src: 'img/lds.png',
         },
         items: [
           {

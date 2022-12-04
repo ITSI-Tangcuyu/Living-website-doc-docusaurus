@@ -1,0 +1,1 @@
+import{r,h as s,H as l}from"./p-8d227782.js";const o=class{constructor(s){r(this,s)}render(){return s(l,null,s("slot",null))}};o.style=":host{display:block}";export{o as li_paragraph}

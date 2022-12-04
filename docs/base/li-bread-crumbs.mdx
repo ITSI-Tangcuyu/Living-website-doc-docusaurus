@@ -5,12 +5,15 @@ description: 面包屑组件可以让用户快速返回以前的页面
 
 # li-bread-crumbs 元组件
 
-li-bread-crumbs 面包屑组件为用户可视化展示当前打开资源的路径，并方便用户快速返回路径中各个部分的页面，通常被用于 Header 元素下方。
-面包屑组件通常使用水平的有序列表 ol 实现。
+li-bread-crumbs 面包屑组件为用户可视化展示当前打开资源的路径，并方便用户快速返回
+路径中各个部分的页面，通常被用于 Header 元素下方。面包屑组件通常使用水平的有序列
+表 ol 实现。
 
 ### 示例
 
-import { LiBreadCrumbs } from '@itsi/living-base-react'
+import Basic from '@site/static/usage/breadcrumb/basic/index.mdx';
+
+<Basic />
 
 ### 组件属性
 
@@ -42,24 +45,25 @@ import { LiBreadCrumbs } from '@itsi/living-base-react'
 
 本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
 
-import Callout from '../../src/components/Callout'
+import Callout from '@components/global/Callout';
 
-<Callout emoji="❤️">
-  建议使用场景:
-  - 需要在当前页面中显示路径历史的时候
-  - 需要为用户提供方面的返回上级页面及以前页面时
-  - 当有较深的导航结构时
+<Callout emoji='❤️'>
+  建议使用场景: - 需要在当前页面中显示路径历史的时候 -
+  需要为用户提供方面的返回上级页面及以前页面时 - 当有较深的导航结构时
 </Callout>
 
-<Callout type="error" emoji="️🚫">
-  避免使用场景：
-  不要用面包屑代替heading组件
+<Callout
+  type='error'
+  emoji='️🚫'>
+  避免使用场景： 不要用面包屑代替heading组件
 </Callout>
 
 ### 可访问性说明
 
 该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
 
-<Callout type="warning" emoji="✅">
+<Callout
+  type='warning'
+  emoji='✅'>
   该组件已经通过LDS的可访问性规则验证，符合WCAG 2.1 AA可访问性指南
 </Callout>

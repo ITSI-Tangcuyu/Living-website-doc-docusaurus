@@ -5,15 +5,18 @@ description: 在Tokens基础上的元组件是组成其他业务组件的基础�
 
 # li-accordion 元组件
 
-> li-accordion 是由一组垂直堆叠的带有可点击标题的页面内容片段组成，通过点击标题可以显示或隐藏其相关的页面内容。
-> 当在一个页面上显示多个页面部分时，li-accordion 通常用于减少用户滚动页面的操作。
+> li-accordion 是由一组垂直堆叠的带有可点击标题的页面内容片段组成，通过点击标题
+> 可以显示或隐藏其相关的页面内容。当在一个页面上显示多个页面部分时，li-accordion
+> 通常用于减少用户滚动页面的操作。
 
-默认情况下，每次只展示一组页面内容。点击打开一组页面内容的时候，其他组的页面内容被折叠起来。
-用户也可以控制在同一时刻是否可以同时需要展示多个标题里面的内容。
+默认情况下，每次只展示一组页面内容。点击打开一组页面内容的时候，其他组的页面内容
+被折叠起来。用户也可以控制在同一时刻是否可以同时需要展示多个标题里面的内容。
 
 ### 示例
 
-import { LiAccordion } from '@itsi/living-base-react'
+import Basic from '@site/static/usage/accordion/basic/index.mdx';
+
+<Basic />
 
 ### 组件属性
 
@@ -40,22 +43,20 @@ import { LiAccordion } from '@itsi/living-base-react'
 
 本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
 
-import Callout from '../../src/components/Callout'
 
-<Callout emoji="❤️">
-  建议使用场景：
-  当在一个页面上显示多个部分时，li-accordion 通常用于减少滚动的需要
-</Callout>
+:::important 建议
+建议使用场景： 当在一个页面上显示多个部分时，li-accordion
+通常用于减少滚动的需要
+:::
 
-<Callout type="error" emoji="️🚫">
-  避免使用场景：
-  不适合在导航环境下使用
-</Callout>
+:::warning 注意
+避免使用场景： 不适合在导航环境下使用
+:::
 
 ### 可访问性说明
 
+:::tip 提示 
 该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
+:::
 
-<Callout type="warning" emoji="✅">
-  该组件已经通过LDS的可访问性规则验证，符合WCAG 2.1 AA可访问性指南
-</Callout>
+

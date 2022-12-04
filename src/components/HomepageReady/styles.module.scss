@@ -1,0 +1,36 @@
+.container {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+[data-theme='dark'] .container {
+  padding: 2rem 0;
+  width: 100%;
+}
+
+[data-theme='light'] .head {
+  padding: 2rem 0 2rem 0;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+}
+
+[data-theme='dark'] .head {
+  padding: 2rem 0 2rem 0;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  /* 水平居中 */
+  align-items: center;
+  /* 垂直居中 */
+}
+
+
+.featureSvg {
+  height: 48px;
+  width: 48px;
+  color: gray;
+}

@@ -7,55 +7,67 @@ description: 设计系统中的视觉设计原子
 
 ### 什么是 Design Tokens？
 
-> Design Token 是设计系统中的视觉设计原子。它们是一组有着统一命名规则的实体，用于存储视觉设计部分的具体参数，
-> 比如 HEX 色值、间距、尺寸的像素等。使用它可以有帮助为 UI 开发工作维护一套具备可扩展性、一致性的视觉体系。
+> Design Token 是设计系统中的视觉设计原子。它们是一组有着统一命名规则的实体，用
+> 于存储视觉设计部分的具体参数，比如 HEX 色值、间距、尺寸的像素等。使用它可以有
+> 帮助为 UI 开发工作维护一套具备可扩展性、一致性的视觉体系。
 
 上面的描述是 Salesforce 在文档中对 Design Token 的定义
 
-通俗来讲：在 WEB 应用的设计领域中，Design Token 是对颜色的色值、间距、尺寸等设计元素定义的设计变量。
-对设计变量名称的合理定义可以让设计变量所代表的含义更容易理解，也更便于对产品风格的控制。
+通俗来讲：在 WEB 应用的设计领域中，Design Token 是对颜色的色值、间距、尺寸等设计
+元素定义的设计变量。对设计变量名称的合理定义可以让设计变量所代表的含义更容易理解
+，也更便于对产品风格的控制。
 
-没有使用Design Tokens的CSS代码示例：
+没有使用 Design Tokens 的 CSS 代码示例：
+
 ```css
 .button {
   width: 72px;
-  height: 48px; 
+  height: 48px;
   border-radius: 20rem;
   background-color: #f5f5f5;
   border: 1px solid #cccccc;
 }
 ```
 
-<div align="center">![向下箭头](/img/arrowdown.svg)</div>
+<div align='center'>
+  <img src='/img/arrowdown.svg' />
+</div>
 
-使用Design Tokens的CSS代码示例：
+使用 Design Tokens 的 CSS 代码示例：
+
 ```css
 .button {
   width: var(--li-size-button-width);
-  height: var(--li-size-button-height); 
+  height: var(--li-size-button-height);
   border-radius: var(--li-border-radius-pill);
   background-color: var(--li-color-500);
   border: var(--li-size-button-tiny-border) solid var(--li-color-border-button);
 }
 ```
 
-上面CSS代码中的背景颜色值从含义模糊的值：**#f5f5f5** 定义为具备明确含义的设计变量：**--li-color-500**,
-通过这样的一层抽象定义，可以增强背景颜色值的语义。但这还远远不够...
+上面 CSS 代码中的背景颜色值从含义模糊的值：**#f5f5f5** 定义为具备明确含义的设计
+变量：**--li-color-500**, 通过这样的一层抽象定义，可以增强背景颜色值的语义。但这
+还远远不够...
 
 再来看一个更具体的例子：
 
 ![Design Tokens的作用](/img/design_token_func.svg)
 
-上图中，没有任何修饰的按钮组件，结合上语义化的 Design Tokens 后可以成为一个带有主题的按钮组件。其中 Design Tokens 中存放了设计师确定的颜色变量值。
-但是，仅仅通过一层抽象，只是为颜色的变量值增加了一些语义能力，并没有带来多少灵活性和适应性。
+上图中，没有任何修饰的按钮组件，结合上语义化的 Design Tokens 后可以成为一个带有
+主题的按钮组件。其中 Design Tokens 中存放了设计师确定的颜色变量值。但是，仅仅通
+过一层抽象，只是为颜色的变量值增加了一些语义能力，并没有带来多少灵活性和适应性。
 
-为了让系统更加灵活、健壮，LDS在设计Design Tokens时，进行了多层次的抽象。下面的图示，展示了对 Design Token 的多层抽象。
+为了让系统更加灵活、健壮，LDS 在设计 Design Tokens 时，进行了多层次的抽象。下面
+的图示，展示了对 Design Token 的多层抽象。
 
 ![存放Design Decision的变量](/img/design_token_decision.svg)
 
 - 这种多重抽象为什么可以提升系统的灵活性和适应能力？
-- 根据Design Token的定义模式，WEB系统中的种类纷繁的组件会产生大量的Token，如何来组织和管理这些大量的Token?
-- WEB系统升级或更新时，数量众多的Design Token如何高效进行同步更新？
-- 设计系统要适应多平台的WEB应用环境，比如：浏览器，IOS，安卓等，Design Token如何适应多平台应用？
+- 根据 Design Token 的定义模式，WEB 系统中的种类纷繁的组件会产生大量的 Token，如
+  何来组织和管理这些大量的 Token?
+- WEB 系统升级或更新时，数量众多的 Design Token 如何高效进行同步更新？
+- 设计系统要适应多平台的 WEB 应用环境，比如：浏览器，IOS，安卓等，Design Token
+  如何适应多平台应用？
 
-要解决这些问题，需要按照清晰明确的规则来对Design Token进行组织和分类管理，下一节讲述Design Tokesn的组织和分类
+要解决这些问题，需要按照清晰明确的规则来对 Design Token 进行组织和分类管理，下一
+节讲述 Design Tokesn 的组织和分类

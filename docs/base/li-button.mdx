@@ -5,11 +5,22 @@ description: 按钮组件用于用户界面的交互
 
 # li-button 元组件
 
-按钮用于界面操作。它们默认具有灰色边框和深色文本的外观。在每个视图上应该只有一个 Primary 样式的按钮，用于页面的主要操作。
+按钮用于界面操作。它们默认具有灰色边框和深色文本的外观。在每个视图上应该只有一个
+Primary 样式的按钮，用于页面的主要操作。
 
 ### 示例
 
-import { LiButton } from '@itsi/living-base-react'
+### 标准尺寸按钮
+
+import Basic from '@site/static/usage/button/basic/index.mdx';
+
+<Basic />
+
+### 小尺寸按钮
+
+import Small from '@site/static/usage/button/small/index.mdx';
+
+<Small />
 
 ### 组件属性
 
@@ -63,22 +74,21 @@ import { LiButton } from '@itsi/living-base-react'
 
 本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
 
-import Callout from '../../src/components/Callout'
+import Callout from '@components/global/Callout';
 
-<Callout emoji="❤️">
-  建议使用场景: 
-  - 通常情况下，按钮用于用户界面中非连接到其他页面的交互 
-  - 当需要为用户提供响应用户操作时 
-  - 用于表单的提交，取消，编辑，保存及打开一个模态框 
-  - 纯文本的按钮看起来像一个连接，这种按钮通常用于“设置”等场景
+<Callout emoji='❤️'>
+  建议使用场景: - 通常情况下，按钮用于用户界面中非连接到其他页面的交互 -
+  当需要为用户提供响应用户操作时 -
+  用于表单的提交，取消，编辑，保存及打开一个模态框 -
+  纯文本的按钮看起来像一个连接，这种按钮通常用于“设置”等场景
 </Callout>
 
-<Callout type="error" emoji="️🚫">
-  避免使用场景： 
-  - 避免使用按钮链接到其他页面。而应该使用Link组件 
-  - 当链接在一个句子中时，避免使用按钮进行链接
+<Callout
+  type='error'
+  emoji='️🚫'>
+  避免使用场景： - 避免使用按钮链接到其他页面。而应该使用Link组件 -
+  当链接在一个句子中时，避免使用按钮进行链接
 </Callout>
-
 
 ### 按钮变体使用说明
 
@@ -97,6 +107,8 @@ import Callout from '../../src/components/Callout'
 
 该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
 
-<Callout type="warning" emoji="✅">
+<Callout
+  type='warning'
+  emoji='✅'>
   该组件已经通过LDS的可访问性规则验证，符合WCAG 2.1 AA可访问性指南
 </Callout>

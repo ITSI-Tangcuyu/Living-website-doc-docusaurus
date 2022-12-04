@@ -6,17 +6,22 @@ const TokenExample = (props) => {
     bgColor = "",
     gdColors = [],
     padding = "",
-    iconSize = "w-12 h-12",
+    width = "70px",
+    height = "35px",
     border = "",
-    rounded = "rounded-lg",
+    rounded = "rounded--lg",
     content = "",
     shadow = "",
     chess = false,
     opacity = "",
     fontsize = "",
     fontweight = "",
-    letterspacing ="",
-    fontcolor =""
+    letterspacing = "",
+    fontcolor = "#3578E5",
+    iconWidth = "",
+    iconHeight = "",
+    borderColor = "#0A7BC7",
+    borderWidth = '1px'
   } = props;
 
   const chessStyle = {
@@ -34,18 +39,23 @@ const TokenExample = (props) => {
     opacity: opacity
   };
 
-  
+
 
   const divStyle = {
     background: bgColor
       ? bgColor
-      : `linear-gradient(180deg, ${gdColors[0]} 0%, ${gdColors[1]} 100%)`,
+      : `linear-gradient(180deg, ${ gdColors[0] } 0%, ${ gdColors[1] } 100%)`,
     boxShadow: shadow,
+    width: iconWidth ? iconWidth : width,
+    height: iconHeight ? iconHeight : height,
+    color: fontcolor,
+    borderColor: borderColor,
+    borderWidth: borderWidth
   };
 
   return (
     <div
-      className={`box-border bg-gray ${iconSize} ${rounded}  ${border} ${padding} ${fontsize} ${fontweight} ${letterspacing} ${fontcolor}`}
+      className={`${ iconWidth ? "" : 'badge' }  ${ rounded }  ${ border } ${ padding } ${ fontsize } ${ fontweight } ${ letterspacing }`}
       style={chess ? chessStyle : divStyle}
     >
       {chess ? <div style={coverStyle}></div> : content}

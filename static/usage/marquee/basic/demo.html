@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Base基础库</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <link rel="stylesheet" href="../../living-base/living-base.css" />
+
+  <script src="../../living-base/living-base.js"></script>
+</head>
+
+<body>
+  <div class="item">
+    <li-marquee class="marquee" scrolldelay="50">
+      <ul>
+        <li>嬴政</li>
+        <li>刘邦</li>
+        <li>刘彻</li>
+        <li>杨坚</li>
+        <li>李世民</li>
+        <li>李隆基</li>
+        <li>赵匡胤</li>
+        <li>赵佶</li>
+        <li>朱元璋</li>
+        <li>朱瞻基</li>
+        <li>玄烨</li>
+        <li>宣统</li>
+      </ul>
+    </li-marquee>
+    <script type="module">
+      const marquee = document.querySelector('.marquee');
+      marquee.addEventListener('mouseover', marquee.stop);
+      marquee.addEventListener('mouseout', marquee.start);
+    </script>
+
+  </div>
+</body>
+
+</html>

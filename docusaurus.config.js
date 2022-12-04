@@ -7,7 +7,7 @@ const path = require('path');
 const prismic = require('@prismicio/client');
 const fetch = require('node-fetch');
 
-/** @type {import('@docusaurus/types').Config} */
+/** @typedef {import('@docusaurus/types').Config} */
 const config = {
   title: 'Living Design System',
   tagline: '基于Web Component、具备应急行业特征的WEB开发体系和工具集',
@@ -26,10 +26,15 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
+    defaultLocale: 'en',
+    locales: ['en', 'zh-Hans'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-GB',
+      }
+    },
   },
-  plugins: ['docusaurus-plugin-sass', [
+  plugins: ['docusaurus-plugin-sass', path.resolve(__dirname, 'plugins', 'lds'), [
     'docusaurus-plugin-module-alias',
     {
       alias: {
@@ -39,11 +44,11 @@ const config = {
         '@components': path.resolve(__dirname, './src/components'),
       },
     },
-  ],],
+  ]],
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      /** @typedef {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
@@ -67,13 +72,13 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    /** @typedef {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
         title: 'Living Design System',
         logo: {
           alt: 'LDS Logo',
-          src: 'img/lds-logo.svg',
+          src: 'img/lds.png',
         },
         items: [
           {
@@ -207,6 +212,9 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      lds: {
+        code: 'lds',
       },
     }),
 };

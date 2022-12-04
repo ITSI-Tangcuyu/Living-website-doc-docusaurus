@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Base基础库</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <link rel="stylesheet" href="../../living-base/living-base.css" />
+
+  <script src="../../living-base/living-base.js"></script>
+</head>
+
+<body>
+  <div class="item">
+    <li-modal heading="Today is your lucky day" size="small" id="modal">
+      <p>Hello. Welcome. What a pleasure it is to have you.</p>
+      <li-button slot="action" variant="secondary" onclick="closeModal()">
+        Cancel
+      </li-button>
+      <li-button slot="action"> Primary Action </li-button>
+    </li-modal>
+
+    <li-button onclick="openModal()">
+      Open Modal
+    </li-button>
+
+    <script>
+      const modal = document.getElementById('modal');
+      function openModal() {
+        modal.opened = true;
+      }
+      function closeModal() {
+        modal.opened = false;
+      }
+    </script>
+  </div>
+</body>
+
+</html>

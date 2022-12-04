@@ -5,22 +5,21 @@ description: 代表li-accoridion组件的内容部分
 
 # li-accordion-section 元组件
 
-li-accordion-section 组件定义和包含了在 li-accordion 组件中折叠/展开的一段具体内容。其内容由原生 HTML 标签或者 LDS 元组件构成。
-组件可通过暴露的 class 属性自定义样式
+li-accordion-section 组件定义和包含了在 li-accordion 组件中折叠/展开的一段具体内
+容。其内容由原生 HTML 标签或者 LDS 元组件构成。组件可通过暴露的 class 属性自定义
+样式
 
 ### 示例
 
-// import { LiAccordionSection } from '@itsi/living-base-react'
-
 ### 组件属性
 
-| 属性    | 类型        | 默认值 | 必选 | 描述                                     |
-| ------- | ----------- | ------ | ---- | ---------------------------------------- |
-| actions | Component[] | 无     | no   | 自定义操作菜单实现，显示在标题的右侧行尾 |
-| class | string | 无 | no | 自定义的 CSS 类 |
-| label | string | 无 | no | 本节内容的标题 |
-| name | string | 无 | no | 本节内容的名称，用于 li-accordiion 组件的 activeSectionName 属性值 |
-| title | string | 无 | no | 本节内容的 tooltip 内容 |
+| 属性    | 类型        | 默认值 | 必选 | 描述                                                               |
+| ------- | ----------- | ------ | ---- | ------------------------------------------------------------------ |
+| actions | Component[] | 无     | no   | 自定义操作菜单实现，显示在标题的右侧行尾                           |
+| class   | string      | 无     | no   | 自定义的 CSS 类                                                    |
+| label   | string      | 无     | no   | 本节内容的标题                                                     |
+| name    | string      | 无     | no   | 本节内容的名称，用于 li-accordiion 组件的 activeSectionName 属性值 |
+| title   | string      | 无     | no   | 本节内容的 tooltip 内容                                            |
 
 ### 组件事件
 
@@ -38,15 +37,16 @@ li-accordion-section 组件定义和包含了在 li-accordion 组件中折叠/�
 
 本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
 
-import Callout from '../../src/components/Callout'
+import Callout from '@components/global/Callout';
 
-
-<Callout emoji="❤️">
+<Callout emoji='❤️'>
   建议使用场景： 当在一个页面上显示多个部分时，li-accordion
   通常用于减少滚动的需要
 </Callout>
 
-<Callout type="error" emoji="️🚫">
+<Callout
+  type='error'
+  emoji='️🚫'>
   避免使用场景： 不适合在导航环境下使用
 </Callout>
 
@@ -54,6 +54,8 @@ import Callout from '../../src/components/Callout'
 
 该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
 
-<Callout type="warning" emoji="✅">
+<Callout
+  type='warning'
+  emoji='✅'>
   该组件已经通过LDS的可访问性规则验证，符合WCAG 2.1 AA可访问性指南
 </Callout>

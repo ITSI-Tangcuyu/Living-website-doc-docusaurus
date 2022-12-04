@@ -9,8 +9,6 @@ li-badge 徽章组件用于通知用户一个对象的状态或某动作被执�
 
 ### 示例
 
-import { LiBadge } from '@itsi/living-base-react'
-
 <LiBadge></LiBadge>
 
 ### 组件属性
@@ -37,24 +35,25 @@ import { LiBadge } from '@itsi/living-base-react'
 
 本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
 
-import Callout from '../../src/components/Callout'
+import Callout from '@components/global/Callout';
 
-<Callout emoji="❤️">
-  建议使用场景:
-  - 为某个动作提供跟新的状态信息
-  - 推荐给用户或提醒用户的信息
-  - 为新增的对象提供明显的提醒
+<Callout emoji='❤️'>
+  建议使用场景: - 为某个动作提供跟新的状态信息 - 推荐给用户或提醒用户的信息 -
+  为新增的对象提供明显的提醒
 </Callout>
 
-<Callout type="error" emoji="️🚫">
-  避免使用场景：
-  - 不要让徽章可点击
+<Callout
+  type='error'
+  emoji='️🚫'>
+  避免使用场景： - 不要让徽章可点击
 </Callout>
 
 ### 可访问性说明
 
 该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
 
-<Callout type="warning" emoji="✅">
+<Callout
+  type='warning'
+  emoji='✅'>
   该组件已经通过LDS的可访问性规则验证，符合WCAG 2.1 AA可访问性指南
 </Callout>

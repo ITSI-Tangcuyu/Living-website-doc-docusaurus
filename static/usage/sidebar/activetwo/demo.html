@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Base基础库</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <link rel="stylesheet" href="../../living-base/living-base.css" />
+
+  <script src="../../living-base/living-base.js"></script>
+
+</head>
+
+<body>
+  <div class="item">
+    <h4>激活的二级菜单</h4>
+    <li-sidebar-nav>
+      <li-sidebar-nav-item>
+        <a href="#">业务链路</a>
+      </li-sidebar-nav-item>
+      <li-sidebar-nav-collapsible label="用户信息" expanded>
+        <li-sidebar-nav-item current>
+          <a href="#">用户群组</a>
+        </li-sidebar-nav-item>
+        <li-sidebar-nav-item>
+          <a href="#">用户权限</a>
+        </li-sidebar-nav-item>
+      </li-sidebar-nav-collapsible>
+      <li-sidebar-nav-item>
+        <a href="#">其他</a>
+      </li-sidebar-nav-item>
+    </li-sidebar-nav>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Base基础库</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <link rel="stylesheet" href="../../living-base/living-base.css" />
+
+  <script src="../../living-base/living-base.js"></script>
+
+</head>
+
+<body>
+  <div class="p1">
+    <li-tab-nav size="large">
+      <li-tab-header slot="tab">
+        <li-icon-home-home></li-icon-home-home>A11Y
+      </li-tab-header>
+      <li-tab-panel slot="panel">
+        A11Y是英文单词可访问性“Accessibility”的缩写。针对Web应用的可访问性W3C提供了WCAG(2)标准(Web Content Accessibility Guidelines)。
+        符合该标准的Web应用可以最大限度的满足残疾人获取Web应用中各类信息的需求
+      </li-tab-panel>
+      <li-tab-header slot="tab">
+        <li-icon-user-file-analytics></li-icon-user-file-analytics>LDS系统中的可访问性
+      </li-tab-header>
+      <li-tab-panel slot="panel">
+        LDS开发体系中的组件在开发过程中，会遵循以下可访问性功能点检查清单。 LDS核心开发人员在开发元组件库、业务组件库的时候，各组件需要通过检查清单中的各项检测后才可以正式发布。
+      </li-tab-panel>
+      <li-tab-header slot="tab">
+        <li-icon-content-heart></li-icon-content-heart> 通用规则
+      </li-tab-header>
+      <li-tab-panel slot="panel">
+        <li-list>
+          <li-list-item marker="false">
+            <li-icon-navigation-right size="16" decorative></li-icon-navigation-right>
+            组件需要通过Chrome浏览器的Axe插件的自动检测
+          </li-list-item>
+          <li-list-item marker="false">
+            <li-icon-navigation-right size="16" decorative></li-icon-navigation-right>
+            组件需要通过Chrome浏览器的Wave插件的自动检测
+          </li-list-item>
+          <li-list-item marker="false">
+            <li-icon-navigation-right size="16" decorative></li-icon-navigation-right>
+            在Windows环境下，可以兼容NVDA屏幕阅读软件
+          </li-list-item>
+        </li-list>
+      </li-tab-panel>
+      <li-tab-header slot="tab">
+        <li-icon-action-random></li-icon-action-random> 命名原则
+      </li-tab-header>
+      <li-tab-panel slot="panel">
+        LDS开发体系使用系统中定义的名称来进行交流，形成一个通俗易懂的语境。 这样在企业中的各种角色的人员比如：项目经理、产品经理、设计师、开发人员、测试人员、部署人员、售后支持等进行沟通交流的时候，
+        会消除歧义。大家都会充分理解LDS系统中Tokens，组件，CSS工具，文件名，仓库名所包含的各种含义。 因此，命名就必须简洁、有含义并易于朗读。
+      </li-tab-panel>
+    </li-tab-nav>
+  </div>
+
+</body>
+
+</html>

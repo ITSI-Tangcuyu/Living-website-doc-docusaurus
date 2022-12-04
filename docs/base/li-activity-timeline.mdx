@@ -9,8 +9,6 @@ li-activity-timeline 活动时间轴组件显示即将进行的、当前的和�
 
 ### 示例
 
-import { LiActivityTimeline } from '@itsi/living-base-react'
-
 ### 组件属性
 
 | 属性                | 类型                | 默认值 | 必选 | 描述                                         |
@@ -47,14 +45,15 @@ import { LiActivityTimeline } from '@itsi/living-base-react'
 
 本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
 
-import Callout from '../../src/components/Callout'
+import Callout from '@components/global/Callout';
 
-<Callout emoji="❤️">
-  建议使用场景：
-  具有过去，现在，未来时间属性的信息列表
+<Callout emoji='❤️'>
+  建议使用场景： 具有过去，现在，未来时间属性的信息列表
 </Callout>
 
-<Callout type="error" emoji="️🚫">
+<Callout
+  type='error'
+  emoji='️🚫'>
   避免使用场景
   <br />
 </Callout>
@@ -63,7 +62,9 @@ import Callout from '../../src/components/Callout'
 
 该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
 
-<Callout type="warning" emoji="❎">
+<Callout
+  type='warning'
+  emoji='❎'>
   该组件还未通过LDS的可访问性规则验证，需要进一步定制开发，才能符合WCAG 2.1
   AA可访问性指南
 </Callout>

@@ -1,0 +1,1 @@
+function t(t,c){const n=`li-${t}`;return Object.keys(c).reduce(((t,e)=>(t[`${n}-${e}`]=c[e],t)),{[n]:!0})}export{t as c}

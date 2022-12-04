@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Base基础库</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <link rel="stylesheet" href="../../living-base/living-base.css" />
+
+  <script src="../../living-base/living-base.js"></script>
+</head>
+
+<body>
+  <div class="item pt">
+    <li-button>标准按钮</li-button>
+    <li-button variant="secondary">二级按钮</li-button>
+    <li-button disabled>禁用状态按钮</li-button>
+    <li-button variant="secondary" disabled>二级禁用状态按钮</li-button>
+  </div>
+  <div class="item pt">
+    <li-button icon-position="after">后置图标按钮<li-icon-navigation-right></li-icon-navigation-right>
+    </li-button>
+    <li-button href="https://example.com" target="_blank">打开新Tab页面的按钮（外部连接）</li-button>
+    <li-button icon-position="before">
+      <li-icon-action-search></li-icon-action-search>前置图标按钮
+    </li-button>
+  </div>
+
+  <div class="item pt">
+    <li-button href="assets/welcome.jpg" download="welcome.jpg">下载按钮</li-button>
+    <li-button href="https://example.com" target="_blank">
+      带有图标的打开新Tab页面按钮（外部连接）
+      <li-icon-navigation-external-link accesibility-title="打开新Tab页面的按钮（外部连接）">
+      </li-icon-navigation-external-link>
+    </li-button>
+  </div>
+</body>
+
+</html>

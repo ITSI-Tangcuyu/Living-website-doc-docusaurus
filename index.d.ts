@@ -3,10 +3,12 @@ declare module '*.module.scss' {
   export default classes;
 }
 
-declare module '@theme/*';
-
 declare module '@components/*';
 
 declare module '@docusaurus/*';
 
-declare module '@Components/global/*'
+declare module '@Components/global/*';
+
+declare module '@theme/*';
+
+declare module '@itsi/*';

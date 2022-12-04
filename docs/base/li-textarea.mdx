@@ -7,7 +7,41 @@ description: 在Tokens基础上的元组件是组成其他业务组件的基础�
 
 ### 示例
 
-import { LiTextarea } from '@itsi/living-base-react'
+### 标准多行文本框示例
+
+import Basic from '@site/static/usage/textarea/basic/index.mdx';
+
+<Basic />
+
+### 有提示信息的多行文本框示例
+
+import Helptext from '@site/static/usage/textarea/helptext/index.mdx';
+
+<Helptext />
+
+### 有错误提醒的多行文本框示例
+
+import Error from '@site/static/usage/textarea/error/index.mdx';
+
+<Error />
+
+### 禁用状态多行文本框示例
+
+import Disabled from '@site/static/usage/textarea/disabled/index.mdx';
+
+<Disabled />
+
+### 最大行数提示多行文本框示例
+
+import Max from '@site/static/usage/textarea/max/index.mdx';
+
+<Max />
+
+### 无行数限制的多行文本框示例
+
+import More from '@site/static/usage/textarea/more/index.mdx';
+
+<More />
 
 ### 组件属性
 
@@ -34,15 +68,17 @@ import { LiTextarea } from '@itsi/living-base-react'
 
 本节为设计人员和开发人员提供了关于在不同上下文中使用此组件的指导原则
 
-import Callout from '../../src/components/Callout'
+import Callout from '@components/global/Callout';
 
-<Callout emoji="❤️">
+<Callout emoji='❤️'>
   建议使用场景
   <br />
   当在一个页面上显示多个部分时，li-accordion 通常用于减少滚动的需要
 </Callout>
 
-<Callout type="error" emoji="️🚫">
+<Callout
+  type='error'
+  emoji='️🚫'>
   避免使用场景
   <br />
   不适合在导航环境下使用
@@ -52,11 +88,15 @@ import Callout from '../../src/components/Callout'
 
 该组件已经通过 LDS 的可访问性规则验证，符合 WCAG 2.1 AA 可访问性指南
 
-<Callout type="warning" emoji="✅">
+<Callout
+  type='warning'
+  emoji='✅'>
   该组件已经通过LDS的可访问性规则验证，符合WCAG 2.1 AA可访问性指南
 </Callout>
 
-<Callout type="warning" emoji="❎">
+<Callout
+  type='warning'
+  emoji='❎'>
   该组件还未通过LDS的可访问性规则验证，需要进一步定制开发，才能符合WCAG 2.1
   AA可访问性指南
 </Callout>

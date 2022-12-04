@@ -7,7 +7,7 @@
 
 import React, { useState, cloneElement, isValidElement, type ReactElement, useRef, createRef, useEffect } from 'react';
 import useIsBrowser from '@docusaurus/useIsBrowser';
-import { useScrollPositionBlocker, duplicates } from '@docusaurus/theme-common';
+import { duplicates } from '@docusaurus/theme-common';
 import type { Props } from '@theme/Tabs';
 import type { Props as TabItemProps } from '@theme/TabItem';
 
@@ -33,9 +33,7 @@ function TabsComponent(props: Props): JSX.Element {
     // child.type.name will give non-sensical values in prod because of
     // minification, but we assume it won't throw in prod.
     throw new Error(
-      `Docusaurus error: Bad <Tabs> child <${
-        // @ts-expect-error: guarding against unexpected cases
-        typeof child.type === 'string' ? child.type : child.type.name
+      `Docusaurus error: Bad <Tabs> child <${typeof child.type === 'string' ? child.type : child.type.name
       }>: all children of the <Tabs> component should be <TabItem>, and every <TabItem> should have a unique "value" prop.`
     );
   });
@@ -71,7 +69,7 @@ function TabsComponent(props: Props): JSX.Element {
 
   const [selectedValue, setSelectedValue] = useState(defaultValue);
   const tabRefs: (HTMLLIElement | null)[] = [];
-  const { blockElementScrollPositionUntilNextRender } = useScrollPositionBlocker();
+  // const { blockElementScrollPositionUntilNextRender } = useScrollPositionBlocker();
 
   const handleTabChange = (event: React.FocusEvent<HTMLLIElement> | React.MouseEvent<HTMLLIElement>) => {
     const newTab = event.currentTarget;
@@ -79,7 +77,7 @@ function TabsComponent(props: Props): JSX.Element {
     const newTabValue = values[newTabIndex]!.value;
 
     if (newTabValue !== selectedValue) {
-      blockElementScrollPositionUntilNextRender(newTab);
+      // blockElementScrollPositionUntilNextRender(newTab);
       setSelectedValue(newTabValue);
     }
   };
@@ -164,7 +162,7 @@ function TabsComponent(props: Props): JSX.Element {
               </button>
             </div>
           )}
-          {values.map(({ value, label, icon, attributes }) => {
+          {values.map(({ value, label, attributes }) => {
             const isSelected = isTabSelected(value);
             return (
               <li
@@ -182,7 +180,7 @@ function TabsComponent(props: Props): JSX.Element {
                 })}
               >
                 {/* Ionic extended portion to add icon support to tab items */}
-                {icon && <span className={clsx('tabs__icon', styles.tabIcon)}>{icon}</span>}
+                {/* {icon && <span className={clsx('tabs__icon', styles.tabIcon)}>{icon}</span>} */}
                 {label ?? value}
               </li>
             )

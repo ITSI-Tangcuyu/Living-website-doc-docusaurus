@@ -34,17 +34,23 @@ const config = {
       }
     },
   },
-  plugins: ['docusaurus-plugin-sass', '@docusaurus/plugin-ideal-image', [
-    'docusaurus-plugin-module-alias',
-    {
-      alias: {
-        'styled-components': path.resolve(__dirname, './node_modules/styled-components'),
-        react: path.resolve(__dirname, './node_modules/react'),
-        'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
-        '@components': path.resolve(__dirname, './src/components'),
+  plugins: ['docusaurus-plugin-sass', ['@docusaurus/plugin-ideal-image', {
+    quality: 70,
+    max: 1030, // 最大缩放图片尺寸。
+    min: 640, // 最小缩放图片尺寸。 如果原始值比这还低，会使用原图尺寸。
+    steps: 2, // 在 min 和 max 之间最多生成的图片数量（包含两端点）
+    disableInDev: false,
+  },], [
+      'docusaurus-plugin-module-alias',
+      {
+        alias: {
+          'styled-components': path.resolve(__dirname, './node_modules/styled-components'),
+          react: path.resolve(__dirname, './node_modules/react'),
+          'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+          '@components': path.resolve(__dirname, './src/components'),
+        },
       },
-    },
-  ]],
+    ]],
   presets: [
     [
       'classic',

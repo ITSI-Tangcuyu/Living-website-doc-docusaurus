@@ -1,0 +1,13 @@
+.bannerspecial {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-theme='dark'] .bannerspecial {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

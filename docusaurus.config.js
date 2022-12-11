@@ -34,7 +34,7 @@ const config = {
       }
     },
   },
-  plugins: ['docusaurus-plugin-sass', path.resolve(__dirname, 'plugins', 'lds'), [
+  plugins: ['docusaurus-plugin-sass', '@docusaurus/plugin-ideal-image', [
     'docusaurus-plugin-module-alias',
     {
       alias: {

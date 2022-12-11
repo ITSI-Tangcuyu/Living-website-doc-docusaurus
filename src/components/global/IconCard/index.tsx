@@ -1,12 +1,12 @@
 import React from 'react';
-import index from '@itsi/base-components/dist/living-base/components/icons/li-icons.json';
+import index from '@itsi/base/dist/living-base/components/icons/li-icons.json';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const IconCards = () => {
   return (
     <BrowserOnly>
       {() => {
-        const LibComponent = require('@itsi/base-components/dist/components');
+        const LibComponent = require('@itsi/base/components');
         return index.map((category) => {
           return (
             <div key={category.category}>
@@ -17,7 +17,9 @@ const IconCards = () => {
                     __html: `<li-icon-${category.category}-${item}  size="24" accessibility-title="${item}" />`,
                   });
                   return (
-                    <div key={item} className='col col--4'>
+                    <div
+                      key={item}
+                      className='col col--4'>
                       <span style={{ padding: '10px 0px' }}>
                         <span style={{ color: '#7C7C7C' }}>
                           {category.category}-
@@ -31,8 +33,7 @@ const IconCards = () => {
                           boxShadow: '0 2px 2px 0 rgba(0,0,0,0.1)',
                           padding: '20px 20px',
                           margin: '-10px',
-                        }}
-                      >
+                        }}>
                         <span dangerouslySetInnerHTML={markup()}></span>
                       </div>
                     </div>

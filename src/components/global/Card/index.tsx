@@ -20,14 +20,11 @@ const Cards = () => {
                 className='card__header'
                 style={{ padding: '1rem' }}>
                 <h2>
-                  {/* <a href={`${website}/docs/base/` + item.title} target='_self'> */}
                   <Link
                     to={`/docs/base/` + item.title}
                     target='_self'>
                     {item.title}
                   </Link>
-
-                  {/* </a> */}
                 </h2>
               </div>
 

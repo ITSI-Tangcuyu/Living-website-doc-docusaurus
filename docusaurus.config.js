@@ -11,7 +11,7 @@ const fetch = require('node-fetch');
 const config = {
   title: 'Living Design System',
   tagline: '基于Web Component、具备应急行业特征的WEB开发体系和工具集',
-  url: 'https://www.itsi.com.cn',
+  url: 'https://lds.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -19,8 +19,10 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
+  projectName: 'lds.github.io', // Usually your repo name.
   organizationName: 'ITSI', // Usually your GitHub org/user name.
-  projectName: 'Living Design System', // Usually your repo name.
+  trailingSlash: false,
+  deploymentBranch: 'gh-pages',
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want

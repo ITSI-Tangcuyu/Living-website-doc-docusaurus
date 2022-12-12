@@ -85,6 +85,8 @@ const config = {
         logo: {
           alt: 'LDS Logo',
           src: 'img/lds.png',
+          width: 32,
+          height: 32,
         },
         items: [
           {

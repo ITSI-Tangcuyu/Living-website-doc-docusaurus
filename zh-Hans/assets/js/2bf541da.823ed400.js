@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkliving_design_docs_docusaurus=self.webpackChunkliving_design_docs_docusaurus||[]).push([[7564],{6786:s=>{s.exports=JSON.parse('{"permalink":"/zh-Hans/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

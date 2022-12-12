@@ -1,0 +1,1 @@
+System.register(["./p-95475f0a.system.js"],(function(t){"use strict";var e,r,n;return{setters:[function(t){e=t.r;r=t.h;n=t.H}],execute:function(){var s=":host{display:block}";var u=t("li_hero_area",function(){function t(t){e(this,t)}t.prototype.render=function(){return r(n,null,r("slot",null))};return t}());u.style=s}}}));

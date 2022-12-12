@@ -1,0 +1,22 @@
+```html
+<li-text-field
+  id="text-field"
+  label="带有事件处理器的单行文本框">
+</li-text-field>
+
+<script>
+  const textField = document.getElementById('text-field');
+  textField.addEventListener('scaleChange', () => {
+    /* ... */
+  });
+  textField.addEventListener('scaleBlur', () => {
+    /* ... */
+  });
+  textField.addEventListener('scaleFocus', () => {
+    /* ... */
+  });
+  textField.addEventListener('scaleKeyDown', () => {
+    /* ... */
+  });
+</script>
+```

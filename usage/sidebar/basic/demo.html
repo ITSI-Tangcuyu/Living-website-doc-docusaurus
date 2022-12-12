@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Base基础库</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@itsi/base@1.0.2/dist/living-base/living-base.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@itsi/base@1.0.2/dist/living-base/living-base.js"></script>
+
+</head>
+
+<body>
+  <div class="item">
+    <li-sidebar-nav collapsible-label="应用监控系统菜单">
+      <li-sidebar-nav-item>
+        <a href="#">主机环境</a>
+      </li-sidebar-nav-item>
+      <li-sidebar-nav-item>
+        <a href="#">指标配置</a>
+      </li-sidebar-nav-item>
+      <li-sidebar-nav-item>
+        <a href="#">监控策略</a>
+      </li-sidebar-nav-item>
+      <li-sidebar-nav-collapsible label="态势感知" expanded>
+        <li-sidebar-nav-item current>
+          <a href="#">态势报送参数</a>
+        </li-sidebar-nav-item>
+        <li-sidebar-nav-item>
+          <a href="#">态势报送模板</a>
+        </li-sidebar-nav-item>
+        <li-sidebar-nav-item>
+          <a href="#">系统节点健康信息</a>
+        </li-sidebar-nav-item>
+      </li-sidebar-nav-collapsible>
+      <li-sidebar-nav-collapsible label="Grafana" expanded>
+        <li-sidebar-nav-collapsible label="业务平台" expanded>
+          <li-sidebar-nav-item>
+            <a href="#">业务概况</a>
+          </li-sidebar-nav-item>
+          <li-sidebar-nav-item>
+            <a href="#">资金账务</a>
+          </li-sidebar-nav-item>
+          <li-sidebar-nav-item>
+            <a href="#">DVP</a>
+          </li-sidebar-nav-item>
+        </li-sidebar-nav-collapsible>
+        <li-sidebar-nav-collapsible label="系统节点">
+          <li-sidebar-nav-item>
+            <a href="#">主机概况</a>
+          </li-sidebar-nav-item>
+          <li-sidebar-nav-item>
+            <a href="#">ES集群</a>
+          </li-sidebar-nav-item>
+          <li-sidebar-nav-item>
+            <a href="#">微服务</a>
+          </li-sidebar-nav-item>
+        </li-sidebar-nav-collapsible>
+      </li-sidebar-nav-collapsible>
+      <li-sidebar-nav-item>
+        <a href="#">系统参数</a>
+      </li-sidebar-nav-item>
+    </li-sidebar-nav>
+  </div>
+</body>
+
+</html>

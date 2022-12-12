@@ -1,0 +1,38 @@
+```html
+<li-button
+  color="primary"
+  onclick="document.querySelector('.dialog').visible = true;"
+  >对话框
+</li-button>
+<li-dialog
+  class="dialog"
+  width="60%">
+  <div
+    slot="header"
+    class="header">
+    如梦令
+  </div>
+  <div class="body">
+    词1:
+    <div>
+      昨夜雨疏风骤，浓睡不消残酒。试问卷帘人，却道海棠依旧。知否，知否？应是绿肥红瘦。
+    </div>
+    词2:
+    <div>
+      常记溪亭日暮，沉醉不知归路。兴尽晚回舟，误入藕花深处。争渡，争渡，惊起一滩鸥鹭。
+    </div>
+  </div>
+  <div
+    slot="footer"
+    class="footer">
+    李清照（1084年3月13日－1155年），号易安居士，宋齐州章丘（今山东济南章丘西北）人，居济南。宋代女词人，婉约派代表，有“千古第一才女”之称。
+    <div>
+      <li-button
+        onclick="document.querySelector('.dialog').visible = false;"
+        color="warning"
+        >关闭</li-button
+      >
+    </div>
+  </div>
+</li-dialog>
+```

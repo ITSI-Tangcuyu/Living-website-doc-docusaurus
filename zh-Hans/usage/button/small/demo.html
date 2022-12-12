@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Living Base基础库</title>
+  <link rel="stylesheet" href="../../common.css" />
+  <script src="../../common.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@itsi/base@1.0.2/dist/living-base/living-base.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@itsi/base@1.0.2/dist/living-base/living-base.js"></script>
+</head>
+
+<body>
+  <div class="item pt">
+    <li-button size="small">小尺寸标准按钮</li-button>
+
+    <li-button size="small" variant="secondary">小尺寸二级按钮</li-button>
+
+    <li-button size="small" disabled>小尺寸禁用状态按钮</li-button>
+  </div>
+  <div class="item pt">
+    <li-button size="small" variant="secondary" disabled>小尺寸二级禁用状态按钮</li-button>
+    <li-button size="small">
+      <li-icon-action-search></li-icon-action-search>前置图标小尺寸按钮
+    </li-button>
+    <li-button size="small">后置图标小尺寸按钮<li-icon-navigation-right></li-icon-navigation-right>
+    </li-button>
+  </div>
+  <div class="item pt">
+    <li-button size="small">
+      <li-icon-navigation-external-link accessibility-title="External link, opens in new tab">
+      </li-icon-navigation-external-link>
+    </li-button>
+
+    <li-button size="small" href="https://example.com" target="_blank">打开新tab页面小尺寸按钮（外部连接）</li-button>
+
+    <li-button size="small" href="assets/welcome.png" download="welcome.png">下载按钮</li-button>
+  </div>
+</body>
+
+</html>

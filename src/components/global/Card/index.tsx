@@ -21,7 +21,7 @@ const Cards = () => {
                 style={{ padding: '1rem' }}>
                 <h2>
                   <Link
-                    to={`/docs/base/` + item.title}
+                    to={item.title}
                     target='_self'>
                     {item.title}
                   </Link>

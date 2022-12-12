@@ -19,8 +19,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  projectName: 'lds.github.io', // Usually your repo name.
-  organizationName: 'ITSI', // Usually your GitHub org/user name.
+  projectName: 'Living-website-doc-docusaurus', // Usually your repo name.
+  organizationName: 'ITSI-Tangcuyu', // Usually your GitHub org/user name.
   trailingSlash: false,
   deploymentBranch: 'gh-pages',
 

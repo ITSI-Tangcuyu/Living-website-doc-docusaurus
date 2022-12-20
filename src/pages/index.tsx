@@ -23,9 +23,10 @@ function HomepageHeader() {
         <p className={clsx('hero__subtitle', styles.subtitle)}>
           {siteConfig.tagline}
         </p>
-        <HomepageBanner />
         <div className={styles.buttons}>
-          <Link className='button button--secondary button--lg' to='/docs/'>
+          <Link
+            className='button button--secondary button--lg'
+            to='/docs/'>
             快速入门 - 5min ⏱️
           </Link>
         </div>
@@ -37,9 +38,12 @@ function HomepageHeader() {
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout title={`${siteConfig.title}`} description='Living Design System'>
+    <Layout
+      title={`${siteConfig.title}`}
+      description='Living Design System'>
       <HomepageHeader />
       <main>
+        <HomepageBanner />
         <HomepageFeatures />
         <HomepageComponents />
         <HomepageExample />

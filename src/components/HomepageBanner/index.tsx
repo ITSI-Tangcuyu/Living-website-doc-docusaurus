@@ -7,7 +7,12 @@ export default function HomepageBanner(): JSX.Element {
     <section
       id='homepagebanner'
       className={styles.bannerspecial}>
-      <img src='/img/flame-forest-fire.png' />
+      <span className={styles.lead}>🏆 铂金赞助商</span>
+      <img
+        className={styles.sponsor}
+        src='/img/itsi.png'
+      />
+      <span className={styles.sname}>娱信互动</span>
     </section>
   );
 }

@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import BirdButton from '@site/src/components/global/BirdButton/BirdButton';
 import HomepageBanner from '@site/src/components/HomepageBanner';
 import HomepageComponents from '@site/src/components/HomepageComponents';
 import HomepageReady from '@site/src/components/HomepageReady';
@@ -24,11 +25,7 @@ function HomepageHeader() {
           {siteConfig.tagline}
         </p>
         <div className={styles.buttons}>
-          <Link
-            className='button button--secondary button--lg'
-            to='/docs/'>
-            快速入门 - 5min ⏱️
-          </Link>
+          <BirdButton />
         </div>
       </div>
     </div>

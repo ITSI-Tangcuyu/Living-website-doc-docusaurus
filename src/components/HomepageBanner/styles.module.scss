@@ -26,6 +26,15 @@
   flex: 1;
 }
 
+[data-theme='dark'] .sname {
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  vertical-align: middle;
+  flex: 1;
+}
+
+
 .sponsor {
   padding-right: 2px;
   height: 32px;
@@ -33,6 +42,16 @@
 
 .lead {
   color: rgba(60, 60, 60, .7);
+  font-weight: 500;
+  font-size: 13px;
+  vertical-align: middle;
+  flex: 1;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+[data-theme='dark'] .lead {
+  color: #fff;
   font-weight: 500;
   font-size: 13px;
   vertical-align: middle;

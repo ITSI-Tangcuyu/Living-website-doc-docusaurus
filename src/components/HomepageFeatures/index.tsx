@@ -37,7 +37,7 @@ const FeatureList: FeatureItem[] = [
     image: '/img/performance.webp',
     description: (
       <>
-        可访问性意味着让每个人都可以访问相同的信息，无论个人的身体和认知能力以及访问WEB的方式是否存在一定的限制
+        在启动时间和绘制性能方面，Web组件始终比许多流行的JavaScript框架更快,同时它们占用更少的内存，并拥有更小的包大小。
       </>
     ),
   },

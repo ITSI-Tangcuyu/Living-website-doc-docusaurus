@@ -1,9 +1,9 @@
 System.register(["./p-95475f0a.system.js","./p-8df5e58b.system.js","./p-1411d998.system.js"],(function(t){"use strict";var e,o,n,i,a,s,r;return{setters:[function(t){e=t.r;o=t.c;n=t.h;i=t.H;a=t.g},function(t){s=t.c},function(t){r=t.e}],execute:function(){function l(t,e,o,n,i){if(n===void 0){n=20}if(i===void 0){i=0}var a=[];if(i>=n){return a}var s=function(t){var a=t.assignedNodes().filter((function(t){return t.nodeType===1}));if(a.length>0){var s=a[0].parentElement;return l(s,e,o,n,i+1)}return[]};var r=Array.from(t.children||[]);for(var c=0,d=r;c<d.length;c++){var u=d[c];if(e(u)){continue}if(o(u)){a.push(u)}if(u.shadowRoot!=null){a.push.apply(a,l(u.shadowRoot,e,o,n,i+1))}else if(u.tagName==="SLOT"){a.push.apply(a,s(u))}else{a.push.apply(a,l(u,e,o,n,i+1))}}return a}function c(t){return t.hasAttribute("hidden")||t.hasAttribute("aria-hidden")&&t.getAttribute("aria-hidden")!=="false"||t.style.display==="none"||t.style.opacity==="0"||t.style.visibility==="hidden"||t.style.visibility==="collapse"}function d(t){return t.hasAttribute("disabled")||t.hasAttribute("aria-disabled")&&t.getAttribute("aria-disabled")!=="false"}function u(t){if(t.getAttribute("tabindex")==="-1"||c(t)||d(t)){return false}return t.hasAttribute("tabindex")||(t instanceof HTMLAnchorElement||t instanceof HTMLAreaElement)&&t.hasAttribute("href")||t instanceof HTMLButtonElement||t instanceof HTMLInputElement||t instanceof HTMLTextAreaElement||t instanceof HTMLSelectElement||t instanceof HTMLIFrameElement}
 /**
        * @license
-       * Scale https://github.com/telekom/scale
+       * Scale https://github.com/li-token/scale
        *
-       * Copyright (c) 2021 Egor Kirpichev and contributors, Deutsche Telekom AG
+       * Copyright (c) 2021 Egor Kirpichev and contributors, Deutsche li-token AG
        *
        * This Source Code Form is subject to the terms of the Mozilla Public
        * License, v. 2.0. If a copy of the MPL was not distributed with this

@@ -1,9 +1,9 @@
 import{r as t,c as o,h as i,H as a,g as e}from"./p-8d227782.js";import{c as n}from"./p-fdf6920f.js";import{e as s}from"./p-821ec953.js";function r(t,o,i,a=20,e=0){const n=[];if(e>=a)return n;const s=t=>{const n=t.assignedNodes().filter((t=>1===t.nodeType));return n.length>0?r(n[0].parentElement,o,i,a,e+1):[]},l=Array.from(t.children||[]);for(const t of l)o(t)||(i(t)&&n.push(t),null!=t.shadowRoot?n.push(...r(t.shadowRoot,o,i,a,e+1)):"SLOT"===t.tagName?n.push(...s(t)):n.push(...r(t,o,i,a,e+1)));return n}function l(t){return t.hasAttribute("hidden")||t.hasAttribute("aria-hidden")&&"false"!==t.getAttribute("aria-hidden")||"none"===t.style.display||"0"===t.style.opacity||"hidden"===t.style.visibility||"collapse"===t.style.visibility}function d(t){return"-1"!==t.getAttribute("tabindex")&&!l(t)&&!function(t){return t.hasAttribute("disabled")||t.hasAttribute("aria-disabled")&&"false"!==t.getAttribute("aria-disabled")}(t)&&(t.hasAttribute("tabindex")||(t instanceof HTMLAnchorElement||t instanceof HTMLAreaElement)&&t.hasAttribute("href")||t instanceof HTMLButtonElement||t instanceof HTMLInputElement||t instanceof HTMLTextAreaElement||t instanceof HTMLSelectElement||t instanceof HTMLIFrameElement)}
 /**
  * @license
- * Scale https://github.com/telekom/scale
+ * Scale https://github.com/li-token/scale
  *
- * Copyright (c) 2021 Egor Kirpichev and contributors, Deutsche Telekom AG
+ * Copyright (c) 2021 Egor Kirpichev and contributors, Deutsche li-token AG
  *
  * This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this

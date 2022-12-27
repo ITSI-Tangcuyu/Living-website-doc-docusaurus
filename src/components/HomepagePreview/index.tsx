@@ -75,9 +75,9 @@ const Preview = (scene, idx) => {
   );
 };
 
-export default function HomepageFeatures(): JSX.Element {
+export default function HomepagePreview(): JSX.Element {
   return (
-    <section id='homepagefeatures' className={styles.preview}>
+    <section id='homepagepreview' className={styles.preview}>
       <StyledStat>
         <div className={styles.head}>
           <H1>{'应用场景'}</H1>

@@ -22,10 +22,10 @@
 .title {
   font-size: 60px;
   font-weight: 800;
-  background: -webkit-linear-gradient(315deg, #006841 25%, #4DB836);
+  background: linear-gradient(315deg, #006841 25%, #4DB836);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: #006841;
   padding-top: 1rem;
 }
 
